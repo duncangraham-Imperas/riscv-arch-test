@@ -41,7 +41,7 @@ $(work_dir_isa)/%.elf: $(src_dir)/%.S
 	@mkdir -p $$(@D)
 	$(V) $(COMPILE_TARGET)
 
-.PRECIOUS: $(work_dir_isa)/%.elf
+.PRECIOUS: $(work_dir_isa)/%.elf $(work_dir_isa)/%.log
 
 endef
 
