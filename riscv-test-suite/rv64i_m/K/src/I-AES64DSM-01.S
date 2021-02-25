@@ -52,7 +52,7 @@ RVTEST_CODE_BEGIN
     # aes64dsm x1, x31, x16
     # sd x1, 0(x6)
 inst_0:
-    TEST_RR_OP(aes64dsm, x1, x31, x31, 0x06fbad2157078033, 0x10fd3dedadea5195, 0xdf7f3844121bcc23, x6, 0, x7)
+    TEST_RR_OP(aes64dsm, x1, x31, x16, 0x06fbad2157078033, 0x10fd3dedadea5195, 0xdf7f3844121bcc23, x6, 0, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x1, 0x06fbad2157078033) 
     
  
@@ -62,7 +62,7 @@ inst_0:
     # aes64dsm x2, x30, x15
     # sd x2, 8(x6)
 inst_1:
-    TEST_RR_OP(aes64dsm, x2, x30, x30, 0x3ff7b01c7616ec49, 0xbd295ce2d2ffbec1, 0xf5adb41aa47d105b, x6, 8, x7)
+    TEST_RR_OP(aes64dsm, x2, x30, x15, 0x3ff7b01c7616ec49, 0xbd295ce2d2ffbec1, 0xf5adb41aa47d105b, x6, 8, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x2, 0x3ff7b01c7616ec49) 
     
  
@@ -72,7 +72,7 @@ inst_1:
     # aes64dsm x3, x29, x14
     # sd x3, 16(x6)
 inst_2:
-    TEST_RR_OP(aes64dsm, x3, x29, x29, 0x5ce65db8b3c046ae, 0xc9649f05a8e1a8bb, 0x82f6747f707af2c0, x6, 16, x7)
+    TEST_RR_OP(aes64dsm, x3, x29, x14, 0x5ce65db8b3c046ae, 0xc9649f05a8e1a8bb, 0x82f6747f707af2c0, x6, 16, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x3, 0x5ce65db8b3c046ae) 
     
  
@@ -82,7 +82,7 @@ inst_2:
     # aes64dsm x4, x28, x13
     # sd x4, 24(x6)
 inst_3:
-    TEST_RR_OP(aes64dsm, x4, x28, x28, 0x3846acdfa5757e88, 0x3541291848c99fcb, 0x73a92fd4e19bfbc3, x6, 24, x7)
+    TEST_RR_OP(aes64dsm, x4, x28, x13, 0x3846acdfa5757e88, 0x3541291848c99fcb, 0x73a92fd4e19bfbc3, x6, 24, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x4, 0x3846acdfa5757e88) 
     
  
@@ -92,7 +92,7 @@ inst_3:
     # aes64dsm x5, x27, x12
     # sd x5, 32(x6)
 inst_4:
-    TEST_RR_OP(aes64dsm, x5, x27, x27, 0xdeba302326da7a70, 0x10a24740461d524f, 0x546b0e54528a10af, x6, 32, x7)
+    TEST_RR_OP(aes64dsm, x5, x27, x12, 0xdeba302326da7a70, 0x10a24740461d524f, 0x546b0e54528a10af, x6, 32, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x5, 0xdeba302326da7a70) 
     
 
@@ -110,7 +110,7 @@ inst_4:
     # aes64dsm x6, x26, x11
     # sd x6, 0(x1)
 inst_5:
-    TEST_RR_OP(aes64dsm, x6, x26, x26, 0xf4af164eeee4597d, 0x546b0e54528a10af, 0x10a24740461d524f, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x6, x26, x11, 0xf4af164eeee4597d, 0x546b0e54528a10af, 0x10a24740461d524f, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x6, 0xf4af164eeee4597d) 
     
  
@@ -120,7 +120,7 @@ inst_5:
     # aes64dsm x7, x25, x10
     # sd x7, 8(x1)
 inst_6:
-    TEST_RR_OP(aes64dsm, x7, x25, x25, 0x6fd974947e0462fa, 0x73a92fd4e19bfbc3, 0x3541291848c99fcb, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x7, x25, x10, 0x6fd974947e0462fa, 0x73a92fd4e19bfbc3, 0x3541291848c99fcb, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x7, 0x6fd974947e0462fa) 
     
  
@@ -130,7 +130,7 @@ inst_6:
     # aes64dsm x8, x24, x9
     # sd x8, 16(x1)
 inst_7:
-    TEST_RR_OP(aes64dsm, x8, x24, x24, 0x50603884062462c0, 0x82f6747f707af2c0, 0xc9649f05a8e1a8bb, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x8, x24, x9, 0x50603884062462c0, 0x82f6747f707af2c0, 0xc9649f05a8e1a8bb, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x8, 0x50603884062462c0) 
     
  
@@ -140,7 +140,7 @@ inst_7:
     # aes64dsm x9, x23, x8
     # sd x9, 24(x1)
 inst_8:
-    TEST_RR_OP(aes64dsm, x9, x23, x23, 0x677a7c6d31aa0e6f, 0xf5adb41aa47d105b, 0xbd295ce2d2ffbec1, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x9, x23, x8, 0x677a7c6d31aa0e6f, 0xf5adb41aa47d105b, 0xbd295ce2d2ffbec1, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x9, 0x677a7c6d31aa0e6f) 
     
  
@@ -150,7 +150,7 @@ inst_8:
     # aes64dsm x10, x22, x7
     # sd x10, 32(x1)
 inst_9:
-    TEST_RR_OP(aes64dsm, x10, x22, x22, 0xf7cde34101c5a48d, 0xdf7f3844121bcc23, 0x10fd3dedadea5195, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x10, x22, x7, 0xf7cde34101c5a48d, 0xdf7f3844121bcc23, 0x10fd3dedadea5195, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x10, 0xf7cde34101c5a48d) 
     
 
@@ -168,7 +168,7 @@ inst_9:
     # aes64dsm x11, x21, x6
     # sd x11, 0(x1)
 inst_10:
-    TEST_RR_OP(aes64dsm, x11, x21, x21, 0x9fc1b0eeed5d749f, 0x1, 0xffffffffffffffff, x1, 0, x7)
+    TEST_RR_OP(aes64dsm, x11, x21, x6, 0x9fc1b0eeed5d749f, 0x1, 0xffffffffffffffff, x1, 0, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x11, 0x9fc1b0eeed5d749f) 
     
  
@@ -178,7 +178,7 @@ inst_10:
     # aes64dsm x12, x20, x5
     # sd x12, 8(x1)
 inst_11:
-    TEST_RR_OP(aes64dsm, x12, x20, x20, 0x9fc1b0ee7d9c22fb, 0x2, 0x7fffffffffffffff, x1, 8, x7)
+    TEST_RR_OP(aes64dsm, x12, x20, x5, 0x9fc1b0ee7d9c22fb, 0x2, 0x7fffffffffffffff, x1, 8, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x12, 0x9fc1b0ee7d9c22fb) 
     
  
@@ -188,7 +188,7 @@ inst_11:
     # aes64dsm x13, x19, x4
     # sd x13, 16(x1)
 inst_12:
-    TEST_RR_OP(aes64dsm, x13, x19, x19, 0x9fc1b0ee75539eda, 0x4, 0xbfffffffffffffff, x1, 16, x7)
+    TEST_RR_OP(aes64dsm, x13, x19, x4, 0x9fc1b0ee75539eda, 0x4, 0xbfffffffffffffff, x1, 16, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x13, 0x9fc1b0ee75539eda) 
     
  
@@ -198,7 +198,7 @@ inst_12:
     # aes64dsm x14, x18, x3
     # sd x14, 24(x1)
 inst_13:
-    TEST_RR_OP(aes64dsm, x14, x18, x18, 0x9fc1b0eeebc205c1, 0x8, 0xdfffffffffffffff, x1, 24, x7)
+    TEST_RR_OP(aes64dsm, x14, x18, x3, 0x9fc1b0eeebc205c1, 0x8, 0xdfffffffffffffff, x1, 24, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x14, 0x9fc1b0eeebc205c1) 
     
  
@@ -208,7 +208,7 @@ inst_13:
     # aes64dsm x15, x17, x2
     # sd x15, 32(x1)
 inst_14:
-    TEST_RR_OP(aes64dsm, x15, x17, x17, 0x9fc1b0eef762843f, 0x10, 0xefffffffffffffff, x1, 32, x7)
+    TEST_RR_OP(aes64dsm, x15, x17, x2, 0x9fc1b0eef762843f, 0x10, 0xefffffffffffffff, x1, 32, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x15, 0x9fc1b0eef762843f) 
     
 
@@ -226,7 +226,7 @@ inst_14:
     # aes64dsm x16, x16, x1
     # sd x16, 0(x2)
 inst_15:
-    TEST_RR_OP(aes64dsm, x16, x16, x16, 0x9fc1b0eed4b1f794, 0x20, 0xf7ffffffffffffff, x2, 0, x3)
+    TEST_RR_OP(aes64dsm, x16, x16, x1, 0x9fc1b0eed4b1f794, 0x20, 0xf7ffffffffffffff, x2, 0, x3)
     RVMODEL_IO_ASSERT_GPR_EQ(x3, x16, 0x9fc1b0eed4b1f794) 
     
  
@@ -236,7 +236,7 @@ inst_15:
     # aes64dsm x17, x15, x31
     # sd x17, 8(x2)
 inst_16:
-    TEST_RR_OP(aes64dsm, x17, x15, x15, 0x9fc1b0ee9524fa6b, 0x40, 0xfbffffffffffffff, x2, 8, x3)
+    TEST_RR_OP(aes64dsm, x17, x15, x31, 0x9fc1b0ee9524fa6b, 0x40, 0xfbffffffffffffff, x2, 8, x3)
     RVMODEL_IO_ASSERT_GPR_EQ(x3, x17, 0x9fc1b0ee9524fa6b) 
     
  
@@ -246,7 +246,7 @@ inst_16:
     # aes64dsm x18, x14, x30
     # sd x18, 16(x2)
 inst_17:
-    TEST_RR_OP(aes64dsm, x18, x14, x14, 0x9fc1b0ee3b21c4b6, 0x80, 0xfdffffffffffffff, x2, 16, x3)
+    TEST_RR_OP(aes64dsm, x18, x14, x30, 0x9fc1b0ee3b21c4b6, 0x80, 0xfdffffffffffffff, x2, 16, x3)
     RVMODEL_IO_ASSERT_GPR_EQ(x3, x18, 0x9fc1b0ee3b21c4b6) 
     
  
@@ -256,7 +256,7 @@ inst_17:
     # aes64dsm x19, x13, x29
     # sd x19, 24(x2)
 inst_18:
-    TEST_RR_OP(aes64dsm, x19, x13, x13, 0x5d749fedee9fc1b0, 0x100, 0xfeffffffffffffff, x2, 24, x3)
+    TEST_RR_OP(aes64dsm, x19, x13, x29, 0x5d749fedee9fc1b0, 0x100, 0xfeffffffffffffff, x2, 24, x3)
     RVMODEL_IO_ASSERT_GPR_EQ(x3, x19, 0x5d749fedee9fc1b0) 
     
  
@@ -266,7 +266,7 @@ inst_18:
     # aes64dsm x20, x12, x28
     # sd x20, 32(x2)
 inst_19:
-    TEST_RR_OP(aes64dsm, x20, x12, x12, 0x3ae67183ee9fc1b0, 0x200, 0xff7fffffffffffff, x2, 32, x3)
+    TEST_RR_OP(aes64dsm, x20, x12, x28, 0x3ae67183ee9fc1b0, 0x200, 0xff7fffffffffffff, x2, 32, x3)
     RVMODEL_IO_ASSERT_GPR_EQ(x3, x20, 0x3ae67183ee9fc1b0) 
     
 
@@ -284,7 +284,7 @@ inst_19:
     # aes64dsm x21, x11, x27
     # sd x21, 0(x1)
 inst_20:
-    TEST_RR_OP(aes64dsm, x21, x11, x11, 0xfea17ecaee9fc1b0, 0x400, 0xffbfffffffffffff, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x21, x11, x27, 0xfea17ecaee9fc1b0, 0x400, 0xffbfffffffffffff, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x21, 0xfea17ecaee9fc1b0) 
     
  
@@ -294,7 +294,7 @@ inst_20:
     # aes64dsm x22, x10, x26
     # sd x22, 8(x1)
 inst_21:
-    TEST_RR_OP(aes64dsm, x22, x10, x10, 0xacb890fbee9fc1b0, 0x800, 0xffdfffffffffffff, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x22, x10, x26, 0xacb890fbee9fc1b0, 0x800, 0xffdfffffffffffff, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x22, 0xacb890fbee9fc1b0) 
     
  
@@ -304,7 +304,7 @@ inst_21:
     # aes64dsm x23, x9, x25
     # sd x23, 16(x1)
 inst_22:
-    TEST_RR_OP(aes64dsm, x23, x9, x9, 0x9e2cfb7bee9fc1b0, 0x1000, 0xffefffffffffffff, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x23, x9, x25, 0x9e2cfb7bee9fc1b0, 0x1000, 0xffefffffffffffff, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x23, 0x9e2cfb7bee9fc1b0) 
     
  
@@ -314,7 +314,7 @@ inst_22:
     # aes64dsm x24, x8, x24
     # sd x24, 24(x1)
 inst_23:
-    TEST_RR_OP(aes64dsm, x24, x8, x8, 0x04d89716ee9fc1b0, 0x2000, 0xfff7ffffffffffff, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x24, x8, x24, 0x04d89716ee9fc1b0, 0x2000, 0xfff7ffffffffffff, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x24, 0x04d89716ee9fc1b0) 
     
  
@@ -324,7 +324,7 @@ inst_23:
     # aes64dsm x25, x7, x23
     # sd x25, 32(x1)
 inst_24:
-    TEST_RR_OP(aes64dsm, x25, x7, x7, 0xca4eb903ee9fc1b0, 0x4000, 0xfffbffffffffffff, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x25, x7, x23, 0xca4eb903ee9fc1b0, 0x4000, 0xfffbffffffffffff, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x25, 0xca4eb903ee9fc1b0) 
     
 
@@ -342,7 +342,7 @@ inst_24:
     # aes64dsm x26, x6, x22
     # sd x26, 0(x1)
 inst_25:
-    TEST_RR_OP(aes64dsm, x26, x6, x6, 0xabc184daee9fc1b0, 0x8000, 0xfffdffffffffffff, x1, 0, x7)
+    TEST_RR_OP(aes64dsm, x26, x6, x22, 0xabc184daee9fc1b0, 0x8000, 0xfffdffffffffffff, x1, 0, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x26, 0xabc184daee9fc1b0) 
     
  
@@ -352,7 +352,7 @@ inst_25:
     # aes64dsm x27, x5, x21
     # sd x27, 8(x1)
 inst_26:
-    TEST_RR_OP(aes64dsm, x27, x5, x5, 0x4b5986e5ee9fc1b0, 0x10000, 0xfffeffffffffffff, x1, 8, x7)
+    TEST_RR_OP(aes64dsm, x27, x5, x21, 0x4b5986e5ee9fc1b0, 0x10000, 0xfffeffffffffffff, x1, 8, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x27, 0x4b5986e5ee9fc1b0) 
     
  
@@ -362,7 +362,7 @@ inst_26:
     # aes64dsm x28, x4, x20
     # sd x28, 16(x1)
 inst_27:
-    TEST_RR_OP(aes64dsm, x28, x4, x4, 0x9fc1b0ee1039053a, 0x20000, 0xffff7fffffffffff, x1, 16, x7)
+    TEST_RR_OP(aes64dsm, x28, x4, x20, 0x9fc1b0ee1039053a, 0x20000, 0xffff7fffffffffff, x1, 16, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x28, 0x9fc1b0ee1039053a) 
     
  
@@ -372,7 +372,7 @@ inst_27:
     # aes64dsm x29, x3, x19
     # sd x29, 24(x1)
 inst_28:
-    TEST_RR_OP(aes64dsm, x29, x3, x3, 0x9fc1b0ee5132fe14, 0x40000, 0xffffbfffffffffff, x1, 24, x7)
+    TEST_RR_OP(aes64dsm, x29, x3, x19, 0x9fc1b0ee5132fe14, 0x40000, 0xffffbfffffffffff, x1, 24, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x29, 0x9fc1b0ee5132fe14) 
     
  
@@ -382,7 +382,7 @@ inst_28:
     # aes64dsm x30, x2, x18
     # sd x30, 32(x1)
 inst_29:
-    TEST_RR_OP(aes64dsm, x30, x2, x2, 0x9fc1b0eefef17ce1, 0x80000, 0xffffdfffffffffff, x1, 32, x7)
+    TEST_RR_OP(aes64dsm, x30, x2, x18, 0x9fc1b0eefef17ce1, 0x80000, 0xffffdfffffffffff, x1, 32, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x30, 0x9fc1b0eefef17ce1) 
     
 
@@ -400,7 +400,7 @@ inst_29:
     # aes64dsm x31, x1, x17
     # sd x31, 0(x5)
 inst_30:
-    TEST_RR_OP(aes64dsm, x31, x1, x1, 0x9fc1b0ee62636974, 0x100000, 0xffffefffffffffff, x5, 0, x6)
+    TEST_RR_OP(aes64dsm, x31, x1, x17, 0x9fc1b0ee62636974, 0x100000, 0xffffefffffffffff, x5, 0, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x31, 0x9fc1b0ee62636974) 
     
  
@@ -410,7 +410,7 @@ inst_30:
     # aes64dsm x1, x31, x16
     # sd x1, 8(x5)
 inst_31:
-    TEST_RR_OP(aes64dsm, x1, x31, x31, 0x9fc1b0ee2c2aeeb3, 0x200000, 0xfffff7ffffffffff, x5, 8, x6)
+    TEST_RR_OP(aes64dsm, x1, x31, x16, 0x9fc1b0ee2c2aeeb3, 0x200000, 0xfffff7ffffffffff, x5, 8, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x1, 0x9fc1b0ee2c2aeeb3) 
     
  
@@ -420,7 +420,7 @@ inst_31:
     # aes64dsm x2, x30, x15
     # sd x2, 16(x5)
 inst_32:
-    TEST_RR_OP(aes64dsm, x2, x30, x30, 0x9fc1b0ee78717562, 0x400000, 0xfffffbffffffffff, x5, 16, x6)
+    TEST_RR_OP(aes64dsm, x2, x30, x15, 0x9fc1b0ee78717562, 0x400000, 0xfffffbffffffffff, x5, 16, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x2, 0x9fc1b0ee78717562) 
     
  
@@ -430,7 +430,7 @@ inst_32:
     # aes64dsm x3, x29, x14
     # sd x3, 24(x5)
 inst_33:
-    TEST_RR_OP(aes64dsm, x3, x29, x29, 0x9fc1b0ee0f15c482, 0x800000, 0xfffffdffffffffff, x5, 24, x6)
+    TEST_RR_OP(aes64dsm, x3, x29, x14, 0x9fc1b0ee0f15c482, 0x800000, 0xfffffdffffffffff, x5, 24, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x3, 0x9fc1b0ee0f15c482) 
     
  
@@ -440,7 +440,7 @@ inst_33:
     # aes64dsm x4, x28, x13
     # sd x4, 32(x5)
 inst_34:
-    TEST_RR_OP(aes64dsm, x4, x28, x28, 0x9fc1b0eee54b5986, 0x1000000, 0xfffffeffffffffff, x5, 32, x6)
+    TEST_RR_OP(aes64dsm, x4, x28, x13, 0x9fc1b0eee54b5986, 0x1000000, 0xfffffeffffffffff, x5, 32, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x4, 0x9fc1b0eee54b5986) 
     
 
@@ -458,7 +458,7 @@ inst_34:
     # aes64dsm x5, x27, x12
     # sd x5, 0(x1)
 inst_35:
-    TEST_RR_OP(aes64dsm, x5, x27, x27, 0x9fc1b0eeee9fc1b0, 0x2000000, 0xffffff7fffffffff, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x5, x27, x12, 0x9fc1b0eeee9fc1b0, 0x2000000, 0xffffff7fffffffff, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x5, 0x9fc1b0eeee9fc1b0) 
     
  
@@ -468,7 +468,7 @@ inst_35:
     # aes64dsm x6, x26, x11
     # sd x6, 8(x1)
 inst_36:
-    TEST_RR_OP(aes64dsm, x6, x26, x26, 0x9fc1b0eeee9fc1b0, 0x4000000, 0xffffffbfffffffff, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x6, x26, x11, 0x9fc1b0eeee9fc1b0, 0x4000000, 0xffffffbfffffffff, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x6, 0x9fc1b0eeee9fc1b0) 
     
  
@@ -478,7 +478,7 @@ inst_36:
     # aes64dsm x7, x25, x10
     # sd x7, 16(x1)
 inst_37:
-    TEST_RR_OP(aes64dsm, x7, x25, x25, 0x9fc1b0eeee9fc1b0, 0x8000000, 0xffffffdfffffffff, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x7, x25, x10, 0x9fc1b0eeee9fc1b0, 0x8000000, 0xffffffdfffffffff, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x7, 0x9fc1b0eeee9fc1b0) 
     
  
@@ -488,7 +488,7 @@ inst_37:
     # aes64dsm x8, x24, x9
     # sd x8, 24(x1)
 inst_38:
-    TEST_RR_OP(aes64dsm, x8, x24, x24, 0x9fc1b0eeee9fc1b0, 0x10000000, 0xffffffefffffffff, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x8, x24, x9, 0x9fc1b0eeee9fc1b0, 0x10000000, 0xffffffefffffffff, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x8, 0x9fc1b0eeee9fc1b0) 
     
  
@@ -498,7 +498,7 @@ inst_38:
     # aes64dsm x9, x23, x8
     # sd x9, 32(x1)
 inst_39:
-    TEST_RR_OP(aes64dsm, x9, x23, x23, 0x9fc1b0eeee9fc1b0, 0x20000000, 0xfffffff7ffffffff, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x9, x23, x8, 0x9fc1b0eeee9fc1b0, 0x20000000, 0xfffffff7ffffffff, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x9, 0x9fc1b0eeee9fc1b0) 
     
 
@@ -516,7 +516,7 @@ inst_39:
     # aes64dsm x10, x22, x7
     # sd x10, 0(x1)
 inst_40:
-    TEST_RR_OP(aes64dsm, x10, x22, x22, 0x9fc1b0eeee9fc1b0, 0x40000000, 0xfffffffbffffffff, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x10, x22, x7, 0x9fc1b0eeee9fc1b0, 0x40000000, 0xfffffffbffffffff, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x10, 0x9fc1b0eeee9fc1b0) 
     
  
@@ -526,7 +526,7 @@ inst_40:
     # aes64dsm x11, x21, x6
     # sd x11, 8(x1)
 inst_41:
-    TEST_RR_OP(aes64dsm, x11, x21, x21, 0x9fc1b0eeee9fc1b0, 0x80000000, 0xfffffffdffffffff, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x11, x21, x6, 0x9fc1b0eeee9fc1b0, 0x80000000, 0xfffffffdffffffff, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x11, 0x9fc1b0eeee9fc1b0) 
     
  
@@ -536,7 +536,7 @@ inst_41:
     # aes64dsm x12, x20, x5
     # sd x12, 16(x1)
 inst_42:
-    TEST_RR_OP(aes64dsm, x12, x20, x20, 0x9c0305c1ee9fc1b0, 0x100000000, 0xfffffffeffffffff, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x12, x20, x5, 0x9c0305c1ee9fc1b0, 0x100000000, 0xfffffffeffffffff, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x12, 0x9c0305c1ee9fc1b0) 
     
  
@@ -546,7 +546,7 @@ inst_42:
     # aes64dsm x13, x19, x4
     # sd x13, 24(x1)
 inst_43:
-    TEST_RR_OP(aes64dsm, x13, x19, x19, 0xc848ad03ee9fc1b0, 0x200000000, 0xffffffff7fffffff, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x13, x19, x4, 0xc848ad03ee9fc1b0, 0x200000000, 0xffffffff7fffffff, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x13, 0xc848ad03ee9fc1b0) 
     
  
@@ -556,7 +556,7 @@ inst_43:
     # aes64dsm x14, x18, x3
     # sd x14, 32(x1)
 inst_44:
-    TEST_RR_OP(aes64dsm, x14, x18, x18, 0x3ba95029ee9fc1b0, 0x400000000, 0xffffffffbfffffff, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x14, x18, x3, 0x3ba95029ee9fc1b0, 0x400000000, 0xffffffffbfffffff, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x14, 0x3ba95029ee9fc1b0) 
     
 
@@ -574,7 +574,7 @@ inst_44:
     # aes64dsm x15, x17, x2
     # sd x15, 0(x3)
 inst_45:
-    TEST_RR_OP(aes64dsm, x15, x17, x17, 0x27cd64f1ee9fc1b0, 0x800000000, 0xffffffffdfffffff, x3, 0, x4)
+    TEST_RR_OP(aes64dsm, x15, x17, x2, 0x27cd64f1ee9fc1b0, 0x800000000, 0xffffffffdfffffff, x3, 0, x4)
     RVMODEL_IO_ASSERT_GPR_EQ(x4, x15, 0x27cd64f1ee9fc1b0) 
     
  
@@ -584,7 +584,7 @@ inst_45:
     # aes64dsm x16, x16, x1
     # sd x16, 8(x3)
 inst_46:
-    TEST_RR_OP(aes64dsm, x16, x16, x16, 0x2ef8799dee9fc1b0, 0x1000000000, 0xffffffffefffffff, x3, 8, x4)
+    TEST_RR_OP(aes64dsm, x16, x16, x1, 0x2ef8799dee9fc1b0, 0x1000000000, 0xffffffffefffffff, x3, 8, x4)
     RVMODEL_IO_ASSERT_GPR_EQ(x4, x16, 0x2ef8799dee9fc1b0) 
     
  
@@ -594,7 +594,7 @@ inst_46:
     # aes64dsm x17, x15, x31
     # sd x17, 16(x3)
 inst_47:
-    TEST_RR_OP(aes64dsm, x17, x15, x15, 0x8aec447fee9fc1b0, 0x2000000000, 0xfffffffff7ffffff, x3, 16, x4)
+    TEST_RR_OP(aes64dsm, x17, x15, x31, 0x8aec447fee9fc1b0, 0x2000000000, 0xfffffffff7ffffff, x3, 16, x4)
     RVMODEL_IO_ASSERT_GPR_EQ(x4, x17, 0x8aec447fee9fc1b0) 
     
  
@@ -604,7 +604,7 @@ inst_47:
     # aes64dsm x18, x14, x30
     # sd x18, 24(x3)
 inst_48:
-    TEST_RR_OP(aes64dsm, x18, x14, x14, 0x50a81ddbee9fc1b0, 0x4000000000, 0xfffffffffbffffff, x3, 24, x4)
+    TEST_RR_OP(aes64dsm, x18, x14, x30, 0x50a81ddbee9fc1b0, 0x4000000000, 0xfffffffffbffffff, x3, 24, x4)
     RVMODEL_IO_ASSERT_GPR_EQ(x4, x18, 0x50a81ddbee9fc1b0) 
     
  
@@ -614,7 +614,7 @@ inst_48:
     # aes64dsm x19, x13, x29
     # sd x19, 32(x3)
 inst_49:
-    TEST_RR_OP(aes64dsm, x19, x13, x13, 0x4f4d5462ee9fc1b0, 0x8000000000, 0xfffffffffdffffff, x3, 32, x4)
+    TEST_RR_OP(aes64dsm, x19, x13, x29, 0x4f4d5462ee9fc1b0, 0x8000000000, 0xfffffffffdffffff, x3, 32, x4)
     RVMODEL_IO_ASSERT_GPR_EQ(x4, x19, 0x4f4d5462ee9fc1b0) 
     
 
@@ -632,7 +632,7 @@ inst_49:
     # aes64dsm x20, x12, x28
     # sd x20, 0(x1)
 inst_50:
-    TEST_RR_OP(aes64dsm, x20, x12, x12, 0x07f7bb3aee9fc1b0, 0x10000000000, 0xfffffffffeffffff, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x20, x12, x28, 0x07f7bb3aee9fc1b0, 0x10000000000, 0xfffffffffeffffff, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x20, 0x07f7bb3aee9fc1b0) 
     
  
@@ -642,7 +642,7 @@ inst_50:
     # aes64dsm x21, x11, x27
     # sd x21, 8(x1)
 inst_51:
-    TEST_RR_OP(aes64dsm, x21, x11, x11, 0x9fc1b0ee485b4b4e, 0x20000000000, 0xffffffffff7fffff, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x21, x11, x27, 0x9fc1b0ee485b4b4e, 0x20000000000, 0xffffffffff7fffff, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x21, 0x9fc1b0ee485b4b4e) 
     
  
@@ -652,7 +652,7 @@ inst_51:
     # aes64dsm x22, x10, x26
     # sd x22, 16(x1)
 inst_52:
-    TEST_RR_OP(aes64dsm, x22, x10, x10, 0x9fc1b0ee43a0650f, 0x40000000000, 0xffffffffffbfffff, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x22, x10, x26, 0x9fc1b0ee43a0650f, 0x40000000000, 0xffffffffffbfffff, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x22, 0x9fc1b0ee43a0650f) 
     
  
@@ -662,7 +662,7 @@ inst_52:
     # aes64dsm x23, x9, x25
     # sd x23, 24(x1)
 inst_53:
-    TEST_RR_OP(aes64dsm, x23, x9, x9, 0x9fc1b0ee802290a0, 0x80000000000, 0xffffffffffdfffff, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x23, x9, x25, 0x9fc1b0ee802290a0, 0x80000000000, 0xffffffffffdfffff, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x23, 0x9fc1b0ee802290a0) 
     
  
@@ -672,7 +672,7 @@ inst_53:
     # aes64dsm x24, x8, x24
     # sd x24, 32(x1)
 inst_54:
-    TEST_RR_OP(aes64dsm, x24, x8, x8, 0x9fc1b0ee1237053c, 0x100000000000, 0xffffffffffefffff, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x24, x8, x24, 0x9fc1b0ee1237053c, 0x100000000000, 0xffffffffffefffff, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x24, 0x9fc1b0ee1237053c) 
     
 
@@ -690,7 +690,7 @@ inst_54:
     # aes64dsm x25, x7, x23
     # sd x25, 0(x1)
 inst_55:
-    TEST_RR_OP(aes64dsm, x25, x7, x7, 0x9fc1b0ee5bb0c272, 0x200000000000, 0xfffffffffff7ffff, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x25, x7, x23, 0x9fc1b0ee5bb0c272, 0x200000000000, 0xfffffffffff7ffff, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x25, 0x9fc1b0ee5bb0c272) 
     
  
@@ -700,7 +700,7 @@ inst_55:
     # aes64dsm x26, x6, x22
     # sd x26, 8(x1)
 inst_56:
-    TEST_RR_OP(aes64dsm, x26, x6, x6, 0x9fc1b0ee002b1326, 0x400000000000, 0xfffffffffffbffff, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x26, x6, x22, 0x9fc1b0ee002b1326, 0x400000000000, 0xfffffffffffbffff, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x26, 0x9fc1b0ee002b1326) 
     
  
@@ -710,7 +710,7 @@ inst_56:
     # aes64dsm x27, x5, x21
     # sd x27, 16(x1)
 inst_57:
-    TEST_RR_OP(aes64dsm, x27, x5, x5, 0x9fc1b0ee649af351, 0x800000000000, 0xfffffffffffdffff, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x27, x5, x21, 0x9fc1b0ee649af351, 0x800000000000, 0xfffffffffffdffff, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x27, 0x9fc1b0ee649af351) 
     
  
@@ -720,7 +720,7 @@ inst_57:
     # aes64dsm x28, x4, x20
     # sd x28, 24(x1)
 inst_58:
-    TEST_RR_OP(aes64dsm, x28, x4, x4, 0x9fc1b0ee3a07f7bb, 0x1000000000000, 0xfffffffffffeffff, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x28, x4, x20, 0x9fc1b0ee3a07f7bb, 0x1000000000000, 0xfffffffffffeffff, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x28, 0x9fc1b0ee3a07f7bb) 
     
  
@@ -730,7 +730,7 @@ inst_58:
     # aes64dsm x29, x3, x19
     # sd x29, 32(x1)
 inst_59:
-    TEST_RR_OP(aes64dsm, x29, x3, x3, 0x9fc1b0eeee9fc1b0, 0x2000000000000, 0xffffffffffff7fff, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x29, x3, x19, 0x9fc1b0eeee9fc1b0, 0x2000000000000, 0xffffffffffff7fff, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x29, 0x9fc1b0eeee9fc1b0) 
     
 
@@ -748,7 +748,7 @@ inst_59:
     # aes64dsm x30, x2, x18
     # sd x30, 0(x4)
 inst_60:
-    TEST_RR_OP(aes64dsm, x30, x2, x2, 0x9fc1b0eeee9fc1b0, 0x4000000000000, 0xffffffffffffbfff, x4, 0, x5)
+    TEST_RR_OP(aes64dsm, x30, x2, x18, 0x9fc1b0eeee9fc1b0, 0x4000000000000, 0xffffffffffffbfff, x4, 0, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x30, 0x9fc1b0eeee9fc1b0) 
     
  
@@ -758,7 +758,7 @@ inst_60:
     # aes64dsm x31, x1, x17
     # sd x31, 8(x4)
 inst_61:
-    TEST_RR_OP(aes64dsm, x31, x1, x1, 0x9fc1b0eeee9fc1b0, 0x8000000000000, 0xffffffffffffdfff, x4, 8, x5)
+    TEST_RR_OP(aes64dsm, x31, x1, x17, 0x9fc1b0eeee9fc1b0, 0x8000000000000, 0xffffffffffffdfff, x4, 8, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x31, 0x9fc1b0eeee9fc1b0) 
     
  
@@ -768,7 +768,7 @@ inst_61:
     # aes64dsm x1, x31, x16
     # sd x1, 16(x4)
 inst_62:
-    TEST_RR_OP(aes64dsm, x1, x31, x31, 0x9fc1b0eeee9fc1b0, 0x10000000000000, 0xffffffffffffefff, x4, 16, x5)
+    TEST_RR_OP(aes64dsm, x1, x31, x16, 0x9fc1b0eeee9fc1b0, 0x10000000000000, 0xffffffffffffefff, x4, 16, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x1, 0x9fc1b0eeee9fc1b0) 
     
  
@@ -778,7 +778,7 @@ inst_62:
     # aes64dsm x2, x30, x15
     # sd x2, 24(x4)
 inst_63:
-    TEST_RR_OP(aes64dsm, x2, x30, x30, 0x9fc1b0eeee9fc1b0, 0x20000000000000, 0xfffffffffffff7ff, x4, 24, x5)
+    TEST_RR_OP(aes64dsm, x2, x30, x15, 0x9fc1b0eeee9fc1b0, 0x20000000000000, 0xfffffffffffff7ff, x4, 24, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x2, 0x9fc1b0eeee9fc1b0) 
     
  
@@ -788,7 +788,7 @@ inst_63:
     # aes64dsm x3, x29, x14
     # sd x3, 32(x4)
 inst_64:
-    TEST_RR_OP(aes64dsm, x3, x29, x29, 0x9fc1b0eeee9fc1b0, 0x40000000000000, 0xfffffffffffffbff, x4, 32, x5)
+    TEST_RR_OP(aes64dsm, x3, x29, x14, 0x9fc1b0eeee9fc1b0, 0x40000000000000, 0xfffffffffffffbff, x4, 32, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x3, 0x9fc1b0eeee9fc1b0) 
     
 
@@ -806,7 +806,7 @@ inst_64:
     # aes64dsm x4, x28, x13
     # sd x4, 0(x1)
 inst_65:
-    TEST_RR_OP(aes64dsm, x4, x28, x28, 0x9fc1b0eeee9fc1b0, 0x80000000000000, 0xfffffffffffffdff, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x4, x28, x13, 0x9fc1b0eeee9fc1b0, 0x80000000000000, 0xfffffffffffffdff, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x4, 0x9fc1b0eeee9fc1b0) 
     
  
@@ -816,7 +816,7 @@ inst_65:
     # aes64dsm x5, x27, x12
     # sd x5, 8(x1)
 inst_66:
-    TEST_RR_OP(aes64dsm, x5, x27, x27, 0x9fc1b0eec19c0305, 0x100000000000000, 0xfffffffffffffeff, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x5, x27, x12, 0x9fc1b0eec19c0305, 0x100000000000000, 0xfffffffffffffeff, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x5, 0x9fc1b0eec19c0305) 
     
  
@@ -826,7 +826,7 @@ inst_66:
     # aes64dsm x6, x26, x11
     # sd x6, 16(x1)
 inst_67:
-    TEST_RR_OP(aes64dsm, x6, x26, x26, 0x9fc1b0eea50cc253, 0x200000000000000, 0xffffffffffffff7f, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x6, x26, x11, 0x9fc1b0eea50cc253, 0x200000000000000, 0xffffffffffffff7f, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x6, 0x9fc1b0eea50cc253) 
     
  
@@ -836,7 +836,7 @@ inst_67:
     # aes64dsm x7, x25, x10
     # sd x7, 24(x1)
 inst_68:
-    TEST_RR_OP(aes64dsm, x7, x25, x25, 0x9fc1b0ee84040def, 0x400000000000000, 0xffffffffffffffbf, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x7, x25, x10, 0x9fc1b0ee84040def, 0x400000000000000, 0xffffffffffffffbf, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x7, 0x9fc1b0ee84040def) 
     
  
@@ -846,7 +846,7 @@ inst_68:
     # aes64dsm x8, x24, x9
     # sd x8, 32(x1)
 inst_69:
-    TEST_RR_OP(aes64dsm, x8, x24, x24, 0x9fc1b0ee9f9a9c74, 0x800000000000000, 0xffffffffffffffdf, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x8, x24, x9, 0x9fc1b0ee9f9a9c74, 0x800000000000000, 0xffffffffffffffdf, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x8, 0x9fc1b0ee9f9a9c74) 
     
 
@@ -864,7 +864,7 @@ inst_69:
     # aes64dsm x9, x23, x8
     # sd x9, 0(x1)
 inst_70:
-    TEST_RR_OP(aes64dsm, x9, x23, x23, 0x9fc1b0ee61863cf5, 0x1000000000000000, 0xffffffffffffffef, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x9, x23, x8, 0x9fc1b0ee61863cf5, 0x1000000000000000, 0xffffffffffffffef, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x9, 0x9fc1b0ee61863cf5) 
     
  
@@ -874,7 +874,7 @@ inst_70:
     # aes64dsm x10, x22, x7
     # sd x10, 8(x1)
 inst_71:
-    TEST_RR_OP(aes64dsm, x10, x22, x22, 0x9fc1b0eecaa5ef86, 0x2000000000000000, 0xfffffffffffffff7, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x10, x22, x7, 0x9fc1b0eecaa5ef86, 0x2000000000000000, 0xfffffffffffffff7, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x10, 0x9fc1b0eecaa5ef86) 
     
  
@@ -884,7 +884,7 @@ inst_71:
     # aes64dsm x11, x21, x6
     # sd x11, 16(x1)
 inst_72:
-    TEST_RR_OP(aes64dsm, x11, x21, x21, 0x9fc1b0ee35e47a8b, 0x4000000000000000, 0xfffffffffffffffb, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x11, x21, x6, 0x9fc1b0ee35e47a8b, 0x4000000000000000, 0xfffffffffffffffb, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x11, 0x9fc1b0ee35e47a8b) 
     
  
@@ -894,7 +894,7 @@ inst_72:
     # aes64dsm x12, x20, x5
     # sd x12, 24(x1)
 inst_73:
-    TEST_RR_OP(aes64dsm, x12, x20, x20, 0x9fc1b0eee84a7fb5, 0x8000000000000000, 0xfffffffffffffffd, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x12, x20, x5, 0x9fc1b0eee84a7fb5, 0x8000000000000000, 0xfffffffffffffffd, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x12, 0x9fc1b0eee84a7fb5) 
     
  
@@ -904,7 +904,7 @@ inst_73:
     # aes64dsm x13, x19, x4
     # sd x13, 32(x1)
 inst_74:
-    TEST_RR_OP(aes64dsm, x13, x19, x19, 0x9fc1b0eeee9fc1b0, 0x0, 0xfffffffffffffffe, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x13, x19, x4, 0x9fc1b0eeee9fc1b0, 0x0, 0xfffffffffffffffe, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x13, 0x9fc1b0eeee9fc1b0) 
     
 
@@ -922,7 +922,7 @@ inst_74:
     # aes64dsm x14, x18, x3
     # sd x14, 0(x4)
 inst_75:
-    TEST_RR_OP(aes64dsm, x14, x18, x18, 0xb0ee9fc1f7bb3a07, 0xfffffffffffffffe, 0x0, x4, 0, x5)
+    TEST_RR_OP(aes64dsm, x14, x18, x3, 0xb0ee9fc1f7bb3a07, 0xfffffffffffffffe, 0x0, x4, 0, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x14, 0xb0ee9fc1f7bb3a07) 
     
  
@@ -932,7 +932,7 @@ inst_75:
     # aes64dsm x15, x17, x2
     # sd x15, 8(x4)
 inst_76:
-    TEST_RR_OP(aes64dsm, x15, x17, x17, 0xb0ee9fc1f351649a, 0xfffffffffffffffd, 0x8000000000000000, x4, 8, x5)
+    TEST_RR_OP(aes64dsm, x15, x17, x2, 0xb0ee9fc1f351649a, 0xfffffffffffffffd, 0x8000000000000000, x4, 8, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x15, 0xb0ee9fc1f351649a) 
     
  
@@ -942,7 +942,7 @@ inst_76:
     # aes64dsm x16, x16, x1
     # sd x16, 16(x4)
 inst_77:
-    TEST_RR_OP(aes64dsm, x16, x16, x16, 0xb0ee9fc11326002b, 0xfffffffffffffffb, 0x4000000000000000, x4, 16, x5)
+    TEST_RR_OP(aes64dsm, x16, x16, x1, 0xb0ee9fc11326002b, 0xfffffffffffffffb, 0x4000000000000000, x4, 16, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x16, 0xb0ee9fc11326002b) 
     
  
@@ -952,7 +952,7 @@ inst_77:
     # aes64dsm x17, x15, x31
     # sd x17, 24(x4)
 inst_78:
-    TEST_RR_OP(aes64dsm, x17, x15, x15, 0xb0ee9fc1c2725bb0, 0xfffffffffffffff7, 0x2000000000000000, x4, 24, x5)
+    TEST_RR_OP(aes64dsm, x17, x15, x31, 0xb0ee9fc1c2725bb0, 0xfffffffffffffff7, 0x2000000000000000, x4, 24, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x17, 0xb0ee9fc1c2725bb0) 
     
  
@@ -962,7 +962,7 @@ inst_78:
     # aes64dsm x18, x14, x30
     # sd x18, 32(x4)
 inst_79:
-    TEST_RR_OP(aes64dsm, x18, x14, x14, 0xb0ee9fc1053c1237, 0xffffffffffffffef, 0x1000000000000000, x4, 32, x5)
+    TEST_RR_OP(aes64dsm, x18, x14, x30, 0xb0ee9fc1053c1237, 0xffffffffffffffef, 0x1000000000000000, x4, 32, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x18, 0xb0ee9fc1053c1237) 
     
 
@@ -980,7 +980,7 @@ inst_79:
     # aes64dsm x19, x13, x29
     # sd x19, 0(x1)
 inst_80:
-    TEST_RR_OP(aes64dsm, x19, x13, x13, 0xb0ee9fc190a08022, 0xffffffffffffffdf, 0x800000000000000, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x19, x13, x29, 0xb0ee9fc190a08022, 0xffffffffffffffdf, 0x800000000000000, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x19, 0xb0ee9fc190a08022) 
     
  
@@ -990,7 +990,7 @@ inst_80:
     # aes64dsm x20, x12, x28
     # sd x20, 8(x1)
 inst_81:
-    TEST_RR_OP(aes64dsm, x20, x12, x12, 0xb0ee9fc1650f43a0, 0xffffffffffffffbf, 0x400000000000000, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x20, x12, x28, 0xb0ee9fc1650f43a0, 0xffffffffffffffbf, 0x400000000000000, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x20, 0xb0ee9fc1650f43a0) 
     
  
@@ -1000,7 +1000,7 @@ inst_81:
     # aes64dsm x21, x11, x27
     # sd x21, 16(x1)
 inst_82:
-    TEST_RR_OP(aes64dsm, x21, x11, x11, 0xb0ee9fc14b4e485b, 0xffffffffffffff7f, 0x200000000000000, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x21, x11, x27, 0xb0ee9fc14b4e485b, 0xffffffffffffff7f, 0x200000000000000, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x21, 0xb0ee9fc14b4e485b) 
     
  
@@ -1010,7 +1010,7 @@ inst_82:
     # aes64dsm x22, x10, x26
     # sd x22, 24(x1)
 inst_83:
-    TEST_RR_OP(aes64dsm, x22, x10, x10, 0xbb3a07f7c1b0ee9f, 0xfffffffffffffeff, 0x100000000000000, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x22, x10, x26, 0xbb3a07f7c1b0ee9f, 0xfffffffffffffeff, 0x100000000000000, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x22, 0xbb3a07f7c1b0ee9f) 
     
  
@@ -1020,7 +1020,7 @@ inst_83:
     # aes64dsm x23, x9, x25
     # sd x23, 32(x1)
 inst_84:
-    TEST_RR_OP(aes64dsm, x23, x9, x9, 0x54624f4dc1b0ee9f, 0xfffffffffffffdff, 0x80000000000000, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x23, x9, x25, 0x54624f4dc1b0ee9f, 0xfffffffffffffdff, 0x80000000000000, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x23, 0x54624f4dc1b0ee9f) 
     
 
@@ -1038,7 +1038,7 @@ inst_84:
     # aes64dsm x24, x8, x24
     # sd x24, 0(x1)
 inst_85:
-    TEST_RR_OP(aes64dsm, x24, x8, x8, 0x1ddb50a8c1b0ee9f, 0xfffffffffffffbff, 0x40000000000000, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x24, x8, x24, 0x1ddb50a8c1b0ee9f, 0xfffffffffffffbff, 0x40000000000000, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x24, 0x1ddb50a8c1b0ee9f) 
     
  
@@ -1048,7 +1048,7 @@ inst_85:
     # aes64dsm x25, x7, x23
     # sd x25, 8(x1)
 inst_86:
-    TEST_RR_OP(aes64dsm, x25, x7, x7, 0x447f8aecc1b0ee9f, 0xfffffffffffff7ff, 0x20000000000000, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x25, x7, x23, 0x447f8aecc1b0ee9f, 0xfffffffffffff7ff, 0x20000000000000, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x25, 0x447f8aecc1b0ee9f) 
     
  
@@ -1058,7 +1058,7 @@ inst_86:
     # aes64dsm x26, x6, x22
     # sd x26, 16(x1)
 inst_87:
-    TEST_RR_OP(aes64dsm, x26, x6, x6, 0x799d2ef8c1b0ee9f, 0xffffffffffffefff, 0x10000000000000, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x26, x6, x22, 0x799d2ef8c1b0ee9f, 0xffffffffffffefff, 0x10000000000000, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x26, 0x799d2ef8c1b0ee9f) 
     
  
@@ -1068,7 +1068,7 @@ inst_87:
     # aes64dsm x27, x5, x21
     # sd x27, 24(x1)
 inst_88:
-    TEST_RR_OP(aes64dsm, x27, x5, x5, 0x64f127cdc1b0ee9f, 0xffffffffffffdfff, 0x8000000000000, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x27, x5, x21, 0x64f127cdc1b0ee9f, 0xffffffffffffdfff, 0x8000000000000, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x27, 0x64f127cdc1b0ee9f) 
     
  
@@ -1078,7 +1078,7 @@ inst_88:
     # aes64dsm x28, x4, x20
     # sd x28, 32(x1)
 inst_89:
-    TEST_RR_OP(aes64dsm, x28, x4, x4, 0x50293ba9c1b0ee9f, 0xffffffffffffbfff, 0x4000000000000, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x28, x4, x20, 0x50293ba9c1b0ee9f, 0xffffffffffffbfff, 0x4000000000000, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x28, 0x50293ba9c1b0ee9f) 
     
 
@@ -1096,7 +1096,7 @@ inst_89:
     # aes64dsm x29, x3, x19
     # sd x29, 0(x4)
 inst_90:
-    TEST_RR_OP(aes64dsm, x29, x3, x3, 0xad03c848c1b0ee9f, 0xffffffffffff7fff, 0x2000000000000, x4, 0, x5)
+    TEST_RR_OP(aes64dsm, x29, x3, x19, 0xad03c848c1b0ee9f, 0xffffffffffff7fff, 0x2000000000000, x4, 0, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x29, 0xad03c848c1b0ee9f) 
     
  
@@ -1106,7 +1106,7 @@ inst_90:
     # aes64dsm x30, x2, x18
     # sd x30, 8(x4)
 inst_91:
-    TEST_RR_OP(aes64dsm, x30, x2, x2, 0x05c19c03c1b0ee9f, 0xfffffffffffeffff, 0x1000000000000, x4, 8, x5)
+    TEST_RR_OP(aes64dsm, x30, x2, x18, 0x05c19c03c1b0ee9f, 0xfffffffffffeffff, 0x1000000000000, x4, 8, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x30, 0x05c19c03c1b0ee9f) 
     
  
@@ -1116,7 +1116,7 @@ inst_91:
     # aes64dsm x31, x1, x17
     # sd x31, 16(x4)
 inst_92:
-    TEST_RR_OP(aes64dsm, x31, x1, x1, 0xb0ee9fc17fb5e84a, 0xfffffffffffdffff, 0x800000000000, x4, 16, x5)
+    TEST_RR_OP(aes64dsm, x31, x1, x17, 0xb0ee9fc17fb5e84a, 0xfffffffffffdffff, 0x800000000000, x4, 16, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x31, 0xb0ee9fc17fb5e84a) 
     
  
@@ -1126,7 +1126,7 @@ inst_92:
     # aes64dsm x1, x31, x16
     # sd x1, 24(x4)
 inst_93:
-    TEST_RR_OP(aes64dsm, x1, x31, x31, 0xb0ee9fc17a8b35e4, 0xfffffffffffbffff, 0x400000000000, x4, 24, x5)
+    TEST_RR_OP(aes64dsm, x1, x31, x16, 0xb0ee9fc17a8b35e4, 0xfffffffffffbffff, 0x400000000000, x4, 24, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x1, 0xb0ee9fc17a8b35e4) 
     
  
@@ -1136,7 +1136,7 @@ inst_93:
     # aes64dsm x2, x30, x15
     # sd x2, 32(x4)
 inst_94:
-    TEST_RR_OP(aes64dsm, x2, x30, x30, 0xb0ee9fc1ef86caa5, 0xfffffffffff7ffff, 0x200000000000, x4, 32, x5)
+    TEST_RR_OP(aes64dsm, x2, x30, x15, 0xb0ee9fc1ef86caa5, 0xfffffffffff7ffff, 0x200000000000, x4, 32, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x2, 0xb0ee9fc1ef86caa5) 
     
 
@@ -1154,7 +1154,7 @@ inst_94:
     # aes64dsm x3, x29, x14
     # sd x3, 0(x1)
 inst_95:
-    TEST_RR_OP(aes64dsm, x3, x29, x29, 0xb0ee9fc13cf56186, 0xffffffffffefffff, 0x100000000000, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x3, x29, x14, 0xb0ee9fc13cf56186, 0xffffffffffefffff, 0x100000000000, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x3, 0xb0ee9fc13cf56186) 
     
  
@@ -1164,7 +1164,7 @@ inst_95:
     # aes64dsm x4, x28, x13
     # sd x4, 8(x1)
 inst_96:
-    TEST_RR_OP(aes64dsm, x4, x28, x28, 0xb0ee9fc19c749f9a, 0xffffffffffdfffff, 0x80000000000, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x4, x28, x13, 0xb0ee9fc19c749f9a, 0xffffffffffdfffff, 0x80000000000, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x4, 0xb0ee9fc19c749f9a) 
     
  
@@ -1174,7 +1174,7 @@ inst_96:
     # aes64dsm x5, x27, x12
     # sd x5, 16(x1)
 inst_97:
-    TEST_RR_OP(aes64dsm, x5, x27, x27, 0xb0ee9fc10def8404, 0xffffffffffbfffff, 0x40000000000, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x5, x27, x12, 0xb0ee9fc10def8404, 0xffffffffffbfffff, 0x40000000000, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x5, 0xb0ee9fc10def8404) 
     
  
@@ -1184,7 +1184,7 @@ inst_97:
     # aes64dsm x6, x26, x11
     # sd x6, 24(x1)
 inst_98:
-    TEST_RR_OP(aes64dsm, x6, x26, x26, 0xb0ee9fc1c253a50c, 0xffffffffff7fffff, 0x20000000000, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x6, x26, x11, 0xb0ee9fc1c253a50c, 0xffffffffff7fffff, 0x20000000000, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x6, 0xb0ee9fc1c253a50c) 
     
  
@@ -1194,7 +1194,7 @@ inst_98:
     # aes64dsm x7, x25, x10
     # sd x7, 32(x1)
 inst_99:
-    TEST_RR_OP(aes64dsm, x7, x25, x25, 0xb0ee9fc10305c19c, 0xfffffffffeffffff, 0x10000000000, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x7, x25, x10, 0xb0ee9fc10305c19c, 0xfffffffffeffffff, 0x10000000000, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x7, 0xb0ee9fc10305c19c) 
     
 
@@ -1212,7 +1212,7 @@ inst_99:
     # aes64dsm x8, x24, x9
     # sd x8, 0(x1)
 inst_100:
-    TEST_RR_OP(aes64dsm, x8, x24, x24, 0xb0ee9fc1c1b0ee9f, 0xfffffffffdffffff, 0x8000000000, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x8, x24, x9, 0xb0ee9fc1c1b0ee9f, 0xfffffffffdffffff, 0x8000000000, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x8, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -1222,7 +1222,7 @@ inst_100:
     # aes64dsm x9, x23, x8
     # sd x9, 8(x1)
 inst_101:
-    TEST_RR_OP(aes64dsm, x9, x23, x23, 0xb0ee9fc1c1b0ee9f, 0xfffffffffbffffff, 0x4000000000, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x9, x23, x8, 0xb0ee9fc1c1b0ee9f, 0xfffffffffbffffff, 0x4000000000, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x9, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -1232,7 +1232,7 @@ inst_101:
     # aes64dsm x10, x22, x7
     # sd x10, 16(x1)
 inst_102:
-    TEST_RR_OP(aes64dsm, x10, x22, x22, 0xb0ee9fc1c1b0ee9f, 0xfffffffff7ffffff, 0x2000000000, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x10, x22, x7, 0xb0ee9fc1c1b0ee9f, 0xfffffffff7ffffff, 0x2000000000, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x10, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -1242,7 +1242,7 @@ inst_102:
     # aes64dsm x11, x21, x6
     # sd x11, 24(x1)
 inst_103:
-    TEST_RR_OP(aes64dsm, x11, x21, x21, 0xb0ee9fc1c1b0ee9f, 0xffffffffefffffff, 0x1000000000, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x11, x21, x6, 0xb0ee9fc1c1b0ee9f, 0xffffffffefffffff, 0x1000000000, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x11, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -1252,7 +1252,7 @@ inst_103:
     # aes64dsm x12, x20, x5
     # sd x12, 32(x1)
 inst_104:
-    TEST_RR_OP(aes64dsm, x12, x20, x20, 0xb0ee9fc1c1b0ee9f, 0xffffffffdfffffff, 0x800000000, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x12, x20, x5, 0xb0ee9fc1c1b0ee9f, 0xffffffffdfffffff, 0x800000000, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x12, 0xb0ee9fc1c1b0ee9f) 
     
 
@@ -1270,7 +1270,7 @@ inst_104:
     # aes64dsm x13, x19, x4
     # sd x13, 0(x5)
 inst_105:
-    TEST_RR_OP(aes64dsm, x13, x19, x19, 0xb0ee9fc1c1b0ee9f, 0xffffffffbfffffff, 0x400000000, x5, 0, x6)
+    TEST_RR_OP(aes64dsm, x13, x19, x4, 0xb0ee9fc1c1b0ee9f, 0xffffffffbfffffff, 0x400000000, x5, 0, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x13, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -1280,7 +1280,7 @@ inst_105:
     # aes64dsm x14, x18, x3
     # sd x14, 8(x5)
 inst_106:
-    TEST_RR_OP(aes64dsm, x14, x18, x18, 0xb0ee9fc1c1b0ee9f, 0xffffffff7fffffff, 0x200000000, x5, 8, x6)
+    TEST_RR_OP(aes64dsm, x14, x18, x3, 0xb0ee9fc1c1b0ee9f, 0xffffffff7fffffff, 0x200000000, x5, 8, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x14, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -1290,7 +1290,7 @@ inst_106:
     # aes64dsm x15, x17, x2
     # sd x15, 16(x5)
 inst_107:
-    TEST_RR_OP(aes64dsm, x15, x17, x17, 0x86e54b59c1b0ee9f, 0xfffffffeffffffff, 0x100000000, x5, 16, x6)
+    TEST_RR_OP(aes64dsm, x15, x17, x2, 0x86e54b59c1b0ee9f, 0xfffffffeffffffff, 0x100000000, x5, 16, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x15, 0x86e54b59c1b0ee9f) 
     
  
@@ -1300,7 +1300,7 @@ inst_107:
     # aes64dsm x16, x16, x1
     # sd x16, 24(x5)
 inst_108:
-    TEST_RR_OP(aes64dsm, x16, x16, x16, 0x84daabc1c1b0ee9f, 0xfffffffdffffffff, 0x80000000, x5, 24, x6)
+    TEST_RR_OP(aes64dsm, x16, x16, x1, 0x84daabc1c1b0ee9f, 0xfffffffdffffffff, 0x80000000, x5, 24, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x16, 0x84daabc1c1b0ee9f) 
     
  
@@ -1310,7 +1310,7 @@ inst_108:
     # aes64dsm x17, x15, x31
     # sd x17, 32(x5)
 inst_109:
-    TEST_RR_OP(aes64dsm, x17, x15, x15, 0xb903ca4ec1b0ee9f, 0xfffffffbffffffff, 0x40000000, x5, 32, x6)
+    TEST_RR_OP(aes64dsm, x17, x15, x31, 0xb903ca4ec1b0ee9f, 0xfffffffbffffffff, 0x40000000, x5, 32, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x17, 0xb903ca4ec1b0ee9f) 
     
 
@@ -1328,7 +1328,7 @@ inst_109:
     # aes64dsm x18, x14, x30
     # sd x18, 0(x1)
 inst_110:
-    TEST_RR_OP(aes64dsm, x18, x14, x14, 0x971604d8c1b0ee9f, 0xfffffff7ffffffff, 0x20000000, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x18, x14, x30, 0x971604d8c1b0ee9f, 0xfffffff7ffffffff, 0x20000000, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x18, 0x971604d8c1b0ee9f) 
     
  
@@ -1338,7 +1338,7 @@ inst_110:
     # aes64dsm x19, x13, x29
     # sd x19, 8(x1)
 inst_111:
-    TEST_RR_OP(aes64dsm, x19, x13, x13, 0xfb7b9e2cc1b0ee9f, 0xffffffefffffffff, 0x10000000, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x19, x13, x29, 0xfb7b9e2cc1b0ee9f, 0xffffffefffffffff, 0x10000000, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x19, 0xfb7b9e2cc1b0ee9f) 
     
  
@@ -1348,7 +1348,7 @@ inst_111:
     # aes64dsm x20, x12, x28
     # sd x20, 16(x1)
 inst_112:
-    TEST_RR_OP(aes64dsm, x20, x12, x12, 0x90fbacb8c1b0ee9f, 0xffffffdfffffffff, 0x8000000, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x20, x12, x28, 0x90fbacb8c1b0ee9f, 0xffffffdfffffffff, 0x8000000, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x20, 0x90fbacb8c1b0ee9f) 
     
  
@@ -1358,7 +1358,7 @@ inst_112:
     # aes64dsm x21, x11, x27
     # sd x21, 24(x1)
 inst_113:
-    TEST_RR_OP(aes64dsm, x21, x11, x11, 0x7ecafea1c1b0ee9f, 0xffffffbfffffffff, 0x4000000, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x21, x11, x27, 0x7ecafea1c1b0ee9f, 0xffffffbfffffffff, 0x4000000, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x21, 0x7ecafea1c1b0ee9f) 
     
  
@@ -1368,7 +1368,7 @@ inst_113:
     # aes64dsm x22, x10, x26
     # sd x22, 32(x1)
 inst_114:
-    TEST_RR_OP(aes64dsm, x22, x10, x10, 0x71833ae6c1b0ee9f, 0xffffff7fffffffff, 0x2000000, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x22, x10, x26, 0x71833ae6c1b0ee9f, 0xffffff7fffffffff, 0x2000000, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x22, 0x71833ae6c1b0ee9f) 
     
 
@@ -1386,7 +1386,7 @@ inst_114:
     # aes64dsm x23, x9, x25
     # sd x23, 0(x1)
 inst_115:
-    TEST_RR_OP(aes64dsm, x23, x9, x9, 0x9fed5d74c1b0ee9f, 0xfffffeffffffffff, 0x1000000, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x23, x9, x25, 0x9fed5d74c1b0ee9f, 0xfffffeffffffffff, 0x1000000, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x23, 0x9fed5d74c1b0ee9f) 
     
  
@@ -1396,7 +1396,7 @@ inst_115:
     # aes64dsm x24, x8, x24
     # sd x24, 8(x1)
 inst_116:
-    TEST_RR_OP(aes64dsm, x24, x8, x8, 0xb0ee9fc1c4b63b21, 0xfffffdffffffffff, 0x800000, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x24, x8, x24, 0xb0ee9fc1c4b63b21, 0xfffffdffffffffff, 0x800000, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x24, 0xb0ee9fc1c4b63b21) 
     
  
@@ -1406,7 +1406,7 @@ inst_116:
     # aes64dsm x25, x7, x23
     # sd x25, 16(x1)
 inst_117:
-    TEST_RR_OP(aes64dsm, x25, x7, x7, 0xb0ee9fc1fa6b9524, 0xfffffbffffffffff, 0x400000, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x25, x7, x23, 0xb0ee9fc1fa6b9524, 0xfffffbffffffffff, 0x400000, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x25, 0xb0ee9fc1fa6b9524) 
     
  
@@ -1416,7 +1416,7 @@ inst_117:
     # aes64dsm x26, x6, x22
     # sd x26, 24(x1)
 inst_118:
-    TEST_RR_OP(aes64dsm, x26, x6, x6, 0xb0ee9fc1f794d4b1, 0xfffff7ffffffffff, 0x200000, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x26, x6, x22, 0xb0ee9fc1f794d4b1, 0xfffff7ffffffffff, 0x200000, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x26, 0xb0ee9fc1f794d4b1) 
     
  
@@ -1426,7 +1426,7 @@ inst_118:
     # aes64dsm x27, x5, x21
     # sd x27, 32(x1)
 inst_119:
-    TEST_RR_OP(aes64dsm, x27, x5, x5, 0xb0ee9fc1843ff762, 0xffffefffffffffff, 0x100000, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x27, x5, x21, 0xb0ee9fc1843ff762, 0xffffefffffffffff, 0x100000, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x27, 0xb0ee9fc1843ff762) 
     
 
@@ -1444,7 +1444,7 @@ inst_119:
     # aes64dsm x28, x4, x20
     # sd x28, 0(x5)
 inst_120:
-    TEST_RR_OP(aes64dsm, x28, x4, x4, 0xb0ee9fc105c1ebc2, 0xffffdfffffffffff, 0x80000, x5, 0, x6)
+    TEST_RR_OP(aes64dsm, x28, x4, x20, 0xb0ee9fc105c1ebc2, 0xffffdfffffffffff, 0x80000, x5, 0, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x28, 0xb0ee9fc105c1ebc2) 
     
  
@@ -1454,7 +1454,7 @@ inst_120:
     # aes64dsm x29, x3, x19
     # sd x29, 8(x5)
 inst_121:
-    TEST_RR_OP(aes64dsm, x29, x3, x3, 0xb0ee9fc19eda7553, 0xffffbfffffffffff, 0x40000, x5, 8, x6)
+    TEST_RR_OP(aes64dsm, x29, x3, x19, 0xb0ee9fc19eda7553, 0xffffbfffffffffff, 0x40000, x5, 8, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x29, 0xb0ee9fc19eda7553) 
     
  
@@ -1464,7 +1464,7 @@ inst_121:
     # aes64dsm x30, x2, x18
     # sd x30, 16(x5)
 inst_122:
-    TEST_RR_OP(aes64dsm, x30, x2, x2, 0xb0ee9fc122fb7d9c, 0xffff7fffffffffff, 0x20000, x5, 16, x6)
+    TEST_RR_OP(aes64dsm, x30, x2, x18, 0xb0ee9fc122fb7d9c, 0xffff7fffffffffff, 0x20000, x5, 16, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x30, 0xb0ee9fc122fb7d9c) 
     
  
@@ -1474,7 +1474,7 @@ inst_122:
     # aes64dsm x31, x1, x17
     # sd x31, 24(x5)
 inst_123:
-    TEST_RR_OP(aes64dsm, x31, x1, x1, 0xb0ee9fc1749fed5d, 0xfffeffffffffffff, 0x10000, x5, 24, x6)
+    TEST_RR_OP(aes64dsm, x31, x1, x17, 0xb0ee9fc1749fed5d, 0xfffeffffffffffff, 0x10000, x5, 24, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x31, 0xb0ee9fc1749fed5d) 
     
  
@@ -1484,7 +1484,7 @@ inst_123:
     # aes64dsm x1, x31, x16
     # sd x1, 32(x5)
 inst_124:
-    TEST_RR_OP(aes64dsm, x1, x31, x31, 0xb0ee9fc1c1b0ee9f, 0xfffdffffffffffff, 0x8000, x5, 32, x6)
+    TEST_RR_OP(aes64dsm, x1, x31, x16, 0xb0ee9fc1c1b0ee9f, 0xfffdffffffffffff, 0x8000, x5, 32, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x1, 0xb0ee9fc1c1b0ee9f) 
     
 
@@ -1502,7 +1502,7 @@ inst_124:
     # aes64dsm x2, x30, x15
     # sd x2, 0(x1)
 inst_125:
-    TEST_RR_OP(aes64dsm, x2, x30, x30, 0xb0ee9fc1c1b0ee9f, 0xfffbffffffffffff, 0x4000, x1, 0, x7)
+    TEST_RR_OP(aes64dsm, x2, x30, x15, 0xb0ee9fc1c1b0ee9f, 0xfffbffffffffffff, 0x4000, x1, 0, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x2, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -1512,7 +1512,7 @@ inst_125:
     # aes64dsm x3, x29, x14
     # sd x3, 8(x1)
 inst_126:
-    TEST_RR_OP(aes64dsm, x3, x29, x29, 0xb0ee9fc1c1b0ee9f, 0xfff7ffffffffffff, 0x2000, x1, 8, x7)
+    TEST_RR_OP(aes64dsm, x3, x29, x14, 0xb0ee9fc1c1b0ee9f, 0xfff7ffffffffffff, 0x2000, x1, 8, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x3, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -1522,7 +1522,7 @@ inst_126:
     # aes64dsm x4, x28, x13
     # sd x4, 16(x1)
 inst_127:
-    TEST_RR_OP(aes64dsm, x4, x28, x28, 0xb0ee9fc1c1b0ee9f, 0xffefffffffffffff, 0x1000, x1, 16, x7)
+    TEST_RR_OP(aes64dsm, x4, x28, x13, 0xb0ee9fc1c1b0ee9f, 0xffefffffffffffff, 0x1000, x1, 16, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x4, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -1532,7 +1532,7 @@ inst_127:
     # aes64dsm x5, x27, x12
     # sd x5, 24(x1)
 inst_128:
-    TEST_RR_OP(aes64dsm, x5, x27, x27, 0xb0ee9fc1c1b0ee9f, 0xffdfffffffffffff, 0x800, x1, 24, x7)
+    TEST_RR_OP(aes64dsm, x5, x27, x12, 0xb0ee9fc1c1b0ee9f, 0xffdfffffffffffff, 0x800, x1, 24, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x5, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -1542,7 +1542,7 @@ inst_128:
     # aes64dsm x6, x26, x11
     # sd x6, 32(x1)
 inst_129:
-    TEST_RR_OP(aes64dsm, x6, x26, x26, 0xb0ee9fc1c1b0ee9f, 0xffbfffffffffffff, 0x400, x1, 32, x7)
+    TEST_RR_OP(aes64dsm, x6, x26, x11, 0xb0ee9fc1c1b0ee9f, 0xffbfffffffffffff, 0x400, x1, 32, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x6, 0xb0ee9fc1c1b0ee9f) 
     
 
@@ -1560,7 +1560,7 @@ inst_129:
     # aes64dsm x7, x25, x10
     # sd x7, 0(x1)
 inst_130:
-    TEST_RR_OP(aes64dsm, x7, x25, x25, 0xb0ee9fc1c1b0ee9f, 0xff7fffffffffffff, 0x200, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x7, x25, x10, 0xb0ee9fc1c1b0ee9f, 0xff7fffffffffffff, 0x200, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x7, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -1570,7 +1570,7 @@ inst_130:
     # aes64dsm x8, x24, x9
     # sd x8, 8(x1)
 inst_131:
-    TEST_RR_OP(aes64dsm, x8, x24, x24, 0xb0ee9fc15986e54b, 0xfeffffffffffffff, 0x100, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x8, x24, x9, 0xb0ee9fc15986e54b, 0xfeffffffffffffff, 0x100, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x8, 0xb0ee9fc15986e54b) 
     
  
@@ -1580,7 +1580,7 @@ inst_131:
     # aes64dsm x9, x23, x8
     # sd x9, 16(x1)
 inst_132:
-    TEST_RR_OP(aes64dsm, x9, x23, x23, 0xb0ee9fc1c4820f15, 0xfdffffffffffffff, 0x80, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x9, x23, x8, 0xb0ee9fc1c4820f15, 0xfdffffffffffffff, 0x80, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x9, 0xb0ee9fc1c4820f15) 
     
  
@@ -1590,7 +1590,7 @@ inst_132:
     # aes64dsm x10, x22, x7
     # sd x10, 24(x1)
 inst_133:
-    TEST_RR_OP(aes64dsm, x10, x22, x22, 0xb0ee9fc175627871, 0xfbffffffffffffff, 0x40, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x10, x22, x7, 0xb0ee9fc175627871, 0xfbffffffffffffff, 0x40, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x10, 0xb0ee9fc175627871) 
     
  
@@ -1600,7 +1600,7 @@ inst_133:
     # aes64dsm x11, x21, x6
     # sd x11, 32(x1)
 inst_134:
-    TEST_RR_OP(aes64dsm, x11, x21, x21, 0xb0ee9fc1eeb32c2a, 0xf7ffffffffffffff, 0x20, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x11, x21, x6, 0xb0ee9fc1eeb32c2a, 0xf7ffffffffffffff, 0x20, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x11, 0xb0ee9fc1eeb32c2a) 
     
 
@@ -1618,7 +1618,7 @@ inst_134:
     # aes64dsm x12, x20, x5
     # sd x12, 0(x6)
 inst_135:
-    TEST_RR_OP(aes64dsm, x12, x20, x20, 0xb0ee9fc169746263, 0xefffffffffffffff, 0x10, x6, 0, x7)
+    TEST_RR_OP(aes64dsm, x12, x20, x5, 0xb0ee9fc169746263, 0xefffffffffffffff, 0x10, x6, 0, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x12, 0xb0ee9fc169746263) 
     
  
@@ -1628,7 +1628,7 @@ inst_135:
     # aes64dsm x13, x19, x4
     # sd x13, 8(x6)
 inst_136:
-    TEST_RR_OP(aes64dsm, x13, x19, x19, 0xb0ee9fc17ce1fef1, 0xdfffffffffffffff, 0x8, x6, 8, x7)
+    TEST_RR_OP(aes64dsm, x13, x19, x4, 0xb0ee9fc17ce1fef1, 0xdfffffffffffffff, 0x8, x6, 8, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x13, 0xb0ee9fc17ce1fef1) 
     
  
@@ -1638,7 +1638,7 @@ inst_136:
     # aes64dsm x14, x18, x3
     # sd x14, 16(x6)
 inst_137:
-    TEST_RR_OP(aes64dsm, x14, x18, x18, 0xb0ee9fc1fe145132, 0xbfffffffffffffff, 0x4, x6, 16, x7)
+    TEST_RR_OP(aes64dsm, x14, x18, x3, 0xb0ee9fc1fe145132, 0xbfffffffffffffff, 0x4, x6, 16, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x14, 0xb0ee9fc1fe145132) 
     
  
@@ -1648,7 +1648,7 @@ inst_137:
     # aes64dsm x15, x17, x2
     # sd x15, 24(x6)
 inst_138:
-    TEST_RR_OP(aes64dsm, x15, x17, x17, 0xb0ee9fc1053a1039, 0x7fffffffffffffff, 0x2, x6, 24, x7)
+    TEST_RR_OP(aes64dsm, x15, x17, x2, 0xb0ee9fc1053a1039, 0x7fffffffffffffff, 0x2, x6, 24, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x15, 0xb0ee9fc1053a1039) 
     
  
@@ -1658,7 +1658,7 @@ inst_138:
     # aes64dsm x16, x16, x1
     # sd x16, 32(x6)
 inst_139:
-    TEST_RR_OP(aes64dsm, x16, x16, x16, 0xb0ee9fc1c1b0ee9f, 0xffffffffffffffff, 0x1, x6, 32, x7)
+    TEST_RR_OP(aes64dsm, x16, x16, x1, 0xb0ee9fc1c1b0ee9f, 0xffffffffffffffff, 0x1, x6, 32, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x16, 0xb0ee9fc1c1b0ee9f) 
     
 
@@ -1676,7 +1676,7 @@ inst_139:
     # aes64dsm x17, x15, x31
     # sd x17, 0(x1)
 inst_140:
-    TEST_RR_OP(aes64dsm, x17, x15, x15, 0x525252525190e77d, 0x1, 0x0, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x17, x15, x31, 0x525252525190e77d, 0x1, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x17, 0x525252525190e77d) 
     
  
@@ -1686,7 +1686,7 @@ inst_140:
     # aes64dsm x18, x14, x30
     # sd x18, 8(x1)
 inst_141:
-    TEST_RR_OP(aes64dsm, x18, x14, x14, 0x52525252c151b119, 0x2, 0x0, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x18, x14, x30, 0x52525252c151b119, 0x2, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x18, 0x52525252c151b119) 
     
  
@@ -1696,7 +1696,7 @@ inst_141:
     # aes64dsm x19, x13, x29
     # sd x19, 16(x1)
 inst_142:
-    TEST_RR_OP(aes64dsm, x19, x13, x13, 0x52525252c99e0d38, 0x4, 0x0, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x19, x13, x29, 0x52525252c99e0d38, 0x4, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x19, 0x52525252c99e0d38) 
     
  
@@ -1706,7 +1706,7 @@ inst_142:
     # aes64dsm x20, x12, x28
     # sd x20, 24(x1)
 inst_143:
-    TEST_RR_OP(aes64dsm, x20, x12, x12, 0x52525252570f9623, 0x8, 0x0, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x20, x12, x28, 0x52525252570f9623, 0x8, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x20, 0x52525252570f9623) 
     
  
@@ -1716,7 +1716,7 @@ inst_143:
     # aes64dsm x21, x11, x27
     # sd x21, 32(x1)
 inst_144:
-    TEST_RR_OP(aes64dsm, x21, x11, x11, 0x525252524baf17dd, 0x10, 0x0, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x21, x11, x27, 0x525252524baf17dd, 0x10, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x21, 0x525252524baf17dd) 
     
 
@@ -1734,7 +1734,7 @@ inst_144:
     # aes64dsm x22, x10, x26
     # sd x22, 0(x1)
 inst_145:
-    TEST_RR_OP(aes64dsm, x22, x10, x10, 0x52525252687c6476, 0x20, 0x0, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x22, x10, x26, 0x52525252687c6476, 0x20, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x22, 0x52525252687c6476) 
     
  
@@ -1744,7 +1744,7 @@ inst_145:
     # aes64dsm x23, x9, x25
     # sd x23, 8(x1)
 inst_146:
-    TEST_RR_OP(aes64dsm, x23, x9, x9, 0x5252525229e96989, 0x40, 0x0, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x23, x9, x25, 0x5252525229e96989, 0x40, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x23, 0x5252525229e96989) 
     
  
@@ -1754,7 +1754,7 @@ inst_146:
     # aes64dsm x24, x8, x24
     # sd x24, 16(x1)
 inst_147:
-    TEST_RR_OP(aes64dsm, x24, x8, x8, 0x5252525287ec5754, 0x80, 0x0, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x24, x8, x24, 0x5252525287ec5754, 0x80, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x24, 0x5252525287ec5754) 
     
  
@@ -1764,7 +1764,7 @@ inst_147:
     # aes64dsm x25, x7, x23
     # sd x25, 24(x1)
 inst_148:
-    TEST_RR_OP(aes64dsm, x25, x7, x7, 0x90e77d5152525252, 0x100, 0x0, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x25, x7, x23, 0x90e77d5152525252, 0x100, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x25, 0x90e77d5152525252) 
     
  
@@ -1774,7 +1774,7 @@ inst_148:
     # aes64dsm x26, x6, x22
     # sd x26, 32(x1)
 inst_149:
-    TEST_RR_OP(aes64dsm, x26, x6, x6, 0x51b119c152525252, 0x200, 0x0, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x26, x6, x22, 0x51b119c152525252, 0x200, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x26, 0x51b119c152525252) 
     
 
@@ -1792,7 +1792,7 @@ inst_149:
     # aes64dsm x27, x5, x21
     # sd x27, 0(x6)
 inst_150:
-    TEST_RR_OP(aes64dsm, x27, x5, x5, 0x9e0d38c952525252, 0x400, 0x0, x6, 0, x7)
+    TEST_RR_OP(aes64dsm, x27, x5, x21, 0x9e0d38c952525252, 0x400, 0x0, x6, 0, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x27, 0x9e0d38c952525252) 
     
  
@@ -1802,7 +1802,7 @@ inst_150:
     # aes64dsm x28, x4, x20
     # sd x28, 8(x6)
 inst_151:
-    TEST_RR_OP(aes64dsm, x28, x4, x4, 0x0f96235752525252, 0x800, 0x0, x6, 8, x7)
+    TEST_RR_OP(aes64dsm, x28, x4, x20, 0x0f96235752525252, 0x800, 0x0, x6, 8, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x28, 0x0f96235752525252) 
     
  
@@ -1812,7 +1812,7 @@ inst_151:
     # aes64dsm x29, x3, x19
     # sd x29, 16(x6)
 inst_152:
-    TEST_RR_OP(aes64dsm, x29, x3, x3, 0xaf17dd4b52525252, 0x1000, 0x0, x6, 16, x7)
+    TEST_RR_OP(aes64dsm, x29, x3, x19, 0xaf17dd4b52525252, 0x1000, 0x0, x6, 16, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x29, 0xaf17dd4b52525252) 
     
  
@@ -1822,7 +1822,7 @@ inst_152:
     # aes64dsm x30, x2, x18
     # sd x30, 24(x6)
 inst_153:
-    TEST_RR_OP(aes64dsm, x30, x2, x2, 0x7c64766852525252, 0x2000, 0x0, x6, 24, x7)
+    TEST_RR_OP(aes64dsm, x30, x2, x18, 0x7c64766852525252, 0x2000, 0x0, x6, 24, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x30, 0x7c64766852525252) 
     
  
@@ -1832,7 +1832,7 @@ inst_153:
     # aes64dsm x31, x1, x17
     # sd x31, 32(x6)
 inst_154:
-    TEST_RR_OP(aes64dsm, x31, x1, x1, 0xe969892952525252, 0x4000, 0x0, x6, 32, x7)
+    TEST_RR_OP(aes64dsm, x31, x1, x17, 0xe969892952525252, 0x4000, 0x0, x6, 32, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x31, 0xe969892952525252) 
     
 
@@ -1850,7 +1850,7 @@ inst_154:
     # aes64dsm x1, x31, x16
     # sd x1, 0(x6)
 inst_155:
-    TEST_RR_OP(aes64dsm, x1, x31, x31, 0xec57548752525252, 0x8000, 0x0, x6, 0, x7)
+    TEST_RR_OP(aes64dsm, x1, x31, x16, 0xec57548752525252, 0x8000, 0x0, x6, 0, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x1, 0xec57548752525252) 
     
  
@@ -1860,7 +1860,7 @@ inst_155:
     # aes64dsm x2, x30, x15
     # sd x2, 8(x6)
 inst_156:
-    TEST_RR_OP(aes64dsm, x2, x30, x30, 0x5252525252525252, 0x10000, 0x0, x6, 8, x7)
+    TEST_RR_OP(aes64dsm, x2, x30, x15, 0x5252525252525252, 0x10000, 0x0, x6, 8, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x2, 0x5252525252525252) 
     
  
@@ -1870,7 +1870,7 @@ inst_156:
     # aes64dsm x3, x29, x14
     # sd x3, 16(x6)
 inst_157:
-    TEST_RR_OP(aes64dsm, x3, x29, x29, 0x5252525252525252, 0x20000, 0x0, x6, 16, x7)
+    TEST_RR_OP(aes64dsm, x3, x29, x14, 0x5252525252525252, 0x20000, 0x0, x6, 16, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x3, 0x5252525252525252) 
     
  
@@ -1880,7 +1880,7 @@ inst_157:
     # aes64dsm x4, x28, x13
     # sd x4, 24(x6)
 inst_158:
-    TEST_RR_OP(aes64dsm, x4, x28, x28, 0x5252525252525252, 0x40000, 0x0, x6, 24, x7)
+    TEST_RR_OP(aes64dsm, x4, x28, x13, 0x5252525252525252, 0x40000, 0x0, x6, 24, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x4, 0x5252525252525252) 
     
  
@@ -1890,7 +1890,7 @@ inst_158:
     # aes64dsm x5, x27, x12
     # sd x5, 32(x6)
 inst_159:
-    TEST_RR_OP(aes64dsm, x5, x27, x27, 0x5252525252525252, 0x80000, 0x0, x6, 32, x7)
+    TEST_RR_OP(aes64dsm, x5, x27, x12, 0x5252525252525252, 0x80000, 0x0, x6, 32, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x5, 0x5252525252525252) 
     
 
@@ -1908,7 +1908,7 @@ inst_159:
     # aes64dsm x6, x26, x11
     # sd x6, 0(x1)
 inst_160:
-    TEST_RR_OP(aes64dsm, x6, x26, x26, 0x5252525252525252, 0x100000, 0x0, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x6, x26, x11, 0x5252525252525252, 0x100000, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x6, 0x5252525252525252) 
     
  
@@ -1918,7 +1918,7 @@ inst_160:
     # aes64dsm x7, x25, x10
     # sd x7, 8(x1)
 inst_161:
-    TEST_RR_OP(aes64dsm, x7, x25, x25, 0x5252525252525252, 0x200000, 0x0, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x7, x25, x10, 0x5252525252525252, 0x200000, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x7, 0x5252525252525252) 
     
  
@@ -1928,7 +1928,7 @@ inst_161:
     # aes64dsm x8, x24, x9
     # sd x8, 16(x1)
 inst_162:
-    TEST_RR_OP(aes64dsm, x8, x24, x24, 0x5252525252525252, 0x400000, 0x0, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x8, x24, x9, 0x5252525252525252, 0x400000, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x8, 0x5252525252525252) 
     
  
@@ -1938,7 +1938,7 @@ inst_162:
     # aes64dsm x9, x23, x8
     # sd x9, 24(x1)
 inst_163:
-    TEST_RR_OP(aes64dsm, x9, x23, x23, 0x5252525252525252, 0x800000, 0x0, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x9, x23, x8, 0x5252525252525252, 0x800000, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x9, 0x5252525252525252) 
     
  
@@ -1948,7 +1948,7 @@ inst_163:
     # aes64dsm x10, x22, x7
     # sd x10, 32(x1)
 inst_164:
-    TEST_RR_OP(aes64dsm, x10, x22, x22, 0x5252525252525252, 0x1000000, 0x0, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x10, x22, x7, 0x5252525252525252, 0x1000000, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x10, 0x5252525252525252) 
     
 
@@ -1966,7 +1966,7 @@ inst_164:
     # aes64dsm x11, x21, x6
     # sd x11, 0(x1)
 inst_165:
-    TEST_RR_OP(aes64dsm, x11, x21, x21, 0x5252525252525252, 0x2000000, 0x0, x1, 0, x7)
+    TEST_RR_OP(aes64dsm, x11, x21, x6, 0x5252525252525252, 0x2000000, 0x0, x1, 0, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x11, 0x5252525252525252) 
     
  
@@ -1976,7 +1976,7 @@ inst_165:
     # aes64dsm x12, x20, x5
     # sd x12, 8(x1)
 inst_166:
-    TEST_RR_OP(aes64dsm, x12, x20, x20, 0x5252525252525252, 0x4000000, 0x0, x1, 8, x7)
+    TEST_RR_OP(aes64dsm, x12, x20, x5, 0x5252525252525252, 0x4000000, 0x0, x1, 8, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x12, 0x5252525252525252) 
     
  
@@ -1986,7 +1986,7 @@ inst_166:
     # aes64dsm x13, x19, x4
     # sd x13, 16(x1)
 inst_167:
-    TEST_RR_OP(aes64dsm, x13, x19, x19, 0x5252525252525252, 0x8000000, 0x0, x1, 16, x7)
+    TEST_RR_OP(aes64dsm, x13, x19, x4, 0x5252525252525252, 0x8000000, 0x0, x1, 16, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x13, 0x5252525252525252) 
     
  
@@ -1996,7 +1996,7 @@ inst_167:
     # aes64dsm x14, x18, x3
     # sd x14, 24(x1)
 inst_168:
-    TEST_RR_OP(aes64dsm, x14, x18, x18, 0x5252525252525252, 0x10000000, 0x0, x1, 24, x7)
+    TEST_RR_OP(aes64dsm, x14, x18, x3, 0x5252525252525252, 0x10000000, 0x0, x1, 24, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x14, 0x5252525252525252) 
     
  
@@ -2006,7 +2006,7 @@ inst_168:
     # aes64dsm x15, x17, x2
     # sd x15, 32(x1)
 inst_169:
-    TEST_RR_OP(aes64dsm, x15, x17, x17, 0x5252525252525252, 0x20000000, 0x0, x1, 32, x7)
+    TEST_RR_OP(aes64dsm, x15, x17, x2, 0x5252525252525252, 0x20000000, 0x0, x1, 32, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x15, 0x5252525252525252) 
     
 
@@ -2024,7 +2024,7 @@ inst_169:
     # aes64dsm x16, x16, x1
     # sd x16, 0(x2)
 inst_170:
-    TEST_RR_OP(aes64dsm, x16, x16, x16, 0x5252525252525252, 0x40000000, 0x0, x2, 0, x3)
+    TEST_RR_OP(aes64dsm, x16, x16, x1, 0x5252525252525252, 0x40000000, 0x0, x2, 0, x3)
     RVMODEL_IO_ASSERT_GPR_EQ(x3, x16, 0x5252525252525252) 
     
  
@@ -2034,7 +2034,7 @@ inst_170:
     # aes64dsm x17, x15, x31
     # sd x17, 8(x2)
 inst_171:
-    TEST_RR_OP(aes64dsm, x17, x15, x15, 0x5252525252525252, 0x80000000, 0x0, x2, 8, x3)
+    TEST_RR_OP(aes64dsm, x17, x15, x31, 0x5252525252525252, 0x80000000, 0x0, x2, 8, x3)
     RVMODEL_IO_ASSERT_GPR_EQ(x3, x17, 0x5252525252525252) 
     
  
@@ -2044,7 +2044,7 @@ inst_171:
     # aes64dsm x18, x14, x30
     # sd x18, 16(x2)
 inst_172:
-    TEST_RR_OP(aes64dsm, x18, x14, x14, 0x5190e77d52525252, 0x100000000, 0x0, x2, 16, x3)
+    TEST_RR_OP(aes64dsm, x18, x14, x30, 0x5190e77d52525252, 0x100000000, 0x0, x2, 16, x3)
     RVMODEL_IO_ASSERT_GPR_EQ(x3, x18, 0x5190e77d52525252) 
     
  
@@ -2054,7 +2054,7 @@ inst_172:
     # aes64dsm x19, x13, x29
     # sd x19, 24(x2)
 inst_173:
-    TEST_RR_OP(aes64dsm, x19, x13, x13, 0xc151b11952525252, 0x200000000, 0x0, x2, 24, x3)
+    TEST_RR_OP(aes64dsm, x19, x13, x29, 0xc151b11952525252, 0x200000000, 0x0, x2, 24, x3)
     RVMODEL_IO_ASSERT_GPR_EQ(x3, x19, 0xc151b11952525252) 
     
  
@@ -2064,7 +2064,7 @@ inst_173:
     # aes64dsm x20, x12, x28
     # sd x20, 32(x2)
 inst_174:
-    TEST_RR_OP(aes64dsm, x20, x12, x12, 0xc99e0d3852525252, 0x400000000, 0x0, x2, 32, x3)
+    TEST_RR_OP(aes64dsm, x20, x12, x28, 0xc99e0d3852525252, 0x400000000, 0x0, x2, 32, x3)
     RVMODEL_IO_ASSERT_GPR_EQ(x3, x20, 0xc99e0d3852525252) 
     
 
@@ -2082,7 +2082,7 @@ inst_174:
     # aes64dsm x21, x11, x27
     # sd x21, 0(x1)
 inst_175:
-    TEST_RR_OP(aes64dsm, x21, x11, x11, 0x570f962352525252, 0x800000000, 0x0, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x21, x11, x27, 0x570f962352525252, 0x800000000, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x21, 0x570f962352525252) 
     
  
@@ -2092,7 +2092,7 @@ inst_175:
     # aes64dsm x22, x10, x26
     # sd x22, 8(x1)
 inst_176:
-    TEST_RR_OP(aes64dsm, x22, x10, x10, 0x4baf17dd52525252, 0x1000000000, 0x0, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x22, x10, x26, 0x4baf17dd52525252, 0x1000000000, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x22, 0x4baf17dd52525252) 
     
  
@@ -2102,7 +2102,7 @@ inst_176:
     # aes64dsm x23, x9, x25
     # sd x23, 16(x1)
 inst_177:
-    TEST_RR_OP(aes64dsm, x23, x9, x9, 0x687c647652525252, 0x2000000000, 0x0, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x23, x9, x25, 0x687c647652525252, 0x2000000000, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x23, 0x687c647652525252) 
     
  
@@ -2112,7 +2112,7 @@ inst_177:
     # aes64dsm x24, x8, x24
     # sd x24, 24(x1)
 inst_178:
-    TEST_RR_OP(aes64dsm, x24, x8, x8, 0x29e9698952525252, 0x4000000000, 0x0, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x24, x8, x24, 0x29e9698952525252, 0x4000000000, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x24, 0x29e9698952525252) 
     
  
@@ -2122,7 +2122,7 @@ inst_178:
     # aes64dsm x25, x7, x23
     # sd x25, 32(x1)
 inst_179:
-    TEST_RR_OP(aes64dsm, x25, x7, x7, 0x87ec575452525252, 0x8000000000, 0x0, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x25, x7, x23, 0x87ec575452525252, 0x8000000000, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x25, 0x87ec575452525252) 
     
 
@@ -2140,7 +2140,7 @@ inst_179:
     # aes64dsm x26, x6, x22
     # sd x26, 0(x1)
 inst_180:
-    TEST_RR_OP(aes64dsm, x26, x6, x6, 0x5252525252525252, 0x10000000000, 0x0, x1, 0, x7)
+    TEST_RR_OP(aes64dsm, x26, x6, x22, 0x5252525252525252, 0x10000000000, 0x0, x1, 0, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x26, 0x5252525252525252) 
     
  
@@ -2150,7 +2150,7 @@ inst_180:
     # aes64dsm x27, x5, x21
     # sd x27, 8(x1)
 inst_181:
-    TEST_RR_OP(aes64dsm, x27, x5, x5, 0x5252525252525252, 0x20000000000, 0x0, x1, 8, x7)
+    TEST_RR_OP(aes64dsm, x27, x5, x21, 0x5252525252525252, 0x20000000000, 0x0, x1, 8, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x27, 0x5252525252525252) 
     
  
@@ -2160,7 +2160,7 @@ inst_181:
     # aes64dsm x28, x4, x20
     # sd x28, 16(x1)
 inst_182:
-    TEST_RR_OP(aes64dsm, x28, x4, x4, 0x5252525252525252, 0x40000000000, 0x0, x1, 16, x7)
+    TEST_RR_OP(aes64dsm, x28, x4, x20, 0x5252525252525252, 0x40000000000, 0x0, x1, 16, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x28, 0x5252525252525252) 
     
  
@@ -2170,7 +2170,7 @@ inst_182:
     # aes64dsm x29, x3, x19
     # sd x29, 24(x1)
 inst_183:
-    TEST_RR_OP(aes64dsm, x29, x3, x3, 0x5252525252525252, 0x80000000000, 0x0, x1, 24, x7)
+    TEST_RR_OP(aes64dsm, x29, x3, x19, 0x5252525252525252, 0x80000000000, 0x0, x1, 24, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x29, 0x5252525252525252) 
     
  
@@ -2180,7 +2180,7 @@ inst_183:
     # aes64dsm x30, x2, x18
     # sd x30, 32(x1)
 inst_184:
-    TEST_RR_OP(aes64dsm, x30, x2, x2, 0x5252525252525252, 0x100000000000, 0x0, x1, 32, x7)
+    TEST_RR_OP(aes64dsm, x30, x2, x18, 0x5252525252525252, 0x100000000000, 0x0, x1, 32, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x30, 0x5252525252525252) 
     
 
@@ -2198,7 +2198,7 @@ inst_184:
     # aes64dsm x31, x1, x17
     # sd x31, 0(x5)
 inst_185:
-    TEST_RR_OP(aes64dsm, x31, x1, x1, 0x5252525252525252, 0x200000000000, 0x0, x5, 0, x6)
+    TEST_RR_OP(aes64dsm, x31, x1, x17, 0x5252525252525252, 0x200000000000, 0x0, x5, 0, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x31, 0x5252525252525252) 
     
  
@@ -2208,7 +2208,7 @@ inst_185:
     # aes64dsm x1, x31, x16
     # sd x1, 8(x5)
 inst_186:
-    TEST_RR_OP(aes64dsm, x1, x31, x31, 0x5252525252525252, 0x400000000000, 0x0, x5, 8, x6)
+    TEST_RR_OP(aes64dsm, x1, x31, x16, 0x5252525252525252, 0x400000000000, 0x0, x5, 8, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x1, 0x5252525252525252) 
     
  
@@ -2218,7 +2218,7 @@ inst_186:
     # aes64dsm x2, x30, x15
     # sd x2, 16(x5)
 inst_187:
-    TEST_RR_OP(aes64dsm, x2, x30, x30, 0x5252525252525252, 0x800000000000, 0x0, x5, 16, x6)
+    TEST_RR_OP(aes64dsm, x2, x30, x15, 0x5252525252525252, 0x800000000000, 0x0, x5, 16, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x2, 0x5252525252525252) 
     
  
@@ -2228,7 +2228,7 @@ inst_187:
     # aes64dsm x3, x29, x14
     # sd x3, 24(x5)
 inst_188:
-    TEST_RR_OP(aes64dsm, x3, x29, x29, 0x5252525252525252, 0x1000000000000, 0x0, x5, 24, x6)
+    TEST_RR_OP(aes64dsm, x3, x29, x14, 0x5252525252525252, 0x1000000000000, 0x0, x5, 24, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x3, 0x5252525252525252) 
     
  
@@ -2238,7 +2238,7 @@ inst_188:
     # aes64dsm x4, x28, x13
     # sd x4, 32(x5)
 inst_189:
-    TEST_RR_OP(aes64dsm, x4, x28, x28, 0x5252525252525252, 0x2000000000000, 0x0, x5, 32, x6)
+    TEST_RR_OP(aes64dsm, x4, x28, x13, 0x5252525252525252, 0x2000000000000, 0x0, x5, 32, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x4, 0x5252525252525252) 
     
 
@@ -2256,7 +2256,7 @@ inst_189:
     # aes64dsm x5, x27, x12
     # sd x5, 0(x1)
 inst_190:
-    TEST_RR_OP(aes64dsm, x5, x27, x27, 0x5252525252525252, 0x4000000000000, 0x0, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x5, x27, x12, 0x5252525252525252, 0x4000000000000, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x5, 0x5252525252525252) 
     
  
@@ -2266,7 +2266,7 @@ inst_190:
     # aes64dsm x6, x26, x11
     # sd x6, 8(x1)
 inst_191:
-    TEST_RR_OP(aes64dsm, x6, x26, x26, 0x5252525252525252, 0x8000000000000, 0x0, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x6, x26, x11, 0x5252525252525252, 0x8000000000000, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x6, 0x5252525252525252) 
     
  
@@ -2276,7 +2276,7 @@ inst_191:
     # aes64dsm x7, x25, x10
     # sd x7, 16(x1)
 inst_192:
-    TEST_RR_OP(aes64dsm, x7, x25, x25, 0x5252525252525252, 0x10000000000000, 0x0, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x7, x25, x10, 0x5252525252525252, 0x10000000000000, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x7, 0x5252525252525252) 
     
  
@@ -2286,7 +2286,7 @@ inst_192:
     # aes64dsm x8, x24, x9
     # sd x8, 24(x1)
 inst_193:
-    TEST_RR_OP(aes64dsm, x8, x24, x24, 0x5252525252525252, 0x20000000000000, 0x0, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x8, x24, x9, 0x5252525252525252, 0x20000000000000, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x8, 0x5252525252525252) 
     
  
@@ -2296,7 +2296,7 @@ inst_193:
     # aes64dsm x9, x23, x8
     # sd x9, 32(x1)
 inst_194:
-    TEST_RR_OP(aes64dsm, x9, x23, x23, 0x5252525252525252, 0x40000000000000, 0x0, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x9, x23, x8, 0x5252525252525252, 0x40000000000000, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x9, 0x5252525252525252) 
     
 
@@ -2314,7 +2314,7 @@ inst_194:
     # aes64dsm x10, x22, x7
     # sd x10, 0(x1)
 inst_195:
-    TEST_RR_OP(aes64dsm, x10, x22, x22, 0x5252525252525252, 0x80000000000000, 0x0, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x10, x22, x7, 0x5252525252525252, 0x80000000000000, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x10, 0x5252525252525252) 
     
  
@@ -2324,7 +2324,7 @@ inst_195:
     # aes64dsm x11, x21, x6
     # sd x11, 8(x1)
 inst_196:
-    TEST_RR_OP(aes64dsm, x11, x21, x21, 0x525252527d5190e7, 0x100000000000000, 0x0, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x11, x21, x6, 0x525252527d5190e7, 0x100000000000000, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x11, 0x525252527d5190e7) 
     
  
@@ -2334,7 +2334,7 @@ inst_196:
     # aes64dsm x12, x20, x5
     # sd x12, 16(x1)
 inst_197:
-    TEST_RR_OP(aes64dsm, x12, x20, x20, 0x5252525219c151b1, 0x200000000000000, 0x0, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x12, x20, x5, 0x5252525219c151b1, 0x200000000000000, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x12, 0x5252525219c151b1) 
     
  
@@ -2344,7 +2344,7 @@ inst_197:
     # aes64dsm x13, x19, x4
     # sd x13, 24(x1)
 inst_198:
-    TEST_RR_OP(aes64dsm, x13, x19, x19, 0x5252525238c99e0d, 0x400000000000000, 0x0, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x13, x19, x4, 0x5252525238c99e0d, 0x400000000000000, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x13, 0x5252525238c99e0d) 
     
  
@@ -2354,7 +2354,7 @@ inst_198:
     # aes64dsm x14, x18, x3
     # sd x14, 32(x1)
 inst_199:
-    TEST_RR_OP(aes64dsm, x14, x18, x18, 0x5252525223570f96, 0x800000000000000, 0x0, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x14, x18, x3, 0x5252525223570f96, 0x800000000000000, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x14, 0x5252525223570f96) 
     
 
@@ -2372,7 +2372,7 @@ inst_199:
     # aes64dsm x15, x17, x2
     # sd x15, 0(x3)
 inst_200:
-    TEST_RR_OP(aes64dsm, x15, x17, x17, 0x52525252dd4baf17, 0x1000000000000000, 0x0, x3, 0, x4)
+    TEST_RR_OP(aes64dsm, x15, x17, x2, 0x52525252dd4baf17, 0x1000000000000000, 0x0, x3, 0, x4)
     RVMODEL_IO_ASSERT_GPR_EQ(x4, x15, 0x52525252dd4baf17) 
     
  
@@ -2382,7 +2382,7 @@ inst_200:
     # aes64dsm x16, x16, x1
     # sd x16, 8(x3)
 inst_201:
-    TEST_RR_OP(aes64dsm, x16, x16, x16, 0x5252525276687c64, 0x2000000000000000, 0x0, x3, 8, x4)
+    TEST_RR_OP(aes64dsm, x16, x16, x1, 0x5252525276687c64, 0x2000000000000000, 0x0, x3, 8, x4)
     RVMODEL_IO_ASSERT_GPR_EQ(x4, x16, 0x5252525276687c64) 
     
  
@@ -2392,7 +2392,7 @@ inst_201:
     # aes64dsm x17, x15, x31
     # sd x17, 16(x3)
 inst_202:
-    TEST_RR_OP(aes64dsm, x17, x15, x15, 0x525252528929e969, 0x4000000000000000, 0x0, x3, 16, x4)
+    TEST_RR_OP(aes64dsm, x17, x15, x31, 0x525252528929e969, 0x4000000000000000, 0x0, x3, 16, x4)
     RVMODEL_IO_ASSERT_GPR_EQ(x4, x17, 0x525252528929e969) 
     
  
@@ -2402,7 +2402,7 @@ inst_202:
     # aes64dsm x18, x14, x30
     # sd x18, 24(x3)
 inst_203:
-    TEST_RR_OP(aes64dsm, x18, x14, x14, 0x525252525487ec57, 0x8000000000000000, 0x0, x3, 24, x4)
+    TEST_RR_OP(aes64dsm, x18, x14, x30, 0x525252525487ec57, 0x8000000000000000, 0x0, x3, 24, x4)
     RVMODEL_IO_ASSERT_GPR_EQ(x4, x18, 0x525252525487ec57) 
     
  
@@ -2412,7 +2412,7 @@ inst_203:
     # aes64dsm x19, x13, x29
     # sd x19, 32(x3)
 inst_204:
-    TEST_RR_OP(aes64dsm, x19, x13, x13, 0x5252525252525252, 0x0, 0x0, x3, 32, x4)
+    TEST_RR_OP(aes64dsm, x19, x13, x29, 0x5252525252525252, 0x0, 0x0, x3, 32, x4)
     RVMODEL_IO_ASSERT_GPR_EQ(x4, x19, 0x5252525252525252) 
     
 
@@ -2430,7 +2430,7 @@ inst_204:
     # aes64dsm x20, x12, x28
     # sd x20, 0(x1)
 inst_205:
-    TEST_RR_OP(aes64dsm, x20, x12, x12, 0xb0ee9fc1f7bb3a07, 0xfffffffffffffffe, 0x0, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x20, x12, x28, 0xb0ee9fc1f7bb3a07, 0xfffffffffffffffe, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x20, 0xb0ee9fc1f7bb3a07) 
     
  
@@ -2440,7 +2440,7 @@ inst_205:
     # aes64dsm x21, x11, x27
     # sd x21, 8(x1)
 inst_206:
-    TEST_RR_OP(aes64dsm, x21, x11, x11, 0xb0ee9fc1f351649a, 0xfffffffffffffffd, 0x0, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x21, x11, x27, 0xb0ee9fc1f351649a, 0xfffffffffffffffd, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x21, 0xb0ee9fc1f351649a) 
     
  
@@ -2450,7 +2450,7 @@ inst_206:
     # aes64dsm x22, x10, x26
     # sd x22, 16(x1)
 inst_207:
-    TEST_RR_OP(aes64dsm, x22, x10, x10, 0xb0ee9fc11326002b, 0xfffffffffffffffb, 0x0, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x22, x10, x26, 0xb0ee9fc11326002b, 0xfffffffffffffffb, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x22, 0xb0ee9fc11326002b) 
     
  
@@ -2460,7 +2460,7 @@ inst_207:
     # aes64dsm x23, x9, x25
     # sd x23, 24(x1)
 inst_208:
-    TEST_RR_OP(aes64dsm, x23, x9, x9, 0xb0ee9fc1c2725bb0, 0xfffffffffffffff7, 0x0, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x23, x9, x25, 0xb0ee9fc1c2725bb0, 0xfffffffffffffff7, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x23, 0xb0ee9fc1c2725bb0) 
     
  
@@ -2470,7 +2470,7 @@ inst_208:
     # aes64dsm x24, x8, x24
     # sd x24, 32(x1)
 inst_209:
-    TEST_RR_OP(aes64dsm, x24, x8, x8, 0xb0ee9fc1053c1237, 0xffffffffffffffef, 0x0, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x24, x8, x24, 0xb0ee9fc1053c1237, 0xffffffffffffffef, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x24, 0xb0ee9fc1053c1237) 
     
 
@@ -2488,7 +2488,7 @@ inst_209:
     # aes64dsm x25, x7, x23
     # sd x25, 0(x1)
 inst_210:
-    TEST_RR_OP(aes64dsm, x25, x7, x7, 0xb0ee9fc190a08022, 0xffffffffffffffdf, 0x0, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x25, x7, x23, 0xb0ee9fc190a08022, 0xffffffffffffffdf, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x25, 0xb0ee9fc190a08022) 
     
  
@@ -2498,7 +2498,7 @@ inst_210:
     # aes64dsm x26, x6, x22
     # sd x26, 8(x1)
 inst_211:
-    TEST_RR_OP(aes64dsm, x26, x6, x6, 0xb0ee9fc1650f43a0, 0xffffffffffffffbf, 0x0, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x26, x6, x22, 0xb0ee9fc1650f43a0, 0xffffffffffffffbf, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x26, 0xb0ee9fc1650f43a0) 
     
  
@@ -2508,7 +2508,7 @@ inst_211:
     # aes64dsm x27, x5, x21
     # sd x27, 16(x1)
 inst_212:
-    TEST_RR_OP(aes64dsm, x27, x5, x5, 0xb0ee9fc14b4e485b, 0xffffffffffffff7f, 0x0, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x27, x5, x21, 0xb0ee9fc14b4e485b, 0xffffffffffffff7f, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x27, 0xb0ee9fc14b4e485b) 
     
  
@@ -2518,7 +2518,7 @@ inst_212:
     # aes64dsm x28, x4, x20
     # sd x28, 24(x1)
 inst_213:
-    TEST_RR_OP(aes64dsm, x28, x4, x4, 0xbb3a07f7c1b0ee9f, 0xfffffffffffffeff, 0x0, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x28, x4, x20, 0xbb3a07f7c1b0ee9f, 0xfffffffffffffeff, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x28, 0xbb3a07f7c1b0ee9f) 
     
  
@@ -2528,7 +2528,7 @@ inst_213:
     # aes64dsm x29, x3, x19
     # sd x29, 32(x1)
 inst_214:
-    TEST_RR_OP(aes64dsm, x29, x3, x3, 0x51649af3c1b0ee9f, 0xfffffffffffffdff, 0x0, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x29, x3, x19, 0x51649af3c1b0ee9f, 0xfffffffffffffdff, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x29, 0x51649af3c1b0ee9f) 
     
 
@@ -2546,7 +2546,7 @@ inst_214:
     # aes64dsm x30, x2, x18
     # sd x30, 0(x4)
 inst_215:
-    TEST_RR_OP(aes64dsm, x30, x2, x2, 0x26002b13c1b0ee9f, 0xfffffffffffffbff, 0x0, x4, 0, x5)
+    TEST_RR_OP(aes64dsm, x30, x2, x18, 0x26002b13c1b0ee9f, 0xfffffffffffffbff, 0x0, x4, 0, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x30, 0x26002b13c1b0ee9f) 
     
  
@@ -2556,7 +2556,7 @@ inst_215:
     # aes64dsm x31, x1, x17
     # sd x31, 8(x4)
 inst_216:
-    TEST_RR_OP(aes64dsm, x31, x1, x1, 0x725bb0c2c1b0ee9f, 0xfffffffffffff7ff, 0x0, x4, 8, x5)
+    TEST_RR_OP(aes64dsm, x31, x1, x17, 0x725bb0c2c1b0ee9f, 0xfffffffffffff7ff, 0x0, x4, 8, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x31, 0x725bb0c2c1b0ee9f) 
     
  
@@ -2566,7 +2566,7 @@ inst_216:
     # aes64dsm x1, x31, x16
     # sd x1, 16(x4)
 inst_217:
-    TEST_RR_OP(aes64dsm, x1, x31, x31, 0x3c123705c1b0ee9f, 0xffffffffffffefff, 0x0, x4, 16, x5)
+    TEST_RR_OP(aes64dsm, x1, x31, x16, 0x3c123705c1b0ee9f, 0xffffffffffffefff, 0x0, x4, 16, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x1, 0x3c123705c1b0ee9f) 
     
  
@@ -2576,7 +2576,7 @@ inst_217:
     # aes64dsm x2, x30, x15
     # sd x2, 24(x4)
 inst_218:
-    TEST_RR_OP(aes64dsm, x2, x30, x30, 0xa0802290c1b0ee9f, 0xffffffffffffdfff, 0x0, x4, 24, x5)
+    TEST_RR_OP(aes64dsm, x2, x30, x15, 0xa0802290c1b0ee9f, 0xffffffffffffdfff, 0x0, x4, 24, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x2, 0xa0802290c1b0ee9f) 
     
  
@@ -2586,7 +2586,7 @@ inst_218:
     # aes64dsm x3, x29, x14
     # sd x3, 32(x4)
 inst_219:
-    TEST_RR_OP(aes64dsm, x3, x29, x29, 0x0f43a065c1b0ee9f, 0xffffffffffffbfff, 0x0, x4, 32, x5)
+    TEST_RR_OP(aes64dsm, x3, x29, x14, 0x0f43a065c1b0ee9f, 0xffffffffffffbfff, 0x0, x4, 32, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x3, 0x0f43a065c1b0ee9f) 
     
 
@@ -2604,7 +2604,7 @@ inst_219:
     # aes64dsm x4, x28, x13
     # sd x4, 0(x1)
 inst_220:
-    TEST_RR_OP(aes64dsm, x4, x28, x28, 0x4e485b4bc1b0ee9f, 0xffffffffffff7fff, 0x0, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x4, x28, x13, 0x4e485b4bc1b0ee9f, 0xffffffffffff7fff, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x4, 0x4e485b4bc1b0ee9f) 
     
  
@@ -2614,7 +2614,7 @@ inst_220:
     # aes64dsm x5, x27, x12
     # sd x5, 8(x1)
 inst_221:
-    TEST_RR_OP(aes64dsm, x5, x27, x27, 0xb0ee9fc1c1b0ee9f, 0xfffffffffffeffff, 0x0, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x5, x27, x12, 0xb0ee9fc1c1b0ee9f, 0xfffffffffffeffff, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x5, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -2624,7 +2624,7 @@ inst_221:
     # aes64dsm x6, x26, x11
     # sd x6, 16(x1)
 inst_222:
-    TEST_RR_OP(aes64dsm, x6, x26, x26, 0xb0ee9fc1c1b0ee9f, 0xfffffffffffdffff, 0x0, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x6, x26, x11, 0xb0ee9fc1c1b0ee9f, 0xfffffffffffdffff, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x6, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -2634,7 +2634,7 @@ inst_222:
     # aes64dsm x7, x25, x10
     # sd x7, 24(x1)
 inst_223:
-    TEST_RR_OP(aes64dsm, x7, x25, x25, 0xb0ee9fc1c1b0ee9f, 0xfffffffffffbffff, 0x0, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x7, x25, x10, 0xb0ee9fc1c1b0ee9f, 0xfffffffffffbffff, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x7, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -2644,7 +2644,7 @@ inst_223:
     # aes64dsm x8, x24, x9
     # sd x8, 32(x1)
 inst_224:
-    TEST_RR_OP(aes64dsm, x8, x24, x24, 0xb0ee9fc1c1b0ee9f, 0xfffffffffff7ffff, 0x0, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x8, x24, x9, 0xb0ee9fc1c1b0ee9f, 0xfffffffffff7ffff, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x8, 0xb0ee9fc1c1b0ee9f) 
     
 
@@ -2662,7 +2662,7 @@ inst_224:
     # aes64dsm x9, x23, x8
     # sd x9, 0(x1)
 inst_225:
-    TEST_RR_OP(aes64dsm, x9, x23, x23, 0xb0ee9fc1c1b0ee9f, 0xffffffffffefffff, 0x0, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x9, x23, x8, 0xb0ee9fc1c1b0ee9f, 0xffffffffffefffff, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x9, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -2672,7 +2672,7 @@ inst_225:
     # aes64dsm x10, x22, x7
     # sd x10, 8(x1)
 inst_226:
-    TEST_RR_OP(aes64dsm, x10, x22, x22, 0xb0ee9fc1c1b0ee9f, 0xffffffffffdfffff, 0x0, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x10, x22, x7, 0xb0ee9fc1c1b0ee9f, 0xffffffffffdfffff, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x10, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -2682,7 +2682,7 @@ inst_226:
     # aes64dsm x11, x21, x6
     # sd x11, 16(x1)
 inst_227:
-    TEST_RR_OP(aes64dsm, x11, x21, x21, 0xb0ee9fc1c1b0ee9f, 0xffffffffffbfffff, 0x0, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x11, x21, x6, 0xb0ee9fc1c1b0ee9f, 0xffffffffffbfffff, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x11, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -2692,7 +2692,7 @@ inst_227:
     # aes64dsm x12, x20, x5
     # sd x12, 24(x1)
 inst_228:
-    TEST_RR_OP(aes64dsm, x12, x20, x20, 0xb0ee9fc1c1b0ee9f, 0xffffffffff7fffff, 0x0, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x12, x20, x5, 0xb0ee9fc1c1b0ee9f, 0xffffffffff7fffff, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x12, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -2702,7 +2702,7 @@ inst_228:
     # aes64dsm x13, x19, x4
     # sd x13, 32(x1)
 inst_229:
-    TEST_RR_OP(aes64dsm, x13, x19, x19, 0xb0ee9fc1c1b0ee9f, 0xfffffffffeffffff, 0x0, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x13, x19, x4, 0xb0ee9fc1c1b0ee9f, 0xfffffffffeffffff, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x13, 0xb0ee9fc1c1b0ee9f) 
     
 
@@ -2720,7 +2720,7 @@ inst_229:
     # aes64dsm x14, x18, x3
     # sd x14, 0(x4)
 inst_230:
-    TEST_RR_OP(aes64dsm, x14, x18, x18, 0xb0ee9fc1c1b0ee9f, 0xfffffffffdffffff, 0x0, x4, 0, x5)
+    TEST_RR_OP(aes64dsm, x14, x18, x3, 0xb0ee9fc1c1b0ee9f, 0xfffffffffdffffff, 0x0, x4, 0, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x14, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -2730,7 +2730,7 @@ inst_230:
     # aes64dsm x15, x17, x2
     # sd x15, 8(x4)
 inst_231:
-    TEST_RR_OP(aes64dsm, x15, x17, x17, 0xb0ee9fc1c1b0ee9f, 0xfffffffffbffffff, 0x0, x4, 8, x5)
+    TEST_RR_OP(aes64dsm, x15, x17, x2, 0xb0ee9fc1c1b0ee9f, 0xfffffffffbffffff, 0x0, x4, 8, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x15, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -2740,7 +2740,7 @@ inst_231:
     # aes64dsm x16, x16, x1
     # sd x16, 16(x4)
 inst_232:
-    TEST_RR_OP(aes64dsm, x16, x16, x16, 0xb0ee9fc1c1b0ee9f, 0xfffffffff7ffffff, 0x0, x4, 16, x5)
+    TEST_RR_OP(aes64dsm, x16, x16, x1, 0xb0ee9fc1c1b0ee9f, 0xfffffffff7ffffff, 0x0, x4, 16, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x16, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -2750,7 +2750,7 @@ inst_232:
     # aes64dsm x17, x15, x31
     # sd x17, 24(x4)
 inst_233:
-    TEST_RR_OP(aes64dsm, x17, x15, x15, 0xb0ee9fc1c1b0ee9f, 0xffffffffefffffff, 0x0, x4, 24, x5)
+    TEST_RR_OP(aes64dsm, x17, x15, x31, 0xb0ee9fc1c1b0ee9f, 0xffffffffefffffff, 0x0, x4, 24, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x17, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -2760,7 +2760,7 @@ inst_233:
     # aes64dsm x18, x14, x30
     # sd x18, 32(x4)
 inst_234:
-    TEST_RR_OP(aes64dsm, x18, x14, x14, 0xb0ee9fc1c1b0ee9f, 0xffffffffdfffffff, 0x0, x4, 32, x5)
+    TEST_RR_OP(aes64dsm, x18, x14, x30, 0xb0ee9fc1c1b0ee9f, 0xffffffffdfffffff, 0x0, x4, 32, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x18, 0xb0ee9fc1c1b0ee9f) 
     
 
@@ -2778,7 +2778,7 @@ inst_234:
     # aes64dsm x19, x13, x29
     # sd x19, 0(x1)
 inst_235:
-    TEST_RR_OP(aes64dsm, x19, x13, x13, 0xb0ee9fc1c1b0ee9f, 0xffffffffbfffffff, 0x0, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x19, x13, x29, 0xb0ee9fc1c1b0ee9f, 0xffffffffbfffffff, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x19, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -2788,7 +2788,7 @@ inst_235:
     # aes64dsm x20, x12, x28
     # sd x20, 8(x1)
 inst_236:
-    TEST_RR_OP(aes64dsm, x20, x12, x12, 0xb0ee9fc1c1b0ee9f, 0xffffffff7fffffff, 0x0, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x20, x12, x28, 0xb0ee9fc1c1b0ee9f, 0xffffffff7fffffff, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x20, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -2798,7 +2798,7 @@ inst_236:
     # aes64dsm x21, x11, x27
     # sd x21, 16(x1)
 inst_237:
-    TEST_RR_OP(aes64dsm, x21, x11, x11, 0x86e54b59c1b0ee9f, 0xfffffffeffffffff, 0x0, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x21, x11, x27, 0x86e54b59c1b0ee9f, 0xfffffffeffffffff, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x21, 0x86e54b59c1b0ee9f) 
     
  
@@ -2808,7 +2808,7 @@ inst_237:
     # aes64dsm x22, x10, x26
     # sd x22, 24(x1)
 inst_238:
-    TEST_RR_OP(aes64dsm, x22, x10, x10, 0x820f15c4c1b0ee9f, 0xfffffffdffffffff, 0x0, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x22, x10, x26, 0x820f15c4c1b0ee9f, 0xfffffffdffffffff, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x22, 0x820f15c4c1b0ee9f) 
     
  
@@ -2818,7 +2818,7 @@ inst_238:
     # aes64dsm x23, x9, x25
     # sd x23, 32(x1)
 inst_239:
-    TEST_RR_OP(aes64dsm, x23, x9, x9, 0x62787175c1b0ee9f, 0xfffffffbffffffff, 0x0, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x23, x9, x25, 0x62787175c1b0ee9f, 0xfffffffbffffffff, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x23, 0x62787175c1b0ee9f) 
     
 
@@ -2836,7 +2836,7 @@ inst_239:
     # aes64dsm x24, x8, x24
     # sd x24, 0(x1)
 inst_240:
-    TEST_RR_OP(aes64dsm, x24, x8, x8, 0xb32c2aeec1b0ee9f, 0xfffffff7ffffffff, 0x0, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x24, x8, x24, 0xb32c2aeec1b0ee9f, 0xfffffff7ffffffff, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x24, 0xb32c2aeec1b0ee9f) 
     
  
@@ -2846,7 +2846,7 @@ inst_240:
     # aes64dsm x25, x7, x23
     # sd x25, 8(x1)
 inst_241:
-    TEST_RR_OP(aes64dsm, x25, x7, x7, 0x74626369c1b0ee9f, 0xffffffefffffffff, 0x0, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x25, x7, x23, 0x74626369c1b0ee9f, 0xffffffefffffffff, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x25, 0x74626369c1b0ee9f) 
     
  
@@ -2856,7 +2856,7 @@ inst_241:
     # aes64dsm x26, x6, x22
     # sd x26, 16(x1)
 inst_242:
-    TEST_RR_OP(aes64dsm, x26, x6, x6, 0xe1fef17cc1b0ee9f, 0xffffffdfffffffff, 0x0, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x26, x6, x22, 0xe1fef17cc1b0ee9f, 0xffffffdfffffffff, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x26, 0xe1fef17cc1b0ee9f) 
     
  
@@ -2866,7 +2866,7 @@ inst_242:
     # aes64dsm x27, x5, x21
     # sd x27, 24(x1)
 inst_243:
-    TEST_RR_OP(aes64dsm, x27, x5, x5, 0x145132fec1b0ee9f, 0xffffffbfffffffff, 0x0, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x27, x5, x21, 0x145132fec1b0ee9f, 0xffffffbfffffffff, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x27, 0x145132fec1b0ee9f) 
     
  
@@ -2876,7 +2876,7 @@ inst_243:
     # aes64dsm x28, x4, x20
     # sd x28, 32(x1)
 inst_244:
-    TEST_RR_OP(aes64dsm, x28, x4, x4, 0x3a103905c1b0ee9f, 0xffffff7fffffffff, 0x0, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x28, x4, x20, 0x3a103905c1b0ee9f, 0xffffff7fffffffff, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x28, 0x3a103905c1b0ee9f) 
     
 
@@ -2894,7 +2894,7 @@ inst_244:
     # aes64dsm x29, x3, x19
     # sd x29, 0(x4)
 inst_245:
-    TEST_RR_OP(aes64dsm, x29, x3, x3, 0xb0ee9fc1c1b0ee9f, 0xfffffeffffffffff, 0x0, x4, 0, x5)
+    TEST_RR_OP(aes64dsm, x29, x3, x19, 0xb0ee9fc1c1b0ee9f, 0xfffffeffffffffff, 0x0, x4, 0, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x29, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -2904,7 +2904,7 @@ inst_245:
     # aes64dsm x30, x2, x18
     # sd x30, 8(x4)
 inst_246:
-    TEST_RR_OP(aes64dsm, x30, x2, x2, 0xb0ee9fc1c1b0ee9f, 0xfffffdffffffffff, 0x0, x4, 8, x5)
+    TEST_RR_OP(aes64dsm, x30, x2, x18, 0xb0ee9fc1c1b0ee9f, 0xfffffdffffffffff, 0x0, x4, 8, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x30, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -2914,7 +2914,7 @@ inst_246:
     # aes64dsm x31, x1, x17
     # sd x31, 16(x4)
 inst_247:
-    TEST_RR_OP(aes64dsm, x31, x1, x1, 0xb0ee9fc1c1b0ee9f, 0xfffffbffffffffff, 0x0, x4, 16, x5)
+    TEST_RR_OP(aes64dsm, x31, x1, x17, 0xb0ee9fc1c1b0ee9f, 0xfffffbffffffffff, 0x0, x4, 16, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x31, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -2924,7 +2924,7 @@ inst_247:
     # aes64dsm x1, x31, x16
     # sd x1, 24(x4)
 inst_248:
-    TEST_RR_OP(aes64dsm, x1, x31, x31, 0xb0ee9fc1c1b0ee9f, 0xfffff7ffffffffff, 0x0, x4, 24, x5)
+    TEST_RR_OP(aes64dsm, x1, x31, x16, 0xb0ee9fc1c1b0ee9f, 0xfffff7ffffffffff, 0x0, x4, 24, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x1, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -2934,7 +2934,7 @@ inst_248:
     # aes64dsm x2, x30, x15
     # sd x2, 32(x4)
 inst_249:
-    TEST_RR_OP(aes64dsm, x2, x30, x30, 0xb0ee9fc1c1b0ee9f, 0xffffefffffffffff, 0x0, x4, 32, x5)
+    TEST_RR_OP(aes64dsm, x2, x30, x15, 0xb0ee9fc1c1b0ee9f, 0xffffefffffffffff, 0x0, x4, 32, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x2, 0xb0ee9fc1c1b0ee9f) 
     
 
@@ -2952,7 +2952,7 @@ inst_249:
     # aes64dsm x3, x29, x14
     # sd x3, 0(x1)
 inst_250:
-    TEST_RR_OP(aes64dsm, x3, x29, x29, 0xb0ee9fc1c1b0ee9f, 0xffffdfffffffffff, 0x0, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x3, x29, x14, 0xb0ee9fc1c1b0ee9f, 0xffffdfffffffffff, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x3, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -2962,7 +2962,7 @@ inst_250:
     # aes64dsm x4, x28, x13
     # sd x4, 8(x1)
 inst_251:
-    TEST_RR_OP(aes64dsm, x4, x28, x28, 0xb0ee9fc1c1b0ee9f, 0xffffbfffffffffff, 0x0, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x4, x28, x13, 0xb0ee9fc1c1b0ee9f, 0xffffbfffffffffff, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x4, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -2972,7 +2972,7 @@ inst_251:
     # aes64dsm x5, x27, x12
     # sd x5, 16(x1)
 inst_252:
-    TEST_RR_OP(aes64dsm, x5, x27, x27, 0xb0ee9fc1c1b0ee9f, 0xffff7fffffffffff, 0x0, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x5, x27, x12, 0xb0ee9fc1c1b0ee9f, 0xffff7fffffffffff, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x5, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -2982,7 +2982,7 @@ inst_252:
     # aes64dsm x6, x26, x11
     # sd x6, 24(x1)
 inst_253:
-    TEST_RR_OP(aes64dsm, x6, x26, x26, 0xb0ee9fc1c1b0ee9f, 0xfffeffffffffffff, 0x0, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x6, x26, x11, 0xb0ee9fc1c1b0ee9f, 0xfffeffffffffffff, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x6, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -2992,7 +2992,7 @@ inst_253:
     # aes64dsm x7, x25, x10
     # sd x7, 32(x1)
 inst_254:
-    TEST_RR_OP(aes64dsm, x7, x25, x25, 0xb0ee9fc1c1b0ee9f, 0xfffdffffffffffff, 0x0, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x7, x25, x10, 0xb0ee9fc1c1b0ee9f, 0xfffdffffffffffff, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x7, 0xb0ee9fc1c1b0ee9f) 
     
 
@@ -3010,7 +3010,7 @@ inst_254:
     # aes64dsm x8, x24, x9
     # sd x8, 0(x1)
 inst_255:
-    TEST_RR_OP(aes64dsm, x8, x24, x24, 0xb0ee9fc1c1b0ee9f, 0xfffbffffffffffff, 0x0, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x8, x24, x9, 0xb0ee9fc1c1b0ee9f, 0xfffbffffffffffff, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x8, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -3020,7 +3020,7 @@ inst_255:
     # aes64dsm x9, x23, x8
     # sd x9, 8(x1)
 inst_256:
-    TEST_RR_OP(aes64dsm, x9, x23, x23, 0xb0ee9fc1c1b0ee9f, 0xfff7ffffffffffff, 0x0, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x9, x23, x8, 0xb0ee9fc1c1b0ee9f, 0xfff7ffffffffffff, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x9, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -3030,7 +3030,7 @@ inst_256:
     # aes64dsm x10, x22, x7
     # sd x10, 16(x1)
 inst_257:
-    TEST_RR_OP(aes64dsm, x10, x22, x22, 0xb0ee9fc1c1b0ee9f, 0xffefffffffffffff, 0x0, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x10, x22, x7, 0xb0ee9fc1c1b0ee9f, 0xffefffffffffffff, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x10, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -3040,7 +3040,7 @@ inst_257:
     # aes64dsm x11, x21, x6
     # sd x11, 24(x1)
 inst_258:
-    TEST_RR_OP(aes64dsm, x11, x21, x21, 0xb0ee9fc1c1b0ee9f, 0xffdfffffffffffff, 0x0, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x11, x21, x6, 0xb0ee9fc1c1b0ee9f, 0xffdfffffffffffff, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x11, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -3050,7 +3050,7 @@ inst_258:
     # aes64dsm x12, x20, x5
     # sd x12, 32(x1)
 inst_259:
-    TEST_RR_OP(aes64dsm, x12, x20, x20, 0xb0ee9fc1c1b0ee9f, 0xffbfffffffffffff, 0x0, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x12, x20, x5, 0xb0ee9fc1c1b0ee9f, 0xffbfffffffffffff, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x12, 0xb0ee9fc1c1b0ee9f) 
     
 
@@ -3068,7 +3068,7 @@ inst_259:
     # aes64dsm x13, x19, x4
     # sd x13, 0(x5)
 inst_260:
-    TEST_RR_OP(aes64dsm, x13, x19, x19, 0xb0ee9fc1c1b0ee9f, 0xff7fffffffffffff, 0x0, x5, 0, x6)
+    TEST_RR_OP(aes64dsm, x13, x19, x4, 0xb0ee9fc1c1b0ee9f, 0xff7fffffffffffff, 0x0, x5, 0, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x13, 0xb0ee9fc1c1b0ee9f) 
     
  
@@ -3078,7 +3078,7 @@ inst_260:
     # aes64dsm x14, x18, x3
     # sd x14, 8(x5)
 inst_261:
-    TEST_RR_OP(aes64dsm, x14, x18, x18, 0xb0ee9fc15986e54b, 0xfeffffffffffffff, 0x0, x5, 8, x6)
+    TEST_RR_OP(aes64dsm, x14, x18, x3, 0xb0ee9fc15986e54b, 0xfeffffffffffffff, 0x0, x5, 8, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x14, 0xb0ee9fc15986e54b) 
     
  
@@ -3088,7 +3088,7 @@ inst_261:
     # aes64dsm x15, x17, x2
     # sd x15, 16(x5)
 inst_262:
-    TEST_RR_OP(aes64dsm, x15, x17, x17, 0xb0ee9fc1c4820f15, 0xfdffffffffffffff, 0x0, x5, 16, x6)
+    TEST_RR_OP(aes64dsm, x15, x17, x2, 0xb0ee9fc1c4820f15, 0xfdffffffffffffff, 0x0, x5, 16, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x15, 0xb0ee9fc1c4820f15) 
     
  
@@ -3098,7 +3098,7 @@ inst_262:
     # aes64dsm x16, x16, x1
     # sd x16, 24(x5)
 inst_263:
-    TEST_RR_OP(aes64dsm, x16, x16, x16, 0xb0ee9fc175627871, 0xfbffffffffffffff, 0x0, x5, 24, x6)
+    TEST_RR_OP(aes64dsm, x16, x16, x1, 0xb0ee9fc175627871, 0xfbffffffffffffff, 0x0, x5, 24, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x16, 0xb0ee9fc175627871) 
     
  
@@ -3108,7 +3108,7 @@ inst_263:
     # aes64dsm x17, x15, x31
     # sd x17, 32(x5)
 inst_264:
-    TEST_RR_OP(aes64dsm, x17, x15, x15, 0xb0ee9fc1eeb32c2a, 0xf7ffffffffffffff, 0x0, x5, 32, x6)
+    TEST_RR_OP(aes64dsm, x17, x15, x31, 0xb0ee9fc1eeb32c2a, 0xf7ffffffffffffff, 0x0, x5, 32, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x17, 0xb0ee9fc1eeb32c2a) 
     
 
@@ -3126,7 +3126,7 @@ inst_264:
     # aes64dsm x18, x14, x30
     # sd x18, 0(x1)
 inst_265:
-    TEST_RR_OP(aes64dsm, x18, x14, x14, 0xb0ee9fc169746263, 0xefffffffffffffff, 0x0, x1, 0, x2)
+    TEST_RR_OP(aes64dsm, x18, x14, x30, 0xb0ee9fc169746263, 0xefffffffffffffff, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x18, 0xb0ee9fc169746263) 
     
  
@@ -3136,7 +3136,7 @@ inst_265:
     # aes64dsm x19, x13, x29
     # sd x19, 8(x1)
 inst_266:
-    TEST_RR_OP(aes64dsm, x19, x13, x13, 0xb0ee9fc17ce1fef1, 0xdfffffffffffffff, 0x0, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x19, x13, x29, 0xb0ee9fc17ce1fef1, 0xdfffffffffffffff, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x19, 0xb0ee9fc17ce1fef1) 
     
  
@@ -3146,7 +3146,7 @@ inst_266:
     # aes64dsm x20, x12, x28
     # sd x20, 16(x1)
 inst_267:
-    TEST_RR_OP(aes64dsm, x20, x12, x12, 0xb0ee9fc1fe145132, 0xbfffffffffffffff, 0x0, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x20, x12, x28, 0xb0ee9fc1fe145132, 0xbfffffffffffffff, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x20, 0xb0ee9fc1fe145132) 
     
  
@@ -3156,7 +3156,7 @@ inst_267:
     # aes64dsm x21, x11, x27
     # sd x21, 24(x1)
 inst_268:
-    TEST_RR_OP(aes64dsm, x21, x11, x11, 0xb0ee9fc1053a1039, 0x7fffffffffffffff, 0x0, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x21, x11, x27, 0xb0ee9fc1053a1039, 0x7fffffffffffffff, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x21, 0xb0ee9fc1053a1039) 
     
  
@@ -3166,7 +3166,7 @@ inst_268:
     # aes64dsm x22, x10, x26
     # sd x22, 32(x1)
 inst_269:
-    TEST_RR_OP(aes64dsm, x22, x10, x10, 0xb0ee9fc1c1b0ee9f, 0xffffffffffffffff, 0x0, x1, 32, x2)
+    TEST_RR_OP(aes64dsm, x22, x10, x26, 0xb0ee9fc1c1b0ee9f, 0xffffffffffffffff, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x22, 0xb0ee9fc1c1b0ee9f) 
     
 
@@ -3178,14 +3178,14 @@ inst_269:
 	RVTEST_SIGBASE(x1,signature_55_0)
 
  
-    # Testcase 270:  rs1:x25(0x10fd3dedadea5195), rs2:x25(0xdf7f3844121bcc23), result rd:x23(0xff4aa30c9cdeb211)
+    # Testcase 270:  rs1:x25(0x10fd3dedadea5195), rs2:x25(0xdf7f3844121bcc23), result rd:x23(0x0e7ced6cca1c96af)
     # li  x25, MASK_XLEN(0xdf7f3844121bcc23)
     # li  x25, MASK_XLEN(0x10fd3dedadea5195)
     # aes64dsm x23, x25, x25
     # sd x23, 0(x1)
 inst_270:
-    TEST_RR_OP(aes64dsm, x23, x25, x25, 0xff4aa30c9cdeb211, 0x10fd3dedadea5195, 0xdf7f3844121bcc23, x1, 0, x2)
-    RVMODEL_IO_ASSERT_GPR_EQ(x2, x23, 0xff4aa30c9cdeb211) 
+    TEST_RR_OP(aes64dsm, x23, x25, x25, 0x0e7ced6cca1c96af, 0x10fd3dedadea5195, 0xdf7f3844121bcc23, x1, 0, x2)
+    RVMODEL_IO_ASSERT_GPR_EQ(x2, x23, 0x0e7ced6cca1c96af) 
     
  
     # Testcase 271:  rs1:x8(0xbd295ce2d2ffbec1), rs2:x24(0xf5adb41aa47d105b), result rd:x0(0x0000000000000000)
@@ -3194,7 +3194,7 @@ inst_270:
     # aes64dsm x0, x8, x24
     # sd x0, 8(x1)
 inst_271:
-    TEST_RR_OP(aes64dsm, x0, x8, x8, 0x0000000000000000, 0xbd295ce2d2ffbec1, 0xf5adb41aa47d105b, x1, 8, x2)
+    TEST_RR_OP(aes64dsm, x0, x8, x24, 0x0000000000000000, 0xbd295ce2d2ffbec1, 0xf5adb41aa47d105b, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x0, 0x0000000000000000) 
     
  
@@ -3204,7 +3204,7 @@ inst_271:
     # aes64dsm x25, x7, x0
     # sd x25, 16(x1)
 inst_272:
-    TEST_RR_OP(aes64dsm, x25, x7, x7, 0xc97e46a8079984f6, 0xc9649f05a8e1a8bb, 0x82f6747f707af2c0, x1, 16, x2)
+    TEST_RR_OP(aes64dsm, x25, x7, x0, 0xc97e46a8079984f6, 0xc9649f05a8e1a8bb, 0x82f6747f707af2c0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x25, 0xc97e46a8079984f6) 
     
  
@@ -3214,7 +3214,7 @@ inst_272:
     # aes64dsm x26, x0, x22
     # sd x26, 24(x1)
 inst_273:
-    TEST_RR_OP(aes64dsm, x26, x0, x0, 0xb879a432c3b88855, 0x3541291848c99fcb, 0x73a92fd4e19bfbc3, x1, 24, x2)
+    TEST_RR_OP(aes64dsm, x26, x0, x22, 0xb879a432c3b88855, 0x3541291848c99fcb, 0x73a92fd4e19bfbc3, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x26, 0xb879a432c3b88855) 
     
 

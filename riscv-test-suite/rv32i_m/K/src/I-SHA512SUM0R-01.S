@@ -52,7 +52,7 @@ RVTEST_CODE_BEGIN
     # sha512sum0r x1, x31, x16
     # sw x1, 0(x6)
 inst_0:
-    TEST_RR_OP(sha512sum0r, x1, x31, x31, 0x4f1e06aa, 0x10fd3dedadea5195, 0xdf7f3844121bcc23, x6, 0, x7)
+    TEST_RR_OP(sha512sum0r, x1, x31, x16, 0x4f1e06aa, 0x10fd3dedadea5195, 0xdf7f3844121bcc23, x6, 0, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x1, 0x4f1e06aa) 
     
  
@@ -62,7 +62,7 @@ inst_0:
     # sha512sum0r x2, x30, x15
     # sw x2, 4(x6)
 inst_1:
-    TEST_RR_OP(sha512sum0r, x2, x30, x30, 0xad86bb8b, 0xbd295ce2d2ffbec1, 0xf5adb41aa47d105b, x6, 4, x7)
+    TEST_RR_OP(sha512sum0r, x2, x30, x15, 0xad86bb8b, 0xbd295ce2d2ffbec1, 0xf5adb41aa47d105b, x6, 4, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x2, 0xad86bb8b) 
     
  
@@ -72,7 +72,7 @@ inst_1:
     # sha512sum0r x3, x29, x14
     # sw x3, 8(x6)
 inst_2:
-    TEST_RR_OP(sha512sum0r, x3, x29, x29, 0xad51655f, 0xc9649f05a8e1a8bb, 0x82f6747f707af2c0, x6, 8, x7)
+    TEST_RR_OP(sha512sum0r, x3, x29, x14, 0xad51655f, 0xc9649f05a8e1a8bb, 0x82f6747f707af2c0, x6, 8, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x3, 0xad51655f) 
     
  
@@ -82,7 +82,7 @@ inst_2:
     # sha512sum0r x4, x28, x13
     # sw x4, 12(x6)
 inst_3:
-    TEST_RR_OP(sha512sum0r, x4, x28, x28, 0x761a7533, 0x3541291848c99fcb, 0x73a92fd4e19bfbc3, x6, 12, x7)
+    TEST_RR_OP(sha512sum0r, x4, x28, x13, 0x761a7533, 0x3541291848c99fcb, 0x73a92fd4e19bfbc3, x6, 12, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x4, 0x761a7533) 
     
  
@@ -92,7 +92,7 @@ inst_3:
     # sha512sum0r x5, x27, x12
     # sw x5, 16(x6)
 inst_4:
-    TEST_RR_OP(sha512sum0r, x5, x27, x27, 0x62a69afe, 0x10a24740461d524f, 0x546b0e54528a10af, x6, 16, x7)
+    TEST_RR_OP(sha512sum0r, x5, x27, x12, 0x62a69afe, 0x10a24740461d524f, 0x546b0e54528a10af, x6, 16, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x5, 0x62a69afe) 
     
 
@@ -110,7 +110,7 @@ inst_4:
     # sha512sum0r x6, x26, x11
     # sw x6, 0(x1)
 inst_5:
-    TEST_RR_OP(sha512sum0r, x6, x26, x26, 0xeede4ac2, 0x546b0e54528a10af, 0x10a24740461d524f, x1, 0, x2)
+    TEST_RR_OP(sha512sum0r, x6, x26, x11, 0xeede4ac2, 0x546b0e54528a10af, 0x10a24740461d524f, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x6, 0xeede4ac2) 
     
  
@@ -120,7 +120,7 @@ inst_5:
     # sha512sum0r x7, x25, x10
     # sw x7, 4(x1)
 inst_6:
-    TEST_RR_OP(sha512sum0r, x7, x25, x25, 0xd83a0873, 0x73a92fd4e19bfbc3, 0x3541291848c99fcb, x1, 4, x2)
+    TEST_RR_OP(sha512sum0r, x7, x25, x10, 0xd83a0873, 0x73a92fd4e19bfbc3, 0x3541291848c99fcb, x1, 4, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x7, 0xd83a0873) 
     
  
@@ -130,7 +130,7 @@ inst_6:
     # sha512sum0r x8, x24, x9
     # sw x8, 8(x1)
 inst_7:
-    TEST_RR_OP(sha512sum0r, x8, x24, x24, 0x257322c8, 0x82f6747f707af2c0, 0xc9649f05a8e1a8bb, x1, 8, x2)
+    TEST_RR_OP(sha512sum0r, x8, x24, x9, 0x257322c8, 0x82f6747f707af2c0, 0xc9649f05a8e1a8bb, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x8, 0x257322c8) 
     
  
@@ -140,7 +140,7 @@ inst_7:
     # sha512sum0r x9, x23, x8
     # sw x9, 12(x1)
 inst_8:
-    TEST_RR_OP(sha512sum0r, x9, x23, x23, 0x6ce1fcd7, 0xf5adb41aa47d105b, 0xbd295ce2d2ffbec1, x1, 12, x2)
+    TEST_RR_OP(sha512sum0r, x9, x23, x8, 0x6ce1fcd7, 0xf5adb41aa47d105b, 0xbd295ce2d2ffbec1, x1, 12, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x9, 0x6ce1fcd7) 
     
  
@@ -150,7 +150,7 @@ inst_8:
     # sha512sum0r x10, x22, x7
     # sw x10, 16(x1)
 inst_9:
-    TEST_RR_OP(sha512sum0r, x10, x22, x22, 0x72845997, 0xdf7f3844121bcc23, 0x10fd3dedadea5195, x1, 16, x2)
+    TEST_RR_OP(sha512sum0r, x10, x22, x7, 0x72845997, 0xdf7f3844121bcc23, 0x10fd3dedadea5195, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x10, 0x72845997) 
     
 
@@ -168,7 +168,7 @@ inst_9:
     # sha512sum0r x11, x21, x6
     # sw x11, 0(x1)
 inst_10:
-    TEST_RR_OP(sha512sum0r, x11, x21, x21, 0x83fffff0, 0x1, 0xffffffff, x1, 0, x7)
+    TEST_RR_OP(sha512sum0r, x11, x21, x6, 0x83fffff0, 0x1, 0xffffffff, x1, 0, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x11, 0x83fffff0) 
     
  
@@ -178,7 +178,7 @@ inst_10:
     # sha512sum0r x12, x20, x5
     # sw x12, 4(x1)
 inst_11:
-    TEST_RR_OP(sha512sum0r, x12, x20, x20, 0x64fffff0, 0x2, 0x7fffffff, x1, 4, x7)
+    TEST_RR_OP(sha512sum0r, x12, x20, x5, 0x64fffff0, 0x2, 0x7fffffff, x1, 4, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x12, 0x64fffff0) 
     
  
@@ -188,7 +188,7 @@ inst_11:
     # sha512sum0r x13, x19, x4
     # sw x13, 8(x1)
 inst_12:
-    TEST_RR_OP(sha512sum0r, x13, x19, x19, 0xd97ffff0, 0x4, 0xbfffffff, x1, 8, x7)
+    TEST_RR_OP(sha512sum0r, x13, x19, x4, 0xd97ffff0, 0x4, 0xbfffffff, x1, 8, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x13, 0xd97ffff0) 
     
  
@@ -198,7 +198,7 @@ inst_12:
     # sha512sum0r x14, x18, x3
     # sw x14, 12(x1)
 inst_13:
-    TEST_RR_OP(sha512sum0r, x14, x18, x18, 0xd9bffff0, 0x8, 0xdfffffff, x1, 12, x7)
+    TEST_RR_OP(sha512sum0r, x14, x18, x3, 0xd9bffff0, 0x8, 0xdfffffff, x1, 12, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x14, 0xd9bffff0) 
     
  
@@ -208,7 +208,7 @@ inst_13:
     # sha512sum0r x15, x17, x2
     # sw x15, 16(x1)
 inst_14:
-    TEST_RR_OP(sha512sum0r, x15, x17, x17, 0xe5dffff0, 0x10, 0xefffffff, x1, 16, x7)
+    TEST_RR_OP(sha512sum0r, x15, x17, x2, 0xe5dffff0, 0x10, 0xefffffff, x1, 16, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x15, 0xe5dffff0) 
     
 
@@ -226,7 +226,7 @@ inst_14:
     # sha512sum0r x16, x16, x1
     # sw x16, 0(x2)
 inst_15:
-    TEST_RR_OP(sha512sum0r, x16, x16, x16, 0x03effff0, 0x20, 0xf7ffffff, x2, 0, x3)
+    TEST_RR_OP(sha512sum0r, x16, x16, x1, 0x03effff0, 0x20, 0xf7ffffff, x2, 0, x3)
     RVMODEL_IO_ASSERT_GPR_EQ(x3, x16, 0x03effff0) 
     
  
@@ -236,7 +236,7 @@ inst_15:
     # sha512sum0r x17, x15, x31
     # sw x17, 4(x2)
 inst_16:
-    TEST_RR_OP(sha512sum0r, x17, x15, x15, 0x00f7fff0, 0x40, 0xfbffffff, x2, 4, x3)
+    TEST_RR_OP(sha512sum0r, x17, x15, x31, 0x00f7fff0, 0x40, 0xfbffffff, x2, 4, x3)
     RVMODEL_IO_ASSERT_GPR_EQ(x3, x17, 0x00f7fff0) 
     
  
@@ -246,7 +246,7 @@ inst_16:
     # sha512sum0r x18, x14, x30
     # sw x18, 8(x2)
 inst_17:
-    TEST_RR_OP(sha512sum0r, x18, x14, x14, 0xe17bfff0, 0x80, 0xfdffffff, x2, 8, x3)
+    TEST_RR_OP(sha512sum0r, x18, x14, x30, 0xe17bfff0, 0x80, 0xfdffffff, x2, 8, x3)
     RVMODEL_IO_ASSERT_GPR_EQ(x3, x18, 0xe17bfff0) 
     
  
@@ -256,7 +256,7 @@ inst_17:
     # sha512sum0r x19, x13, x29
     # sw x19, 12(x2)
 inst_18:
-    TEST_RR_OP(sha512sum0r, x19, x13, x13, 0xd1bdfff0, 0x100, 0xfeffffff, x2, 12, x3)
+    TEST_RR_OP(sha512sum0r, x19, x13, x29, 0xd1bdfff0, 0x100, 0xfeffffff, x2, 12, x3)
     RVMODEL_IO_ASSERT_GPR_EQ(x3, x19, 0xd1bdfff0) 
     
  
@@ -266,7 +266,7 @@ inst_18:
     # sha512sum0r x20, x12, x28
     # sw x20, 16(x2)
 inst_19:
-    TEST_RR_OP(sha512sum0r, x20, x12, x12, 0xc9defff0, 0x200, 0xff7fffff, x2, 16, x3)
+    TEST_RR_OP(sha512sum0r, x20, x12, x28, 0xc9defff0, 0x200, 0xff7fffff, x2, 16, x3)
     RVMODEL_IO_ASSERT_GPR_EQ(x3, x20, 0xc9defff0) 
     
 
@@ -284,7 +284,7 @@ inst_19:
     # sha512sum0r x21, x11, x27
     # sw x21, 0(x1)
 inst_20:
-    TEST_RR_OP(sha512sum0r, x21, x11, x11, 0xc5ef7ff0, 0x400, 0xffbfffff, x1, 0, x2)
+    TEST_RR_OP(sha512sum0r, x21, x11, x27, 0xc5ef7ff0, 0x400, 0xffbfffff, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x21, 0xc5ef7ff0) 
     
  
@@ -294,7 +294,7 @@ inst_20:
     # sha512sum0r x22, x10, x26
     # sw x22, 4(x1)
 inst_21:
-    TEST_RR_OP(sha512sum0r, x22, x10, x10, 0xc3f7bff0, 0x800, 0xffdfffff, x1, 4, x2)
+    TEST_RR_OP(sha512sum0r, x22, x10, x26, 0xc3f7bff0, 0x800, 0xffdfffff, x1, 4, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x22, 0xc3f7bff0) 
     
  
@@ -304,7 +304,7 @@ inst_21:
     # sha512sum0r x23, x9, x25
     # sw x23, 8(x1)
 inst_22:
-    TEST_RR_OP(sha512sum0r, x23, x9, x9, 0xc0fbdff0, 0x1000, 0xffefffff, x1, 8, x2)
+    TEST_RR_OP(sha512sum0r, x23, x9, x25, 0xc0fbdff0, 0x1000, 0xffefffff, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x23, 0xc0fbdff0) 
     
  
@@ -314,7 +314,7 @@ inst_22:
     # sha512sum0r x24, x8, x24
     # sw x24, 12(x1)
 inst_23:
-    TEST_RR_OP(sha512sum0r, x24, x8, x8, 0xc17deff0, 0x2000, 0xfff7ffff, x1, 12, x2)
+    TEST_RR_OP(sha512sum0r, x24, x8, x24, 0xc17deff0, 0x2000, 0xfff7ffff, x1, 12, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x24, 0xc17deff0) 
     
  
@@ -324,7 +324,7 @@ inst_23:
     # sha512sum0r x25, x7, x23
     # sw x25, 16(x1)
 inst_24:
-    TEST_RR_OP(sha512sum0r, x25, x7, x7, 0xc1bef7f0, 0x4000, 0xfffbffff, x1, 16, x2)
+    TEST_RR_OP(sha512sum0r, x25, x7, x23, 0xc1bef7f0, 0x4000, 0xfffbffff, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x25, 0xc1bef7f0) 
     
 
@@ -342,7 +342,7 @@ inst_24:
     # sha512sum0r x26, x6, x22
     # sw x26, 0(x1)
 inst_25:
-    TEST_RR_OP(sha512sum0r, x26, x6, x6, 0xc1df7bf0, 0x8000, 0xfffdffff, x1, 0, x7)
+    TEST_RR_OP(sha512sum0r, x26, x6, x22, 0xc1df7bf0, 0x8000, 0xfffdffff, x1, 0, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x26, 0xc1df7bf0) 
     
  
@@ -352,7 +352,7 @@ inst_25:
     # sha512sum0r x27, x5, x21
     # sw x27, 4(x1)
 inst_26:
-    TEST_RR_OP(sha512sum0r, x27, x5, x5, 0xc1efbdf0, 0x10000, 0xfffeffff, x1, 4, x7)
+    TEST_RR_OP(sha512sum0r, x27, x5, x21, 0xc1efbdf0, 0x10000, 0xfffeffff, x1, 4, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x27, 0xc1efbdf0) 
     
  
@@ -362,7 +362,7 @@ inst_26:
     # sha512sum0r x28, x4, x20
     # sw x28, 8(x1)
 inst_27:
-    TEST_RR_OP(sha512sum0r, x28, x4, x4, 0xc1f7def0, 0x20000, 0xffff7fff, x1, 8, x7)
+    TEST_RR_OP(sha512sum0r, x28, x4, x20, 0xc1f7def0, 0x20000, 0xffff7fff, x1, 8, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x28, 0xc1f7def0) 
     
  
@@ -372,7 +372,7 @@ inst_27:
     # sha512sum0r x29, x3, x19
     # sw x29, 12(x1)
 inst_28:
-    TEST_RR_OP(sha512sum0r, x29, x3, x3, 0xc1fbef70, 0x40000, 0xffffbfff, x1, 12, x7)
+    TEST_RR_OP(sha512sum0r, x29, x3, x19, 0xc1fbef70, 0x40000, 0xffffbfff, x1, 12, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x29, 0xc1fbef70) 
     
  
@@ -382,7 +382,7 @@ inst_28:
     # sha512sum0r x30, x2, x18
     # sw x30, 16(x1)
 inst_29:
-    TEST_RR_OP(sha512sum0r, x30, x2, x2, 0xc1fdf7b0, 0x80000, 0xffffdfff, x1, 16, x7)
+    TEST_RR_OP(sha512sum0r, x30, x2, x18, 0xc1fdf7b0, 0x80000, 0xffffdfff, x1, 16, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x30, 0xc1fdf7b0) 
     
 
@@ -400,7 +400,7 @@ inst_29:
     # sha512sum0r x31, x1, x17
     # sw x31, 0(x5)
 inst_30:
-    TEST_RR_OP(sha512sum0r, x31, x1, x1, 0xc1fefbd0, 0x100000, 0xffffefff, x5, 0, x6)
+    TEST_RR_OP(sha512sum0r, x31, x1, x17, 0xc1fefbd0, 0x100000, 0xffffefff, x5, 0, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x31, 0xc1fefbd0) 
     
  
@@ -410,7 +410,7 @@ inst_30:
     # sha512sum0r x1, x31, x16
     # sw x1, 4(x5)
 inst_31:
-    TEST_RR_OP(sha512sum0r, x1, x31, x31, 0xc1ff7de0, 0x200000, 0xfffff7ff, x5, 4, x6)
+    TEST_RR_OP(sha512sum0r, x1, x31, x16, 0xc1ff7de0, 0x200000, 0xfffff7ff, x5, 4, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x1, 0xc1ff7de0) 
     
  
@@ -420,7 +420,7 @@ inst_31:
     # sha512sum0r x2, x30, x15
     # sw x2, 8(x5)
 inst_32:
-    TEST_RR_OP(sha512sum0r, x2, x30, x30, 0xc1ffbef8, 0x400000, 0xfffffbff, x5, 8, x6)
+    TEST_RR_OP(sha512sum0r, x2, x30, x15, 0xc1ffbef8, 0x400000, 0xfffffbff, x5, 8, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x2, 0xc1ffbef8) 
     
  
@@ -430,7 +430,7 @@ inst_32:
     # sha512sum0r x3, x29, x14
     # sw x3, 12(x5)
 inst_33:
-    TEST_RR_OP(sha512sum0r, x3, x29, x29, 0xc1ffdf74, 0x800000, 0xfffffdff, x5, 12, x6)
+    TEST_RR_OP(sha512sum0r, x3, x29, x14, 0xc1ffdf74, 0x800000, 0xfffffdff, x5, 12, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x3, 0xc1ffdf74) 
     
  
@@ -440,7 +440,7 @@ inst_33:
     # sha512sum0r x4, x28, x13
     # sw x4, 16(x5)
 inst_34:
-    TEST_RR_OP(sha512sum0r, x4, x28, x28, 0xc1ffefb2, 0x1000000, 0xfffffeff, x5, 16, x6)
+    TEST_RR_OP(sha512sum0r, x4, x28, x13, 0xc1ffefb2, 0x1000000, 0xfffffeff, x5, 16, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x4, 0xc1ffefb2) 
     
 
@@ -458,7 +458,7 @@ inst_34:
     # sha512sum0r x5, x27, x12
     # sw x5, 0(x1)
 inst_35:
-    TEST_RR_OP(sha512sum0r, x5, x27, x27, 0xc1fff7d1, 0x2000000, 0xffffff7f, x1, 0, x2)
+    TEST_RR_OP(sha512sum0r, x5, x27, x12, 0xc1fff7d1, 0x2000000, 0xffffff7f, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x5, 0xc1fff7d1) 
     
  
@@ -468,7 +468,7 @@ inst_35:
     # sha512sum0r x6, x26, x11
     # sw x6, 4(x1)
 inst_36:
-    TEST_RR_OP(sha512sum0r, x6, x26, x26, 0xc1fffbe0, 0x4000000, 0xffffffbf, x1, 4, x2)
+    TEST_RR_OP(sha512sum0r, x6, x26, x11, 0xc1fffbe0, 0x4000000, 0xffffffbf, x1, 4, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x6, 0xc1fffbe0) 
     
  
@@ -478,7 +478,7 @@ inst_36:
     # sha512sum0r x7, x25, x10
     # sw x7, 8(x1)
 inst_37:
-    TEST_RR_OP(sha512sum0r, x7, x25, x25, 0xc1fffdf8, 0x8000000, 0xffffffdf, x1, 8, x2)
+    TEST_RR_OP(sha512sum0r, x7, x25, x10, 0xc1fffdf8, 0x8000000, 0xffffffdf, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x7, 0xc1fffdf8) 
     
  
@@ -488,7 +488,7 @@ inst_37:
     # sha512sum0r x8, x24, x9
     # sw x8, 12(x1)
 inst_38:
-    TEST_RR_OP(sha512sum0r, x8, x24, x24, 0xc1fffef5, 0x10000000, 0xffffffef, x1, 12, x2)
+    TEST_RR_OP(sha512sum0r, x8, x24, x9, 0xc1fffef5, 0x10000000, 0xffffffef, x1, 12, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x8, 0xc1fffef5) 
     
  
@@ -498,7 +498,7 @@ inst_38:
     # sha512sum0r x9, x23, x8
     # sw x9, 16(x1)
 inst_39:
-    TEST_RR_OP(sha512sum0r, x9, x23, x23, 0xc1ffff70, 0x20000000, 0xfffffff7, x1, 16, x2)
+    TEST_RR_OP(sha512sum0r, x9, x23, x8, 0xc1ffff70, 0x20000000, 0xfffffff7, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x9, 0xc1ffff70) 
     
 
@@ -516,7 +516,7 @@ inst_39:
     # sha512sum0r x10, x22, x7
     # sw x10, 0(x1)
 inst_40:
-    TEST_RR_OP(sha512sum0r, x10, x22, x22, 0xc1ffffb5, 0x40000000, 0xfffffffb, x1, 0, x2)
+    TEST_RR_OP(sha512sum0r, x10, x22, x7, 0xc1ffffb5, 0x40000000, 0xfffffffb, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x10, 0xc1ffffb5) 
     
  
@@ -526,7 +526,7 @@ inst_40:
     # sha512sum0r x11, x21, x6
     # sw x11, 4(x1)
 inst_41:
-    TEST_RR_OP(sha512sum0r, x11, x21, x21, 0xc1ffffd8, 0x80000000, 0xfffffffd, x1, 4, x2)
+    TEST_RR_OP(sha512sum0r, x11, x21, x6, 0xc1ffffd8, 0x80000000, 0xfffffffd, x1, 4, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x11, 0xc1ffffd8) 
     
  
@@ -536,7 +536,7 @@ inst_41:
     # sha512sum0r x12, x20, x5
     # sw x12, 8(x1)
 inst_42:
-    TEST_RR_OP(sha512sum0r, x12, x20, x20, 0xc1ffffe0, 0x0, 0xfffffffe, x1, 8, x2)
+    TEST_RR_OP(sha512sum0r, x12, x20, x5, 0xc1ffffe0, 0x0, 0xfffffffe, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x12, 0xc1ffffe0) 
     
  
@@ -546,7 +546,7 @@ inst_42:
     # sha512sum0r x13, x19, x4
     # sw x13, 12(x1)
 inst_43:
-    TEST_RR_OP(sha512sum0r, x13, x19, x19, 0x7c00000f, 0xfffffffe, 0x0, x1, 12, x2)
+    TEST_RR_OP(sha512sum0r, x13, x19, x4, 0x7c00000f, 0xfffffffe, 0x0, x1, 12, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x13, 0x7c00000f) 
     
  
@@ -556,7 +556,7 @@ inst_43:
     # sha512sum0r x14, x18, x3
     # sw x14, 16(x1)
 inst_44:
-    TEST_RR_OP(sha512sum0r, x14, x18, x18, 0x9b00000f, 0xfffffffd, 0x80000000, x1, 16, x2)
+    TEST_RR_OP(sha512sum0r, x14, x18, x3, 0x9b00000f, 0xfffffffd, 0x80000000, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x14, 0x9b00000f) 
     
 
@@ -574,7 +574,7 @@ inst_44:
     # sha512sum0r x15, x17, x2
     # sw x15, 0(x3)
 inst_45:
-    TEST_RR_OP(sha512sum0r, x15, x17, x17, 0x2680000f, 0xfffffffb, 0x40000000, x3, 0, x4)
+    TEST_RR_OP(sha512sum0r, x15, x17, x2, 0x2680000f, 0xfffffffb, 0x40000000, x3, 0, x4)
     RVMODEL_IO_ASSERT_GPR_EQ(x4, x15, 0x2680000f) 
     
  
@@ -584,7 +584,7 @@ inst_45:
     # sha512sum0r x16, x16, x1
     # sw x16, 4(x3)
 inst_46:
-    TEST_RR_OP(sha512sum0r, x16, x16, x16, 0x2640000f, 0xfffffff7, 0x20000000, x3, 4, x4)
+    TEST_RR_OP(sha512sum0r, x16, x16, x1, 0x2640000f, 0xfffffff7, 0x20000000, x3, 4, x4)
     RVMODEL_IO_ASSERT_GPR_EQ(x4, x16, 0x2640000f) 
     
  
@@ -594,7 +594,7 @@ inst_46:
     # sha512sum0r x17, x15, x31
     # sw x17, 8(x3)
 inst_47:
-    TEST_RR_OP(sha512sum0r, x17, x15, x15, 0x1a20000f, 0xffffffef, 0x10000000, x3, 8, x4)
+    TEST_RR_OP(sha512sum0r, x17, x15, x31, 0x1a20000f, 0xffffffef, 0x10000000, x3, 8, x4)
     RVMODEL_IO_ASSERT_GPR_EQ(x4, x17, 0x1a20000f) 
     
  
@@ -604,7 +604,7 @@ inst_47:
     # sha512sum0r x18, x14, x30
     # sw x18, 12(x3)
 inst_48:
-    TEST_RR_OP(sha512sum0r, x18, x14, x14, 0xfc10000f, 0xffffffdf, 0x8000000, x3, 12, x4)
+    TEST_RR_OP(sha512sum0r, x18, x14, x30, 0xfc10000f, 0xffffffdf, 0x8000000, x3, 12, x4)
     RVMODEL_IO_ASSERT_GPR_EQ(x4, x18, 0xfc10000f) 
     
  
@@ -614,7 +614,7 @@ inst_48:
     # sha512sum0r x19, x13, x29
     # sw x19, 16(x3)
 inst_49:
-    TEST_RR_OP(sha512sum0r, x19, x13, x13, 0xff08000f, 0xffffffbf, 0x4000000, x3, 16, x4)
+    TEST_RR_OP(sha512sum0r, x19, x13, x29, 0xff08000f, 0xffffffbf, 0x4000000, x3, 16, x4)
     RVMODEL_IO_ASSERT_GPR_EQ(x4, x19, 0xff08000f) 
     
 
@@ -632,7 +632,7 @@ inst_49:
     # sha512sum0r x20, x12, x28
     # sw x20, 0(x1)
 inst_50:
-    TEST_RR_OP(sha512sum0r, x20, x12, x12, 0x1e84000f, 0xffffff7f, 0x2000000, x1, 0, x2)
+    TEST_RR_OP(sha512sum0r, x20, x12, x28, 0x1e84000f, 0xffffff7f, 0x2000000, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x20, 0x1e84000f) 
     
  
@@ -642,7 +642,7 @@ inst_50:
     # sha512sum0r x21, x11, x27
     # sw x21, 4(x1)
 inst_51:
-    TEST_RR_OP(sha512sum0r, x21, x11, x11, 0x2e42000f, 0xfffffeff, 0x1000000, x1, 4, x2)
+    TEST_RR_OP(sha512sum0r, x21, x11, x27, 0x2e42000f, 0xfffffeff, 0x1000000, x1, 4, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x21, 0x2e42000f) 
     
  
@@ -652,7 +652,7 @@ inst_51:
     # sha512sum0r x22, x10, x26
     # sw x22, 8(x1)
 inst_52:
-    TEST_RR_OP(sha512sum0r, x22, x10, x10, 0x3621000f, 0xfffffdff, 0x800000, x1, 8, x2)
+    TEST_RR_OP(sha512sum0r, x22, x10, x26, 0x3621000f, 0xfffffdff, 0x800000, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x22, 0x3621000f) 
     
  
@@ -662,7 +662,7 @@ inst_52:
     # sha512sum0r x23, x9, x25
     # sw x23, 12(x1)
 inst_53:
-    TEST_RR_OP(sha512sum0r, x23, x9, x9, 0x3a10800f, 0xfffffbff, 0x400000, x1, 12, x2)
+    TEST_RR_OP(sha512sum0r, x23, x9, x25, 0x3a10800f, 0xfffffbff, 0x400000, x1, 12, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x23, 0x3a10800f) 
     
  
@@ -672,7 +672,7 @@ inst_53:
     # sha512sum0r x24, x8, x24
     # sw x24, 16(x1)
 inst_54:
-    TEST_RR_OP(sha512sum0r, x24, x8, x8, 0x3c08400f, 0xfffff7ff, 0x200000, x1, 16, x2)
+    TEST_RR_OP(sha512sum0r, x24, x8, x24, 0x3c08400f, 0xfffff7ff, 0x200000, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x24, 0x3c08400f) 
     
 
@@ -690,7 +690,7 @@ inst_54:
     # sha512sum0r x25, x7, x23
     # sw x25, 0(x1)
 inst_55:
-    TEST_RR_OP(sha512sum0r, x25, x7, x7, 0x3f04200f, 0xffffefff, 0x100000, x1, 0, x2)
+    TEST_RR_OP(sha512sum0r, x25, x7, x23, 0x3f04200f, 0xffffefff, 0x100000, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x25, 0x3f04200f) 
     
  
@@ -700,7 +700,7 @@ inst_55:
     # sha512sum0r x26, x6, x22
     # sw x26, 4(x1)
 inst_56:
-    TEST_RR_OP(sha512sum0r, x26, x6, x6, 0x3e82100f, 0xffffdfff, 0x80000, x1, 4, x2)
+    TEST_RR_OP(sha512sum0r, x26, x6, x22, 0x3e82100f, 0xffffdfff, 0x80000, x1, 4, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x26, 0x3e82100f) 
     
  
@@ -710,7 +710,7 @@ inst_56:
     # sha512sum0r x27, x5, x21
     # sw x27, 8(x1)
 inst_57:
-    TEST_RR_OP(sha512sum0r, x27, x5, x5, 0x3e41080f, 0xffffbfff, 0x40000, x1, 8, x2)
+    TEST_RR_OP(sha512sum0r, x27, x5, x21, 0x3e41080f, 0xffffbfff, 0x40000, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x27, 0x3e41080f) 
     
  
@@ -720,7 +720,7 @@ inst_57:
     # sha512sum0r x28, x4, x20
     # sw x28, 12(x1)
 inst_58:
-    TEST_RR_OP(sha512sum0r, x28, x4, x4, 0x3e20840f, 0xffff7fff, 0x20000, x1, 12, x2)
+    TEST_RR_OP(sha512sum0r, x28, x4, x20, 0x3e20840f, 0xffff7fff, 0x20000, x1, 12, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x28, 0x3e20840f) 
     
  
@@ -730,7 +730,7 @@ inst_58:
     # sha512sum0r x29, x3, x19
     # sw x29, 16(x1)
 inst_59:
-    TEST_RR_OP(sha512sum0r, x29, x3, x3, 0x3e10420f, 0xfffeffff, 0x10000, x1, 16, x2)
+    TEST_RR_OP(sha512sum0r, x29, x3, x19, 0x3e10420f, 0xfffeffff, 0x10000, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x29, 0x3e10420f) 
     
 
@@ -748,7 +748,7 @@ inst_59:
     # sha512sum0r x30, x2, x18
     # sw x30, 0(x4)
 inst_60:
-    TEST_RR_OP(sha512sum0r, x30, x2, x2, 0x3e08210f, 0xfffdffff, 0x8000, x4, 0, x5)
+    TEST_RR_OP(sha512sum0r, x30, x2, x18, 0x3e08210f, 0xfffdffff, 0x8000, x4, 0, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x30, 0x3e08210f) 
     
  
@@ -758,7 +758,7 @@ inst_60:
     # sha512sum0r x31, x1, x17
     # sw x31, 4(x4)
 inst_61:
-    TEST_RR_OP(sha512sum0r, x31, x1, x1, 0x3e04108f, 0xfffbffff, 0x4000, x4, 4, x5)
+    TEST_RR_OP(sha512sum0r, x31, x1, x17, 0x3e04108f, 0xfffbffff, 0x4000, x4, 4, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x31, 0x3e04108f) 
     
  
@@ -768,7 +768,7 @@ inst_61:
     # sha512sum0r x1, x31, x16
     # sw x1, 8(x4)
 inst_62:
-    TEST_RR_OP(sha512sum0r, x1, x31, x31, 0x3e02084f, 0xfff7ffff, 0x2000, x4, 8, x5)
+    TEST_RR_OP(sha512sum0r, x1, x31, x16, 0x3e02084f, 0xfff7ffff, 0x2000, x4, 8, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x1, 0x3e02084f) 
     
  
@@ -778,7 +778,7 @@ inst_62:
     # sha512sum0r x2, x30, x15
     # sw x2, 12(x4)
 inst_63:
-    TEST_RR_OP(sha512sum0r, x2, x30, x30, 0x3e01042f, 0xffefffff, 0x1000, x4, 12, x5)
+    TEST_RR_OP(sha512sum0r, x2, x30, x15, 0x3e01042f, 0xffefffff, 0x1000, x4, 12, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x2, 0x3e01042f) 
     
  
@@ -788,7 +788,7 @@ inst_63:
     # sha512sum0r x3, x29, x14
     # sw x3, 16(x4)
 inst_64:
-    TEST_RR_OP(sha512sum0r, x3, x29, x29, 0x3e00821f, 0xffdfffff, 0x800, x4, 16, x5)
+    TEST_RR_OP(sha512sum0r, x3, x29, x14, 0x3e00821f, 0xffdfffff, 0x800, x4, 16, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x3, 0x3e00821f) 
     
 
@@ -806,7 +806,7 @@ inst_64:
     # sha512sum0r x4, x28, x13
     # sw x4, 0(x1)
 inst_65:
-    TEST_RR_OP(sha512sum0r, x4, x28, x28, 0x3e004107, 0xffbfffff, 0x400, x1, 0, x2)
+    TEST_RR_OP(sha512sum0r, x4, x28, x13, 0x3e004107, 0xffbfffff, 0x400, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x4, 0x3e004107) 
     
  
@@ -816,7 +816,7 @@ inst_65:
     # sha512sum0r x5, x27, x12
     # sw x5, 4(x1)
 inst_66:
-    TEST_RR_OP(sha512sum0r, x5, x27, x27, 0x3e00208b, 0xff7fffff, 0x200, x1, 4, x2)
+    TEST_RR_OP(sha512sum0r, x5, x27, x12, 0x3e00208b, 0xff7fffff, 0x200, x1, 4, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x5, 0x3e00208b) 
     
  
@@ -826,7 +826,7 @@ inst_66:
     # sha512sum0r x6, x26, x11
     # sw x6, 8(x1)
 inst_67:
-    TEST_RR_OP(sha512sum0r, x6, x26, x26, 0x3e00104d, 0xfeffffff, 0x100, x1, 8, x2)
+    TEST_RR_OP(sha512sum0r, x6, x26, x11, 0x3e00104d, 0xfeffffff, 0x100, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x6, 0x3e00104d) 
     
  
@@ -836,7 +836,7 @@ inst_67:
     # sha512sum0r x7, x25, x10
     # sw x7, 12(x1)
 inst_68:
-    TEST_RR_OP(sha512sum0r, x7, x25, x25, 0x3e00082e, 0xfdffffff, 0x80, x1, 12, x2)
+    TEST_RR_OP(sha512sum0r, x7, x25, x10, 0x3e00082e, 0xfdffffff, 0x80, x1, 12, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x7, 0x3e00082e) 
     
  
@@ -846,7 +846,7 @@ inst_68:
     # sha512sum0r x8, x24, x9
     # sw x8, 16(x1)
 inst_69:
-    TEST_RR_OP(sha512sum0r, x8, x24, x24, 0x3e00041f, 0xfbffffff, 0x40, x1, 16, x2)
+    TEST_RR_OP(sha512sum0r, x8, x24, x9, 0x3e00041f, 0xfbffffff, 0x40, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x8, 0x3e00041f) 
     
 
@@ -864,7 +864,7 @@ inst_69:
     # sha512sum0r x9, x23, x8
     # sw x9, 0(x1)
 inst_70:
-    TEST_RR_OP(sha512sum0r, x9, x23, x23, 0x3e000207, 0xf7ffffff, 0x20, x1, 0, x2)
+    TEST_RR_OP(sha512sum0r, x9, x23, x8, 0x3e000207, 0xf7ffffff, 0x20, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x9, 0x3e000207) 
     
  
@@ -874,7 +874,7 @@ inst_70:
     # sha512sum0r x10, x22, x7
     # sw x10, 4(x1)
 inst_71:
-    TEST_RR_OP(sha512sum0r, x10, x22, x22, 0x3e00010a, 0xefffffff, 0x10, x1, 4, x2)
+    TEST_RR_OP(sha512sum0r, x10, x22, x7, 0x3e00010a, 0xefffffff, 0x10, x1, 4, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x10, 0x3e00010a) 
     
  
@@ -884,7 +884,7 @@ inst_71:
     # sha512sum0r x11, x21, x6
     # sw x11, 8(x1)
 inst_72:
-    TEST_RR_OP(sha512sum0r, x11, x21, x21, 0x3e00008f, 0xdfffffff, 0x8, x1, 8, x2)
+    TEST_RR_OP(sha512sum0r, x11, x21, x6, 0x3e00008f, 0xdfffffff, 0x8, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x11, 0x3e00008f) 
     
  
@@ -894,7 +894,7 @@ inst_72:
     # sha512sum0r x12, x20, x5
     # sw x12, 12(x1)
 inst_73:
-    TEST_RR_OP(sha512sum0r, x12, x20, x20, 0x3e00004a, 0xbfffffff, 0x4, x1, 12, x2)
+    TEST_RR_OP(sha512sum0r, x12, x20, x5, 0x3e00004a, 0xbfffffff, 0x4, x1, 12, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x12, 0x3e00004a) 
     
  
@@ -904,7 +904,7 @@ inst_73:
     # sha512sum0r x13, x19, x4
     # sw x13, 16(x1)
 inst_74:
-    TEST_RR_OP(sha512sum0r, x13, x19, x19, 0x3e000027, 0x7fffffff, 0x2, x1, 16, x2)
+    TEST_RR_OP(sha512sum0r, x13, x19, x4, 0x3e000027, 0x7fffffff, 0x2, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x13, 0x3e000027) 
     
 
@@ -922,7 +922,7 @@ inst_74:
     # sha512sum0r x14, x18, x3
     # sw x14, 0(x4)
 inst_75:
-    TEST_RR_OP(sha512sum0r, x14, x18, x18, 0x3e00001f, 0xffffffff, 0x1, x4, 0, x5)
+    TEST_RR_OP(sha512sum0r, x14, x18, x3, 0x3e00001f, 0xffffffff, 0x1, x4, 0, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x14, 0x3e00001f) 
     
  
@@ -932,7 +932,7 @@ inst_75:
     # sha512sum0r x15, x17, x2
     # sw x15, 4(x4)
 inst_76:
-    TEST_RR_OP(sha512sum0r, x15, x17, x17, 0x42000000, 0x1, 0x0, x4, 4, x5)
+    TEST_RR_OP(sha512sum0r, x15, x17, x2, 0x42000000, 0x1, 0x0, x4, 4, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x15, 0x42000000) 
     
  
@@ -942,7 +942,7 @@ inst_76:
     # sha512sum0r x16, x16, x1
     # sw x16, 8(x4)
 inst_77:
-    TEST_RR_OP(sha512sum0r, x16, x16, x16, 0x84000000, 0x2, 0x0, x4, 8, x5)
+    TEST_RR_OP(sha512sum0r, x16, x16, x1, 0x84000000, 0x2, 0x0, x4, 8, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x16, 0x84000000) 
     
  
@@ -952,7 +952,7 @@ inst_77:
     # sha512sum0r x17, x15, x31
     # sw x17, 12(x4)
 inst_78:
-    TEST_RR_OP(sha512sum0r, x17, x15, x15, 0x08000000, 0x4, 0x0, x4, 12, x5)
+    TEST_RR_OP(sha512sum0r, x17, x15, x31, 0x08000000, 0x4, 0x0, x4, 12, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x17, 0x08000000) 
     
  
@@ -962,7 +962,7 @@ inst_78:
     # sha512sum0r x18, x14, x30
     # sw x18, 16(x4)
 inst_79:
-    TEST_RR_OP(sha512sum0r, x18, x14, x14, 0x10000000, 0x8, 0x0, x4, 16, x5)
+    TEST_RR_OP(sha512sum0r, x18, x14, x30, 0x10000000, 0x8, 0x0, x4, 16, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x18, 0x10000000) 
     
 
@@ -980,7 +980,7 @@ inst_79:
     # sha512sum0r x19, x13, x29
     # sw x19, 0(x1)
 inst_80:
-    TEST_RR_OP(sha512sum0r, x19, x13, x13, 0x20000000, 0x10, 0x0, x1, 0, x2)
+    TEST_RR_OP(sha512sum0r, x19, x13, x29, 0x20000000, 0x10, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x19, 0x20000000) 
     
  
@@ -990,7 +990,7 @@ inst_80:
     # sha512sum0r x20, x12, x28
     # sw x20, 4(x1)
 inst_81:
-    TEST_RR_OP(sha512sum0r, x20, x12, x12, 0x40000000, 0x20, 0x0, x1, 4, x2)
+    TEST_RR_OP(sha512sum0r, x20, x12, x28, 0x40000000, 0x20, 0x0, x1, 4, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x20, 0x40000000) 
     
  
@@ -1000,7 +1000,7 @@ inst_81:
     # sha512sum0r x21, x11, x27
     # sw x21, 8(x1)
 inst_82:
-    TEST_RR_OP(sha512sum0r, x21, x11, x11, 0x80000000, 0x40, 0x0, x1, 8, x2)
+    TEST_RR_OP(sha512sum0r, x21, x11, x27, 0x80000000, 0x40, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x21, 0x80000000) 
     
  
@@ -1010,7 +1010,7 @@ inst_82:
     # sha512sum0r x22, x10, x26
     # sw x22, 12(x1)
 inst_83:
-    TEST_RR_OP(sha512sum0r, x22, x10, x10, 0x00000000, 0x80, 0x0, x1, 12, x2)
+    TEST_RR_OP(sha512sum0r, x22, x10, x26, 0x00000000, 0x80, 0x0, x1, 12, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x22, 0x00000000) 
     
  
@@ -1020,7 +1020,7 @@ inst_83:
     # sha512sum0r x23, x9, x25
     # sw x23, 16(x1)
 inst_84:
-    TEST_RR_OP(sha512sum0r, x23, x9, x9, 0x00000000, 0x100, 0x0, x1, 16, x2)
+    TEST_RR_OP(sha512sum0r, x23, x9, x25, 0x00000000, 0x100, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x23, 0x00000000) 
     
 
@@ -1038,7 +1038,7 @@ inst_84:
     # sha512sum0r x24, x8, x24
     # sw x24, 0(x1)
 inst_85:
-    TEST_RR_OP(sha512sum0r, x24, x8, x8, 0x00000000, 0x200, 0x0, x1, 0, x2)
+    TEST_RR_OP(sha512sum0r, x24, x8, x24, 0x00000000, 0x200, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x24, 0x00000000) 
     
  
@@ -1048,7 +1048,7 @@ inst_85:
     # sha512sum0r x25, x7, x23
     # sw x25, 4(x1)
 inst_86:
-    TEST_RR_OP(sha512sum0r, x25, x7, x7, 0x00000000, 0x400, 0x0, x1, 4, x2)
+    TEST_RR_OP(sha512sum0r, x25, x7, x23, 0x00000000, 0x400, 0x0, x1, 4, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x25, 0x00000000) 
     
  
@@ -1058,7 +1058,7 @@ inst_86:
     # sha512sum0r x26, x6, x22
     # sw x26, 8(x1)
 inst_87:
-    TEST_RR_OP(sha512sum0r, x26, x6, x6, 0x00000000, 0x800, 0x0, x1, 8, x2)
+    TEST_RR_OP(sha512sum0r, x26, x6, x22, 0x00000000, 0x800, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x26, 0x00000000) 
     
  
@@ -1068,7 +1068,7 @@ inst_87:
     # sha512sum0r x27, x5, x21
     # sw x27, 12(x1)
 inst_88:
-    TEST_RR_OP(sha512sum0r, x27, x5, x5, 0x00000000, 0x1000, 0x0, x1, 12, x2)
+    TEST_RR_OP(sha512sum0r, x27, x5, x21, 0x00000000, 0x1000, 0x0, x1, 12, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x27, 0x00000000) 
     
  
@@ -1078,7 +1078,7 @@ inst_88:
     # sha512sum0r x28, x4, x20
     # sw x28, 16(x1)
 inst_89:
-    TEST_RR_OP(sha512sum0r, x28, x4, x4, 0x00000000, 0x2000, 0x0, x1, 16, x2)
+    TEST_RR_OP(sha512sum0r, x28, x4, x20, 0x00000000, 0x2000, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x28, 0x00000000) 
     
 
@@ -1096,7 +1096,7 @@ inst_89:
     # sha512sum0r x29, x3, x19
     # sw x29, 0(x4)
 inst_90:
-    TEST_RR_OP(sha512sum0r, x29, x3, x3, 0x00000000, 0x4000, 0x0, x4, 0, x5)
+    TEST_RR_OP(sha512sum0r, x29, x3, x19, 0x00000000, 0x4000, 0x0, x4, 0, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x29, 0x00000000) 
     
  
@@ -1106,7 +1106,7 @@ inst_90:
     # sha512sum0r x30, x2, x18
     # sw x30, 4(x4)
 inst_91:
-    TEST_RR_OP(sha512sum0r, x30, x2, x2, 0x00000000, 0x8000, 0x0, x4, 4, x5)
+    TEST_RR_OP(sha512sum0r, x30, x2, x18, 0x00000000, 0x8000, 0x0, x4, 4, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x30, 0x00000000) 
     
  
@@ -1116,7 +1116,7 @@ inst_91:
     # sha512sum0r x31, x1, x17
     # sw x31, 8(x4)
 inst_92:
-    TEST_RR_OP(sha512sum0r, x31, x1, x1, 0x00000000, 0x10000, 0x0, x4, 8, x5)
+    TEST_RR_OP(sha512sum0r, x31, x1, x17, 0x00000000, 0x10000, 0x0, x4, 8, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x31, 0x00000000) 
     
  
@@ -1126,7 +1126,7 @@ inst_92:
     # sha512sum0r x1, x31, x16
     # sw x1, 12(x4)
 inst_93:
-    TEST_RR_OP(sha512sum0r, x1, x31, x31, 0x00000000, 0x20000, 0x0, x4, 12, x5)
+    TEST_RR_OP(sha512sum0r, x1, x31, x16, 0x00000000, 0x20000, 0x0, x4, 12, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x1, 0x00000000) 
     
  
@@ -1136,7 +1136,7 @@ inst_93:
     # sha512sum0r x2, x30, x15
     # sw x2, 16(x4)
 inst_94:
-    TEST_RR_OP(sha512sum0r, x2, x30, x30, 0x00000000, 0x40000, 0x0, x4, 16, x5)
+    TEST_RR_OP(sha512sum0r, x2, x30, x15, 0x00000000, 0x40000, 0x0, x4, 16, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x2, 0x00000000) 
     
 
@@ -1154,7 +1154,7 @@ inst_94:
     # sha512sum0r x3, x29, x14
     # sw x3, 0(x1)
 inst_95:
-    TEST_RR_OP(sha512sum0r, x3, x29, x29, 0x00000000, 0x80000, 0x0, x1, 0, x2)
+    TEST_RR_OP(sha512sum0r, x3, x29, x14, 0x00000000, 0x80000, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x3, 0x00000000) 
     
  
@@ -1164,7 +1164,7 @@ inst_95:
     # sha512sum0r x4, x28, x13
     # sw x4, 4(x1)
 inst_96:
-    TEST_RR_OP(sha512sum0r, x4, x28, x28, 0x00000000, 0x100000, 0x0, x1, 4, x2)
+    TEST_RR_OP(sha512sum0r, x4, x28, x13, 0x00000000, 0x100000, 0x0, x1, 4, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x4, 0x00000000) 
     
  
@@ -1174,7 +1174,7 @@ inst_96:
     # sha512sum0r x5, x27, x12
     # sw x5, 8(x1)
 inst_97:
-    TEST_RR_OP(sha512sum0r, x5, x27, x27, 0x00000000, 0x200000, 0x0, x1, 8, x2)
+    TEST_RR_OP(sha512sum0r, x5, x27, x12, 0x00000000, 0x200000, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x5, 0x00000000) 
     
  
@@ -1184,7 +1184,7 @@ inst_97:
     # sha512sum0r x6, x26, x11
     # sw x6, 12(x1)
 inst_98:
-    TEST_RR_OP(sha512sum0r, x6, x26, x26, 0x00000000, 0x400000, 0x0, x1, 12, x2)
+    TEST_RR_OP(sha512sum0r, x6, x26, x11, 0x00000000, 0x400000, 0x0, x1, 12, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x6, 0x00000000) 
     
  
@@ -1194,7 +1194,7 @@ inst_98:
     # sha512sum0r x7, x25, x10
     # sw x7, 16(x1)
 inst_99:
-    TEST_RR_OP(sha512sum0r, x7, x25, x25, 0x00000000, 0x800000, 0x0, x1, 16, x2)
+    TEST_RR_OP(sha512sum0r, x7, x25, x10, 0x00000000, 0x800000, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x7, 0x00000000) 
     
 
@@ -1212,7 +1212,7 @@ inst_99:
     # sha512sum0r x8, x24, x9
     # sw x8, 0(x1)
 inst_100:
-    TEST_RR_OP(sha512sum0r, x8, x24, x24, 0x00000000, 0x1000000, 0x0, x1, 0, x2)
+    TEST_RR_OP(sha512sum0r, x8, x24, x9, 0x00000000, 0x1000000, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x8, 0x00000000) 
     
  
@@ -1222,7 +1222,7 @@ inst_100:
     # sha512sum0r x9, x23, x8
     # sw x9, 4(x1)
 inst_101:
-    TEST_RR_OP(sha512sum0r, x9, x23, x23, 0x00000000, 0x2000000, 0x0, x1, 4, x2)
+    TEST_RR_OP(sha512sum0r, x9, x23, x8, 0x00000000, 0x2000000, 0x0, x1, 4, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x9, 0x00000000) 
     
  
@@ -1232,7 +1232,7 @@ inst_101:
     # sha512sum0r x10, x22, x7
     # sw x10, 8(x1)
 inst_102:
-    TEST_RR_OP(sha512sum0r, x10, x22, x22, 0x00000000, 0x4000000, 0x0, x1, 8, x2)
+    TEST_RR_OP(sha512sum0r, x10, x22, x7, 0x00000000, 0x4000000, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x10, 0x00000000) 
     
  
@@ -1242,7 +1242,7 @@ inst_102:
     # sha512sum0r x11, x21, x6
     # sw x11, 12(x1)
 inst_103:
-    TEST_RR_OP(sha512sum0r, x11, x21, x21, 0x00000000, 0x8000000, 0x0, x1, 12, x2)
+    TEST_RR_OP(sha512sum0r, x11, x21, x6, 0x00000000, 0x8000000, 0x0, x1, 12, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x11, 0x00000000) 
     
  
@@ -1252,7 +1252,7 @@ inst_103:
     # sha512sum0r x12, x20, x5
     # sw x12, 16(x1)
 inst_104:
-    TEST_RR_OP(sha512sum0r, x12, x20, x20, 0x00000001, 0x10000000, 0x0, x1, 16, x2)
+    TEST_RR_OP(sha512sum0r, x12, x20, x5, 0x00000001, 0x10000000, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x12, 0x00000001) 
     
 
@@ -1270,7 +1270,7 @@ inst_104:
     # sha512sum0r x13, x19, x4
     # sw x13, 0(x5)
 inst_105:
-    TEST_RR_OP(sha512sum0r, x13, x19, x19, 0x00000002, 0x20000000, 0x0, x5, 0, x6)
+    TEST_RR_OP(sha512sum0r, x13, x19, x4, 0x00000002, 0x20000000, 0x0, x5, 0, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x13, 0x00000002) 
     
  
@@ -1280,7 +1280,7 @@ inst_105:
     # sha512sum0r x14, x18, x3
     # sw x14, 4(x5)
 inst_106:
-    TEST_RR_OP(sha512sum0r, x14, x18, x18, 0x00000004, 0x40000000, 0x0, x5, 4, x6)
+    TEST_RR_OP(sha512sum0r, x14, x18, x3, 0x00000004, 0x40000000, 0x0, x5, 4, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x14, 0x00000004) 
     
  
@@ -1290,7 +1290,7 @@ inst_106:
     # sha512sum0r x15, x17, x2
     # sw x15, 8(x5)
 inst_107:
-    TEST_RR_OP(sha512sum0r, x15, x17, x17, 0x00000008, 0x80000000, 0x0, x5, 8, x6)
+    TEST_RR_OP(sha512sum0r, x15, x17, x2, 0x00000008, 0x80000000, 0x0, x5, 8, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x15, 0x00000008) 
     
  
@@ -1300,7 +1300,7 @@ inst_107:
     # sha512sum0r x16, x16, x1
     # sw x16, 12(x5)
 inst_108:
-    TEST_RR_OP(sha512sum0r, x16, x16, x16, 0x00000000, 0x0, 0x0, x5, 12, x6)
+    TEST_RR_OP(sha512sum0r, x16, x16, x1, 0x00000000, 0x0, 0x0, x5, 12, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x16, 0x00000000) 
     
  
@@ -1310,7 +1310,7 @@ inst_108:
     # sha512sum0r x17, x15, x31
     # sw x17, 16(x5)
 inst_109:
-    TEST_RR_OP(sha512sum0r, x17, x15, x15, 0x7c00000f, 0xfffffffe, 0x0, x5, 16, x6)
+    TEST_RR_OP(sha512sum0r, x17, x15, x31, 0x7c00000f, 0xfffffffe, 0x0, x5, 16, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x17, 0x7c00000f) 
     
 
@@ -1328,7 +1328,7 @@ inst_109:
     # sha512sum0r x18, x14, x30
     # sw x18, 0(x1)
 inst_110:
-    TEST_RR_OP(sha512sum0r, x18, x14, x14, 0xba00000f, 0xfffffffd, 0x0, x1, 0, x2)
+    TEST_RR_OP(sha512sum0r, x18, x14, x30, 0xba00000f, 0xfffffffd, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x18, 0xba00000f) 
     
  
@@ -1338,7 +1338,7 @@ inst_110:
     # sha512sum0r x19, x13, x29
     # sw x19, 4(x1)
 inst_111:
-    TEST_RR_OP(sha512sum0r, x19, x13, x13, 0x3600000f, 0xfffffffb, 0x0, x1, 4, x2)
+    TEST_RR_OP(sha512sum0r, x19, x13, x29, 0x3600000f, 0xfffffffb, 0x0, x1, 4, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x19, 0x3600000f) 
     
  
@@ -1348,7 +1348,7 @@ inst_111:
     # sha512sum0r x20, x12, x28
     # sw x20, 8(x1)
 inst_112:
-    TEST_RR_OP(sha512sum0r, x20, x12, x12, 0x2e00000f, 0xfffffff7, 0x0, x1, 8, x2)
+    TEST_RR_OP(sha512sum0r, x20, x12, x28, 0x2e00000f, 0xfffffff7, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x20, 0x2e00000f) 
     
  
@@ -1358,7 +1358,7 @@ inst_112:
     # sha512sum0r x21, x11, x27
     # sw x21, 12(x1)
 inst_113:
-    TEST_RR_OP(sha512sum0r, x21, x11, x11, 0x1e00000f, 0xffffffef, 0x0, x1, 12, x2)
+    TEST_RR_OP(sha512sum0r, x21, x11, x27, 0x1e00000f, 0xffffffef, 0x0, x1, 12, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x21, 0x1e00000f) 
     
  
@@ -1368,7 +1368,7 @@ inst_113:
     # sha512sum0r x22, x10, x26
     # sw x22, 16(x1)
 inst_114:
-    TEST_RR_OP(sha512sum0r, x22, x10, x10, 0x7e00000f, 0xffffffdf, 0x0, x1, 16, x2)
+    TEST_RR_OP(sha512sum0r, x22, x10, x26, 0x7e00000f, 0xffffffdf, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x22, 0x7e00000f) 
     
 
@@ -1386,7 +1386,7 @@ inst_114:
     # sha512sum0r x23, x9, x25
     # sw x23, 0(x1)
 inst_115:
-    TEST_RR_OP(sha512sum0r, x23, x9, x9, 0xbe00000f, 0xffffffbf, 0x0, x1, 0, x2)
+    TEST_RR_OP(sha512sum0r, x23, x9, x25, 0xbe00000f, 0xffffffbf, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x23, 0xbe00000f) 
     
  
@@ -1396,7 +1396,7 @@ inst_115:
     # sha512sum0r x24, x8, x24
     # sw x24, 4(x1)
 inst_116:
-    TEST_RR_OP(sha512sum0r, x24, x8, x8, 0x3e00000f, 0xffffff7f, 0x0, x1, 4, x2)
+    TEST_RR_OP(sha512sum0r, x24, x8, x24, 0x3e00000f, 0xffffff7f, 0x0, x1, 4, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x24, 0x3e00000f) 
     
  
@@ -1406,7 +1406,7 @@ inst_116:
     # sha512sum0r x25, x7, x23
     # sw x25, 8(x1)
 inst_117:
-    TEST_RR_OP(sha512sum0r, x25, x7, x7, 0x3e00000f, 0xfffffeff, 0x0, x1, 8, x2)
+    TEST_RR_OP(sha512sum0r, x25, x7, x23, 0x3e00000f, 0xfffffeff, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x25, 0x3e00000f) 
     
  
@@ -1416,7 +1416,7 @@ inst_117:
     # sha512sum0r x26, x6, x22
     # sw x26, 12(x1)
 inst_118:
-    TEST_RR_OP(sha512sum0r, x26, x6, x6, 0x3e00000f, 0xfffffdff, 0x0, x1, 12, x2)
+    TEST_RR_OP(sha512sum0r, x26, x6, x22, 0x3e00000f, 0xfffffdff, 0x0, x1, 12, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x26, 0x3e00000f) 
     
  
@@ -1426,7 +1426,7 @@ inst_118:
     # sha512sum0r x27, x5, x21
     # sw x27, 16(x1)
 inst_119:
-    TEST_RR_OP(sha512sum0r, x27, x5, x5, 0x3e00000f, 0xfffffbff, 0x0, x1, 16, x2)
+    TEST_RR_OP(sha512sum0r, x27, x5, x21, 0x3e00000f, 0xfffffbff, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x27, 0x3e00000f) 
     
 
@@ -1444,7 +1444,7 @@ inst_119:
     # sha512sum0r x28, x4, x20
     # sw x28, 0(x5)
 inst_120:
-    TEST_RR_OP(sha512sum0r, x28, x4, x4, 0x3e00000f, 0xfffff7ff, 0x0, x5, 0, x6)
+    TEST_RR_OP(sha512sum0r, x28, x4, x20, 0x3e00000f, 0xfffff7ff, 0x0, x5, 0, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x28, 0x3e00000f) 
     
  
@@ -1454,7 +1454,7 @@ inst_120:
     # sha512sum0r x29, x3, x19
     # sw x29, 4(x5)
 inst_121:
-    TEST_RR_OP(sha512sum0r, x29, x3, x3, 0x3e00000f, 0xffffefff, 0x0, x5, 4, x6)
+    TEST_RR_OP(sha512sum0r, x29, x3, x19, 0x3e00000f, 0xffffefff, 0x0, x5, 4, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x29, 0x3e00000f) 
     
  
@@ -1464,7 +1464,7 @@ inst_121:
     # sha512sum0r x30, x2, x18
     # sw x30, 8(x5)
 inst_122:
-    TEST_RR_OP(sha512sum0r, x30, x2, x2, 0x3e00000f, 0xffffdfff, 0x0, x5, 8, x6)
+    TEST_RR_OP(sha512sum0r, x30, x2, x18, 0x3e00000f, 0xffffdfff, 0x0, x5, 8, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x30, 0x3e00000f) 
     
  
@@ -1474,7 +1474,7 @@ inst_122:
     # sha512sum0r x31, x1, x17
     # sw x31, 12(x5)
 inst_123:
-    TEST_RR_OP(sha512sum0r, x31, x1, x1, 0x3e00000f, 0xffffbfff, 0x0, x5, 12, x6)
+    TEST_RR_OP(sha512sum0r, x31, x1, x17, 0x3e00000f, 0xffffbfff, 0x0, x5, 12, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x31, 0x3e00000f) 
     
  
@@ -1484,7 +1484,7 @@ inst_123:
     # sha512sum0r x1, x31, x16
     # sw x1, 16(x5)
 inst_124:
-    TEST_RR_OP(sha512sum0r, x1, x31, x31, 0x3e00000f, 0xffff7fff, 0x0, x5, 16, x6)
+    TEST_RR_OP(sha512sum0r, x1, x31, x16, 0x3e00000f, 0xffff7fff, 0x0, x5, 16, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x1, 0x3e00000f) 
     
 
@@ -1502,7 +1502,7 @@ inst_124:
     # sha512sum0r x2, x30, x15
     # sw x2, 0(x1)
 inst_125:
-    TEST_RR_OP(sha512sum0r, x2, x30, x30, 0x3e00000f, 0xfffeffff, 0x0, x1, 0, x7)
+    TEST_RR_OP(sha512sum0r, x2, x30, x15, 0x3e00000f, 0xfffeffff, 0x0, x1, 0, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x2, 0x3e00000f) 
     
  
@@ -1512,7 +1512,7 @@ inst_125:
     # sha512sum0r x3, x29, x14
     # sw x3, 4(x1)
 inst_126:
-    TEST_RR_OP(sha512sum0r, x3, x29, x29, 0x3e00000f, 0xfffdffff, 0x0, x1, 4, x7)
+    TEST_RR_OP(sha512sum0r, x3, x29, x14, 0x3e00000f, 0xfffdffff, 0x0, x1, 4, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x3, 0x3e00000f) 
     
  
@@ -1522,7 +1522,7 @@ inst_126:
     # sha512sum0r x4, x28, x13
     # sw x4, 8(x1)
 inst_127:
-    TEST_RR_OP(sha512sum0r, x4, x28, x28, 0x3e00000f, 0xfffbffff, 0x0, x1, 8, x7)
+    TEST_RR_OP(sha512sum0r, x4, x28, x13, 0x3e00000f, 0xfffbffff, 0x0, x1, 8, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x4, 0x3e00000f) 
     
  
@@ -1532,7 +1532,7 @@ inst_127:
     # sha512sum0r x5, x27, x12
     # sw x5, 12(x1)
 inst_128:
-    TEST_RR_OP(sha512sum0r, x5, x27, x27, 0x3e00000f, 0xfff7ffff, 0x0, x1, 12, x7)
+    TEST_RR_OP(sha512sum0r, x5, x27, x12, 0x3e00000f, 0xfff7ffff, 0x0, x1, 12, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x5, 0x3e00000f) 
     
  
@@ -1542,7 +1542,7 @@ inst_128:
     # sha512sum0r x6, x26, x11
     # sw x6, 16(x1)
 inst_129:
-    TEST_RR_OP(sha512sum0r, x6, x26, x26, 0x3e00000f, 0xffefffff, 0x0, x1, 16, x7)
+    TEST_RR_OP(sha512sum0r, x6, x26, x11, 0x3e00000f, 0xffefffff, 0x0, x1, 16, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x6, 0x3e00000f) 
     
 
@@ -1560,7 +1560,7 @@ inst_129:
     # sha512sum0r x7, x25, x10
     # sw x7, 0(x1)
 inst_130:
-    TEST_RR_OP(sha512sum0r, x7, x25, x25, 0x3e00000f, 0xffdfffff, 0x0, x1, 0, x2)
+    TEST_RR_OP(sha512sum0r, x7, x25, x10, 0x3e00000f, 0xffdfffff, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x7, 0x3e00000f) 
     
  
@@ -1570,7 +1570,7 @@ inst_130:
     # sha512sum0r x8, x24, x9
     # sw x8, 4(x1)
 inst_131:
-    TEST_RR_OP(sha512sum0r, x8, x24, x24, 0x3e00000f, 0xffbfffff, 0x0, x1, 4, x2)
+    TEST_RR_OP(sha512sum0r, x8, x24, x9, 0x3e00000f, 0xffbfffff, 0x0, x1, 4, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x8, 0x3e00000f) 
     
  
@@ -1580,7 +1580,7 @@ inst_131:
     # sha512sum0r x9, x23, x8
     # sw x9, 8(x1)
 inst_132:
-    TEST_RR_OP(sha512sum0r, x9, x23, x23, 0x3e00000f, 0xff7fffff, 0x0, x1, 8, x2)
+    TEST_RR_OP(sha512sum0r, x9, x23, x8, 0x3e00000f, 0xff7fffff, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x9, 0x3e00000f) 
     
  
@@ -1590,7 +1590,7 @@ inst_132:
     # sha512sum0r x10, x22, x7
     # sw x10, 12(x1)
 inst_133:
-    TEST_RR_OP(sha512sum0r, x10, x22, x22, 0x3e00000f, 0xfeffffff, 0x0, x1, 12, x2)
+    TEST_RR_OP(sha512sum0r, x10, x22, x7, 0x3e00000f, 0xfeffffff, 0x0, x1, 12, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x10, 0x3e00000f) 
     
  
@@ -1600,7 +1600,7 @@ inst_133:
     # sha512sum0r x11, x21, x6
     # sw x11, 16(x1)
 inst_134:
-    TEST_RR_OP(sha512sum0r, x11, x21, x21, 0x3e00000f, 0xfdffffff, 0x0, x1, 16, x2)
+    TEST_RR_OP(sha512sum0r, x11, x21, x6, 0x3e00000f, 0xfdffffff, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x11, 0x3e00000f) 
     
 
@@ -1618,7 +1618,7 @@ inst_134:
     # sha512sum0r x12, x20, x5
     # sw x12, 0(x6)
 inst_135:
-    TEST_RR_OP(sha512sum0r, x12, x20, x20, 0x3e00000f, 0xfbffffff, 0x0, x6, 0, x7)
+    TEST_RR_OP(sha512sum0r, x12, x20, x5, 0x3e00000f, 0xfbffffff, 0x0, x6, 0, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x12, 0x3e00000f) 
     
  
@@ -1628,7 +1628,7 @@ inst_135:
     # sha512sum0r x13, x19, x4
     # sw x13, 4(x6)
 inst_136:
-    TEST_RR_OP(sha512sum0r, x13, x19, x19, 0x3e00000f, 0xf7ffffff, 0x0, x6, 4, x7)
+    TEST_RR_OP(sha512sum0r, x13, x19, x4, 0x3e00000f, 0xf7ffffff, 0x0, x6, 4, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x13, 0x3e00000f) 
     
  
@@ -1638,7 +1638,7 @@ inst_136:
     # sha512sum0r x14, x18, x3
     # sw x14, 8(x6)
 inst_137:
-    TEST_RR_OP(sha512sum0r, x14, x18, x18, 0x3e00000e, 0xefffffff, 0x0, x6, 8, x7)
+    TEST_RR_OP(sha512sum0r, x14, x18, x3, 0x3e00000e, 0xefffffff, 0x0, x6, 8, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x14, 0x3e00000e) 
     
  
@@ -1648,7 +1648,7 @@ inst_137:
     # sha512sum0r x15, x17, x2
     # sw x15, 12(x6)
 inst_138:
-    TEST_RR_OP(sha512sum0r, x15, x17, x17, 0x3e00000d, 0xdfffffff, 0x0, x6, 12, x7)
+    TEST_RR_OP(sha512sum0r, x15, x17, x2, 0x3e00000d, 0xdfffffff, 0x0, x6, 12, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x15, 0x3e00000d) 
     
  
@@ -1658,7 +1658,7 @@ inst_138:
     # sha512sum0r x16, x16, x1
     # sw x16, 16(x6)
 inst_139:
-    TEST_RR_OP(sha512sum0r, x16, x16, x16, 0x3e00000b, 0xbfffffff, 0x0, x6, 16, x7)
+    TEST_RR_OP(sha512sum0r, x16, x16, x1, 0x3e00000b, 0xbfffffff, 0x0, x6, 16, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x16, 0x3e00000b) 
     
 
@@ -1676,7 +1676,7 @@ inst_139:
     # sha512sum0r x17, x15, x31
     # sw x17, 0(x1)
 inst_140:
-    TEST_RR_OP(sha512sum0r, x17, x15, x15, 0x3e000007, 0x7fffffff, 0x0, x1, 0, x2)
+    TEST_RR_OP(sha512sum0r, x17, x15, x31, 0x3e000007, 0x7fffffff, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x17, 0x3e000007) 
     
  
@@ -1686,18 +1686,18 @@ inst_140:
     # sha512sum0r x18, x14, x30
     # sw x18, 4(x1)
 inst_141:
-    TEST_RR_OP(sha512sum0r, x18, x14, x14, 0x3e00000f, 0xffffffff, 0x0, x1, 4, x2)
+    TEST_RR_OP(sha512sum0r, x18, x14, x30, 0x3e00000f, 0xffffffff, 0x0, x1, 4, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x18, 0x3e00000f) 
     
  
-    # Testcase 142:  rs1:x29(0x10fd3dedadea5195), rs2:x29(0xdf7f3844121bcc23), result rd:x19(0x9e84599c)
+    # Testcase 142:  rs1:x29(0x10fd3dedadea5195), rs2:x29(0xdf7f3844121bcc23), result rd:x19(0xa31e06a1)
     # li  x29, MASK_XLEN(0xdf7f3844121bcc23)
     # li  x29, MASK_XLEN(0x10fd3dedadea5195)
     # sha512sum0r x19, x29, x29
     # sw x19, 8(x1)
 inst_142:
-    TEST_RR_OP(sha512sum0r, x19, x29, x29, 0x9e84599c, 0x10fd3dedadea5195, 0xdf7f3844121bcc23, x1, 8, x2)
-    RVMODEL_IO_ASSERT_GPR_EQ(x2, x19, 0x9e84599c) 
+    TEST_RR_OP(sha512sum0r, x19, x29, x29, 0xa31e06a1, 0x10fd3dedadea5195, 0xdf7f3844121bcc23, x1, 8, x2)
+    RVMODEL_IO_ASSERT_GPR_EQ(x2, x19, 0xa31e06a1) 
     
  
     # Testcase 143:  rs1:x12(0xbd295ce2d2ffbec1), rs2:x28(0xf5adb41aa47d105b), result rd:x0(0x00000000)
@@ -1706,7 +1706,7 @@ inst_142:
     # sha512sum0r x0, x12, x28
     # sw x0, 12(x1)
 inst_143:
-    TEST_RR_OP(sha512sum0r, x0, x12, x12, 0x00000000, 0xbd295ce2d2ffbec1, 0xf5adb41aa47d105b, x1, 12, x2)
+    TEST_RR_OP(sha512sum0r, x0, x12, x28, 0x00000000, 0xbd295ce2d2ffbec1, 0xf5adb41aa47d105b, x1, 12, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x0, 0x00000000) 
     
  
@@ -1716,7 +1716,7 @@ inst_143:
     # sha512sum0r x21, x11, x0
     # sw x21, 16(x1)
 inst_144:
-    TEST_RR_OP(sha512sum0r, x21, x11, x11, 0xb600000a, 0xc9649f05a8e1a8bb, 0x82f6747f707af2c0, x1, 16, x2)
+    TEST_RR_OP(sha512sum0r, x21, x11, x0, 0xb600000a, 0xc9649f05a8e1a8bb, 0x82f6747f707af2c0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x21, 0xb600000a) 
     
 
@@ -1734,7 +1734,7 @@ inst_144:
     # sha512sum0r x22, x0, x26
     # sw x22, 0(x1)
 inst_145:
-    TEST_RR_OP(sha512sum0r, x22, x0, x0, 0x201a7537, 0x3541291848c99fcb, 0x73a92fd4e19bfbc3, x1, 0, x2)
+    TEST_RR_OP(sha512sum0r, x22, x0, x26, 0x201a7537, 0x3541291848c99fcb, 0x73a92fd4e19bfbc3, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x22, 0x201a7537) 
     
 

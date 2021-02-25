@@ -52,7 +52,7 @@ RVTEST_CODE_BEGIN
     # clmul x1, x31, x16
     # sd x1, 0(x6)
 inst_0:
-    TEST_RR_OP(clmul, x1, x31, x31, 0x4158d0b31156fc1f, 0x10fd3dedadea5195, 0xdf7f3844121bcc23, x6, 0, x7)
+    TEST_RR_OP(clmul, x1, x31, x16, 0x4158d0b31156fc1f, 0x10fd3dedadea5195, 0xdf7f3844121bcc23, x6, 0, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x1, 0x4158d0b31156fc1f) 
     
  
@@ -62,7 +62,7 @@ inst_0:
     # clmul x2, x30, x15
     # sd x2, 8(x6)
 inst_1:
-    TEST_RR_OP(clmul, x2, x30, x30, 0x37d11d4118b8791b, 0xbd295ce2d2ffbec1, 0xf5adb41aa47d105b, x6, 8, x7)
+    TEST_RR_OP(clmul, x2, x30, x15, 0x37d11d4118b8791b, 0xbd295ce2d2ffbec1, 0xf5adb41aa47d105b, x6, 8, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x2, 0x37d11d4118b8791b) 
     
  
@@ -72,7 +72,7 @@ inst_1:
     # clmul x3, x29, x14
     # sd x3, 16(x6)
 inst_2:
-    TEST_RR_OP(clmul, x3, x29, x29, 0x9cfab0e5acbe9540, 0xc9649f05a8e1a8bb, 0x82f6747f707af2c0, x6, 16, x7)
+    TEST_RR_OP(clmul, x3, x29, x14, 0x9cfab0e5acbe9540, 0xc9649f05a8e1a8bb, 0x82f6747f707af2c0, x6, 16, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x3, 0x9cfab0e5acbe9540) 
     
  
@@ -82,7 +82,7 @@ inst_2:
     # clmul x4, x28, x13
     # sd x4, 24(x6)
 inst_3:
-    TEST_RR_OP(clmul, x4, x28, x28, 0x4fa718af378b221d, 0x3541291848c99fcb, 0x73a92fd4e19bfbc3, x6, 24, x7)
+    TEST_RR_OP(clmul, x4, x28, x13, 0x4fa718af378b221d, 0x3541291848c99fcb, 0x73a92fd4e19bfbc3, x6, 24, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x4, 0x4fa718af378b221d) 
     
  
@@ -92,7 +92,7 @@ inst_3:
     # clmul x5, x27, x12
     # sd x5, 32(x6)
 inst_4:
-    TEST_RR_OP(clmul, x5, x27, x27, 0xffab8fef45f9b3f5, 0x10a24740461d524f, 0x546b0e54528a10af, x6, 32, x7)
+    TEST_RR_OP(clmul, x5, x27, x12, 0xffab8fef45f9b3f5, 0x10a24740461d524f, 0x546b0e54528a10af, x6, 32, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x5, 0xffab8fef45f9b3f5) 
     
 
@@ -110,7 +110,7 @@ inst_4:
     # clmul x6, x26, x11
     # sd x6, 0(x1)
 inst_5:
-    TEST_RR_OP(clmul, x6, x26, x26, 0xffab8fef45f9b3f5, 0x546b0e54528a10af, 0x10a24740461d524f, x1, 0, x2)
+    TEST_RR_OP(clmul, x6, x26, x11, 0xffab8fef45f9b3f5, 0x546b0e54528a10af, 0x10a24740461d524f, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x6, 0xffab8fef45f9b3f5) 
     
  
@@ -120,7 +120,7 @@ inst_5:
     # clmul x7, x25, x10
     # sd x7, 8(x1)
 inst_6:
-    TEST_RR_OP(clmul, x7, x25, x25, 0x4fa718af378b221d, 0x73a92fd4e19bfbc3, 0x3541291848c99fcb, x1, 8, x2)
+    TEST_RR_OP(clmul, x7, x25, x10, 0x4fa718af378b221d, 0x73a92fd4e19bfbc3, 0x3541291848c99fcb, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x7, 0x4fa718af378b221d) 
     
  
@@ -130,7 +130,7 @@ inst_6:
     # clmul x8, x24, x9
     # sd x8, 16(x1)
 inst_7:
-    TEST_RR_OP(clmul, x8, x24, x24, 0x9cfab0e5acbe9540, 0x82f6747f707af2c0, 0xc9649f05a8e1a8bb, x1, 16, x2)
+    TEST_RR_OP(clmul, x8, x24, x9, 0x9cfab0e5acbe9540, 0x82f6747f707af2c0, 0xc9649f05a8e1a8bb, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x8, 0x9cfab0e5acbe9540) 
     
  
@@ -140,7 +140,7 @@ inst_7:
     # clmul x9, x23, x8
     # sd x9, 24(x1)
 inst_8:
-    TEST_RR_OP(clmul, x9, x23, x23, 0x37d11d4118b8791b, 0xf5adb41aa47d105b, 0xbd295ce2d2ffbec1, x1, 24, x2)
+    TEST_RR_OP(clmul, x9, x23, x8, 0x37d11d4118b8791b, 0xf5adb41aa47d105b, 0xbd295ce2d2ffbec1, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x9, 0x37d11d4118b8791b) 
     
  
@@ -150,7 +150,7 @@ inst_8:
     # clmul x10, x22, x7
     # sd x10, 32(x1)
 inst_9:
-    TEST_RR_OP(clmul, x10, x22, x22, 0x4158d0b31156fc1f, 0xdf7f3844121bcc23, 0x10fd3dedadea5195, x1, 32, x2)
+    TEST_RR_OP(clmul, x10, x22, x7, 0x4158d0b31156fc1f, 0xdf7f3844121bcc23, 0x10fd3dedadea5195, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x10, 0x4158d0b31156fc1f) 
     
 
@@ -168,7 +168,7 @@ inst_9:
     # clmul x11, x21, x6
     # sd x11, 0(x1)
 inst_10:
-    TEST_RR_OP(clmul, x11, x21, x21, 0xffffffffffffffff, 0x1, 0xffffffffffffffff, x1, 0, x7)
+    TEST_RR_OP(clmul, x11, x21, x6, 0xffffffffffffffff, 0x1, 0xffffffffffffffff, x1, 0, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x11, 0xffffffffffffffff) 
     
  
@@ -178,7 +178,7 @@ inst_10:
     # clmul x12, x20, x5
     # sd x12, 8(x1)
 inst_11:
-    TEST_RR_OP(clmul, x12, x20, x20, 0xfffffffffffffffe, 0x2, 0x7fffffffffffffff, x1, 8, x7)
+    TEST_RR_OP(clmul, x12, x20, x5, 0xfffffffffffffffe, 0x2, 0x7fffffffffffffff, x1, 8, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x12, 0xfffffffffffffffe) 
     
  
@@ -188,7 +188,7 @@ inst_11:
     # clmul x13, x19, x4
     # sd x13, 16(x1)
 inst_12:
-    TEST_RR_OP(clmul, x13, x19, x19, 0xfffffffffffffffc, 0x4, 0xbfffffffffffffff, x1, 16, x7)
+    TEST_RR_OP(clmul, x13, x19, x4, 0xfffffffffffffffc, 0x4, 0xbfffffffffffffff, x1, 16, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x13, 0xfffffffffffffffc) 
     
  
@@ -198,7 +198,7 @@ inst_12:
     # clmul x14, x18, x3
     # sd x14, 24(x1)
 inst_13:
-    TEST_RR_OP(clmul, x14, x18, x18, 0xfffffffffffffff8, 0x8, 0xdfffffffffffffff, x1, 24, x7)
+    TEST_RR_OP(clmul, x14, x18, x3, 0xfffffffffffffff8, 0x8, 0xdfffffffffffffff, x1, 24, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x14, 0xfffffffffffffff8) 
     
  
@@ -208,7 +208,7 @@ inst_13:
     # clmul x15, x17, x2
     # sd x15, 32(x1)
 inst_14:
-    TEST_RR_OP(clmul, x15, x17, x17, 0xfffffffffffffff0, 0x10, 0xefffffffffffffff, x1, 32, x7)
+    TEST_RR_OP(clmul, x15, x17, x2, 0xfffffffffffffff0, 0x10, 0xefffffffffffffff, x1, 32, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x15, 0xfffffffffffffff0) 
     
 
@@ -226,7 +226,7 @@ inst_14:
     # clmul x16, x16, x1
     # sd x16, 0(x2)
 inst_15:
-    TEST_RR_OP(clmul, x16, x16, x16, 0xffffffffffffffe0, 0x20, 0xf7ffffffffffffff, x2, 0, x3)
+    TEST_RR_OP(clmul, x16, x16, x1, 0xffffffffffffffe0, 0x20, 0xf7ffffffffffffff, x2, 0, x3)
     RVMODEL_IO_ASSERT_GPR_EQ(x3, x16, 0xffffffffffffffe0) 
     
  
@@ -236,7 +236,7 @@ inst_15:
     # clmul x17, x15, x31
     # sd x17, 8(x2)
 inst_16:
-    TEST_RR_OP(clmul, x17, x15, x15, 0xffffffffffffffc0, 0x40, 0xfbffffffffffffff, x2, 8, x3)
+    TEST_RR_OP(clmul, x17, x15, x31, 0xffffffffffffffc0, 0x40, 0xfbffffffffffffff, x2, 8, x3)
     RVMODEL_IO_ASSERT_GPR_EQ(x3, x17, 0xffffffffffffffc0) 
     
  
@@ -246,7 +246,7 @@ inst_16:
     # clmul x18, x14, x30
     # sd x18, 16(x2)
 inst_17:
-    TEST_RR_OP(clmul, x18, x14, x14, 0xffffffffffffff80, 0x80, 0xfdffffffffffffff, x2, 16, x3)
+    TEST_RR_OP(clmul, x18, x14, x30, 0xffffffffffffff80, 0x80, 0xfdffffffffffffff, x2, 16, x3)
     RVMODEL_IO_ASSERT_GPR_EQ(x3, x18, 0xffffffffffffff80) 
     
  
@@ -256,7 +256,7 @@ inst_17:
     # clmul x19, x13, x29
     # sd x19, 24(x2)
 inst_18:
-    TEST_RR_OP(clmul, x19, x13, x13, 0xffffffffffffff00, 0x100, 0xfeffffffffffffff, x2, 24, x3)
+    TEST_RR_OP(clmul, x19, x13, x29, 0xffffffffffffff00, 0x100, 0xfeffffffffffffff, x2, 24, x3)
     RVMODEL_IO_ASSERT_GPR_EQ(x3, x19, 0xffffffffffffff00) 
     
  
@@ -266,7 +266,7 @@ inst_18:
     # clmul x20, x12, x28
     # sd x20, 32(x2)
 inst_19:
-    TEST_RR_OP(clmul, x20, x12, x12, 0xfffffffffffffe00, 0x200, 0xff7fffffffffffff, x2, 32, x3)
+    TEST_RR_OP(clmul, x20, x12, x28, 0xfffffffffffffe00, 0x200, 0xff7fffffffffffff, x2, 32, x3)
     RVMODEL_IO_ASSERT_GPR_EQ(x3, x20, 0xfffffffffffffe00) 
     
 
@@ -284,7 +284,7 @@ inst_19:
     # clmul x21, x11, x27
     # sd x21, 0(x1)
 inst_20:
-    TEST_RR_OP(clmul, x21, x11, x11, 0xfffffffffffffc00, 0x400, 0xffbfffffffffffff, x1, 0, x2)
+    TEST_RR_OP(clmul, x21, x11, x27, 0xfffffffffffffc00, 0x400, 0xffbfffffffffffff, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x21, 0xfffffffffffffc00) 
     
  
@@ -294,7 +294,7 @@ inst_20:
     # clmul x22, x10, x26
     # sd x22, 8(x1)
 inst_21:
-    TEST_RR_OP(clmul, x22, x10, x10, 0xfffffffffffff800, 0x800, 0xffdfffffffffffff, x1, 8, x2)
+    TEST_RR_OP(clmul, x22, x10, x26, 0xfffffffffffff800, 0x800, 0xffdfffffffffffff, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x22, 0xfffffffffffff800) 
     
  
@@ -304,7 +304,7 @@ inst_21:
     # clmul x23, x9, x25
     # sd x23, 16(x1)
 inst_22:
-    TEST_RR_OP(clmul, x23, x9, x9, 0xfffffffffffff000, 0x1000, 0xffefffffffffffff, x1, 16, x2)
+    TEST_RR_OP(clmul, x23, x9, x25, 0xfffffffffffff000, 0x1000, 0xffefffffffffffff, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x23, 0xfffffffffffff000) 
     
  
@@ -314,7 +314,7 @@ inst_22:
     # clmul x24, x8, x24
     # sd x24, 24(x1)
 inst_23:
-    TEST_RR_OP(clmul, x24, x8, x8, 0xffffffffffffe000, 0x2000, 0xfff7ffffffffffff, x1, 24, x2)
+    TEST_RR_OP(clmul, x24, x8, x24, 0xffffffffffffe000, 0x2000, 0xfff7ffffffffffff, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x24, 0xffffffffffffe000) 
     
  
@@ -324,7 +324,7 @@ inst_23:
     # clmul x25, x7, x23
     # sd x25, 32(x1)
 inst_24:
-    TEST_RR_OP(clmul, x25, x7, x7, 0xffffffffffffc000, 0x4000, 0xfffbffffffffffff, x1, 32, x2)
+    TEST_RR_OP(clmul, x25, x7, x23, 0xffffffffffffc000, 0x4000, 0xfffbffffffffffff, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x25, 0xffffffffffffc000) 
     
 
@@ -342,7 +342,7 @@ inst_24:
     # clmul x26, x6, x22
     # sd x26, 0(x1)
 inst_25:
-    TEST_RR_OP(clmul, x26, x6, x6, 0xffffffffffff8000, 0x8000, 0xfffdffffffffffff, x1, 0, x7)
+    TEST_RR_OP(clmul, x26, x6, x22, 0xffffffffffff8000, 0x8000, 0xfffdffffffffffff, x1, 0, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x26, 0xffffffffffff8000) 
     
  
@@ -352,7 +352,7 @@ inst_25:
     # clmul x27, x5, x21
     # sd x27, 8(x1)
 inst_26:
-    TEST_RR_OP(clmul, x27, x5, x5, 0xffffffffffff0000, 0x10000, 0xfffeffffffffffff, x1, 8, x7)
+    TEST_RR_OP(clmul, x27, x5, x21, 0xffffffffffff0000, 0x10000, 0xfffeffffffffffff, x1, 8, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x27, 0xffffffffffff0000) 
     
  
@@ -362,7 +362,7 @@ inst_26:
     # clmul x28, x4, x20
     # sd x28, 16(x1)
 inst_27:
-    TEST_RR_OP(clmul, x28, x4, x4, 0xfffffffffffe0000, 0x20000, 0xffff7fffffffffff, x1, 16, x7)
+    TEST_RR_OP(clmul, x28, x4, x20, 0xfffffffffffe0000, 0x20000, 0xffff7fffffffffff, x1, 16, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x28, 0xfffffffffffe0000) 
     
  
@@ -372,7 +372,7 @@ inst_27:
     # clmul x29, x3, x19
     # sd x29, 24(x1)
 inst_28:
-    TEST_RR_OP(clmul, x29, x3, x3, 0xfffffffffffc0000, 0x40000, 0xffffbfffffffffff, x1, 24, x7)
+    TEST_RR_OP(clmul, x29, x3, x19, 0xfffffffffffc0000, 0x40000, 0xffffbfffffffffff, x1, 24, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x29, 0xfffffffffffc0000) 
     
  
@@ -382,7 +382,7 @@ inst_28:
     # clmul x30, x2, x18
     # sd x30, 32(x1)
 inst_29:
-    TEST_RR_OP(clmul, x30, x2, x2, 0xfffffffffff80000, 0x80000, 0xffffdfffffffffff, x1, 32, x7)
+    TEST_RR_OP(clmul, x30, x2, x18, 0xfffffffffff80000, 0x80000, 0xffffdfffffffffff, x1, 32, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x30, 0xfffffffffff80000) 
     
 
@@ -400,7 +400,7 @@ inst_29:
     # clmul x31, x1, x17
     # sd x31, 0(x5)
 inst_30:
-    TEST_RR_OP(clmul, x31, x1, x1, 0xfffffffffff00000, 0x100000, 0xffffefffffffffff, x5, 0, x6)
+    TEST_RR_OP(clmul, x31, x1, x17, 0xfffffffffff00000, 0x100000, 0xffffefffffffffff, x5, 0, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x31, 0xfffffffffff00000) 
     
  
@@ -410,7 +410,7 @@ inst_30:
     # clmul x1, x31, x16
     # sd x1, 8(x5)
 inst_31:
-    TEST_RR_OP(clmul, x1, x31, x31, 0xffffffffffe00000, 0x200000, 0xfffff7ffffffffff, x5, 8, x6)
+    TEST_RR_OP(clmul, x1, x31, x16, 0xffffffffffe00000, 0x200000, 0xfffff7ffffffffff, x5, 8, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x1, 0xffffffffffe00000) 
     
  
@@ -420,7 +420,7 @@ inst_31:
     # clmul x2, x30, x15
     # sd x2, 16(x5)
 inst_32:
-    TEST_RR_OP(clmul, x2, x30, x30, 0xffffffffffc00000, 0x400000, 0xfffffbffffffffff, x5, 16, x6)
+    TEST_RR_OP(clmul, x2, x30, x15, 0xffffffffffc00000, 0x400000, 0xfffffbffffffffff, x5, 16, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x2, 0xffffffffffc00000) 
     
  
@@ -430,7 +430,7 @@ inst_32:
     # clmul x3, x29, x14
     # sd x3, 24(x5)
 inst_33:
-    TEST_RR_OP(clmul, x3, x29, x29, 0xffffffffff800000, 0x800000, 0xfffffdffffffffff, x5, 24, x6)
+    TEST_RR_OP(clmul, x3, x29, x14, 0xffffffffff800000, 0x800000, 0xfffffdffffffffff, x5, 24, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x3, 0xffffffffff800000) 
     
  
@@ -440,7 +440,7 @@ inst_33:
     # clmul x4, x28, x13
     # sd x4, 32(x5)
 inst_34:
-    TEST_RR_OP(clmul, x4, x28, x28, 0xffffffffff000000, 0x1000000, 0xfffffeffffffffff, x5, 32, x6)
+    TEST_RR_OP(clmul, x4, x28, x13, 0xffffffffff000000, 0x1000000, 0xfffffeffffffffff, x5, 32, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x4, 0xffffffffff000000) 
     
 
@@ -458,7 +458,7 @@ inst_34:
     # clmul x5, x27, x12
     # sd x5, 0(x1)
 inst_35:
-    TEST_RR_OP(clmul, x5, x27, x27, 0xfffffffffe000000, 0x2000000, 0xffffff7fffffffff, x1, 0, x2)
+    TEST_RR_OP(clmul, x5, x27, x12, 0xfffffffffe000000, 0x2000000, 0xffffff7fffffffff, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x5, 0xfffffffffe000000) 
     
  
@@ -468,7 +468,7 @@ inst_35:
     # clmul x6, x26, x11
     # sd x6, 8(x1)
 inst_36:
-    TEST_RR_OP(clmul, x6, x26, x26, 0xfffffffffc000000, 0x4000000, 0xffffffbfffffffff, x1, 8, x2)
+    TEST_RR_OP(clmul, x6, x26, x11, 0xfffffffffc000000, 0x4000000, 0xffffffbfffffffff, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x6, 0xfffffffffc000000) 
     
  
@@ -478,7 +478,7 @@ inst_36:
     # clmul x7, x25, x10
     # sd x7, 16(x1)
 inst_37:
-    TEST_RR_OP(clmul, x7, x25, x25, 0xfffffffff8000000, 0x8000000, 0xffffffdfffffffff, x1, 16, x2)
+    TEST_RR_OP(clmul, x7, x25, x10, 0xfffffffff8000000, 0x8000000, 0xffffffdfffffffff, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x7, 0xfffffffff8000000) 
     
  
@@ -488,7 +488,7 @@ inst_37:
     # clmul x8, x24, x9
     # sd x8, 24(x1)
 inst_38:
-    TEST_RR_OP(clmul, x8, x24, x24, 0xfffffffff0000000, 0x10000000, 0xffffffefffffffff, x1, 24, x2)
+    TEST_RR_OP(clmul, x8, x24, x9, 0xfffffffff0000000, 0x10000000, 0xffffffefffffffff, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x8, 0xfffffffff0000000) 
     
  
@@ -498,7 +498,7 @@ inst_38:
     # clmul x9, x23, x8
     # sd x9, 32(x1)
 inst_39:
-    TEST_RR_OP(clmul, x9, x23, x23, 0xffffffffe0000000, 0x20000000, 0xfffffff7ffffffff, x1, 32, x2)
+    TEST_RR_OP(clmul, x9, x23, x8, 0xffffffffe0000000, 0x20000000, 0xfffffff7ffffffff, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x9, 0xffffffffe0000000) 
     
 
@@ -516,7 +516,7 @@ inst_39:
     # clmul x10, x22, x7
     # sd x10, 0(x1)
 inst_40:
-    TEST_RR_OP(clmul, x10, x22, x22, 0xffffffffc0000000, 0x40000000, 0xfffffffbffffffff, x1, 0, x2)
+    TEST_RR_OP(clmul, x10, x22, x7, 0xffffffffc0000000, 0x40000000, 0xfffffffbffffffff, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x10, 0xffffffffc0000000) 
     
  
@@ -526,7 +526,7 @@ inst_40:
     # clmul x11, x21, x6
     # sd x11, 8(x1)
 inst_41:
-    TEST_RR_OP(clmul, x11, x21, x21, 0xffffffff80000000, 0x80000000, 0xfffffffdffffffff, x1, 8, x2)
+    TEST_RR_OP(clmul, x11, x21, x6, 0xffffffff80000000, 0x80000000, 0xfffffffdffffffff, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x11, 0xffffffff80000000) 
     
  
@@ -536,7 +536,7 @@ inst_41:
     # clmul x12, x20, x5
     # sd x12, 16(x1)
 inst_42:
-    TEST_RR_OP(clmul, x12, x20, x20, 0xffffffff00000000, 0x100000000, 0xfffffffeffffffff, x1, 16, x2)
+    TEST_RR_OP(clmul, x12, x20, x5, 0xffffffff00000000, 0x100000000, 0xfffffffeffffffff, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x12, 0xffffffff00000000) 
     
  
@@ -546,7 +546,7 @@ inst_42:
     # clmul x13, x19, x4
     # sd x13, 24(x1)
 inst_43:
-    TEST_RR_OP(clmul, x13, x19, x19, 0xfffffffe00000000, 0x200000000, 0xffffffff7fffffff, x1, 24, x2)
+    TEST_RR_OP(clmul, x13, x19, x4, 0xfffffffe00000000, 0x200000000, 0xffffffff7fffffff, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x13, 0xfffffffe00000000) 
     
  
@@ -556,7 +556,7 @@ inst_43:
     # clmul x14, x18, x3
     # sd x14, 32(x1)
 inst_44:
-    TEST_RR_OP(clmul, x14, x18, x18, 0xfffffffc00000000, 0x400000000, 0xffffffffbfffffff, x1, 32, x2)
+    TEST_RR_OP(clmul, x14, x18, x3, 0xfffffffc00000000, 0x400000000, 0xffffffffbfffffff, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x14, 0xfffffffc00000000) 
     
 
@@ -574,7 +574,7 @@ inst_44:
     # clmul x15, x17, x2
     # sd x15, 0(x3)
 inst_45:
-    TEST_RR_OP(clmul, x15, x17, x17, 0xfffffff800000000, 0x800000000, 0xffffffffdfffffff, x3, 0, x4)
+    TEST_RR_OP(clmul, x15, x17, x2, 0xfffffff800000000, 0x800000000, 0xffffffffdfffffff, x3, 0, x4)
     RVMODEL_IO_ASSERT_GPR_EQ(x4, x15, 0xfffffff800000000) 
     
  
@@ -584,7 +584,7 @@ inst_45:
     # clmul x16, x16, x1
     # sd x16, 8(x3)
 inst_46:
-    TEST_RR_OP(clmul, x16, x16, x16, 0xfffffff000000000, 0x1000000000, 0xffffffffefffffff, x3, 8, x4)
+    TEST_RR_OP(clmul, x16, x16, x1, 0xfffffff000000000, 0x1000000000, 0xffffffffefffffff, x3, 8, x4)
     RVMODEL_IO_ASSERT_GPR_EQ(x4, x16, 0xfffffff000000000) 
     
  
@@ -594,7 +594,7 @@ inst_46:
     # clmul x17, x15, x31
     # sd x17, 16(x3)
 inst_47:
-    TEST_RR_OP(clmul, x17, x15, x15, 0xffffffe000000000, 0x2000000000, 0xfffffffff7ffffff, x3, 16, x4)
+    TEST_RR_OP(clmul, x17, x15, x31, 0xffffffe000000000, 0x2000000000, 0xfffffffff7ffffff, x3, 16, x4)
     RVMODEL_IO_ASSERT_GPR_EQ(x4, x17, 0xffffffe000000000) 
     
  
@@ -604,7 +604,7 @@ inst_47:
     # clmul x18, x14, x30
     # sd x18, 24(x3)
 inst_48:
-    TEST_RR_OP(clmul, x18, x14, x14, 0xffffffc000000000, 0x4000000000, 0xfffffffffbffffff, x3, 24, x4)
+    TEST_RR_OP(clmul, x18, x14, x30, 0xffffffc000000000, 0x4000000000, 0xfffffffffbffffff, x3, 24, x4)
     RVMODEL_IO_ASSERT_GPR_EQ(x4, x18, 0xffffffc000000000) 
     
  
@@ -614,7 +614,7 @@ inst_48:
     # clmul x19, x13, x29
     # sd x19, 32(x3)
 inst_49:
-    TEST_RR_OP(clmul, x19, x13, x13, 0xffffff8000000000, 0x8000000000, 0xfffffffffdffffff, x3, 32, x4)
+    TEST_RR_OP(clmul, x19, x13, x29, 0xffffff8000000000, 0x8000000000, 0xfffffffffdffffff, x3, 32, x4)
     RVMODEL_IO_ASSERT_GPR_EQ(x4, x19, 0xffffff8000000000) 
     
 
@@ -632,7 +632,7 @@ inst_49:
     # clmul x20, x12, x28
     # sd x20, 0(x1)
 inst_50:
-    TEST_RR_OP(clmul, x20, x12, x12, 0xffffff0000000000, 0x10000000000, 0xfffffffffeffffff, x1, 0, x2)
+    TEST_RR_OP(clmul, x20, x12, x28, 0xffffff0000000000, 0x10000000000, 0xfffffffffeffffff, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x20, 0xffffff0000000000) 
     
  
@@ -642,7 +642,7 @@ inst_50:
     # clmul x21, x11, x27
     # sd x21, 8(x1)
 inst_51:
-    TEST_RR_OP(clmul, x21, x11, x11, 0xfffffe0000000000, 0x20000000000, 0xffffffffff7fffff, x1, 8, x2)
+    TEST_RR_OP(clmul, x21, x11, x27, 0xfffffe0000000000, 0x20000000000, 0xffffffffff7fffff, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x21, 0xfffffe0000000000) 
     
  
@@ -652,7 +652,7 @@ inst_51:
     # clmul x22, x10, x26
     # sd x22, 16(x1)
 inst_52:
-    TEST_RR_OP(clmul, x22, x10, x10, 0xfffffc0000000000, 0x40000000000, 0xffffffffffbfffff, x1, 16, x2)
+    TEST_RR_OP(clmul, x22, x10, x26, 0xfffffc0000000000, 0x40000000000, 0xffffffffffbfffff, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x22, 0xfffffc0000000000) 
     
  
@@ -662,7 +662,7 @@ inst_52:
     # clmul x23, x9, x25
     # sd x23, 24(x1)
 inst_53:
-    TEST_RR_OP(clmul, x23, x9, x9, 0xfffff80000000000, 0x80000000000, 0xffffffffffdfffff, x1, 24, x2)
+    TEST_RR_OP(clmul, x23, x9, x25, 0xfffff80000000000, 0x80000000000, 0xffffffffffdfffff, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x23, 0xfffff80000000000) 
     
  
@@ -672,7 +672,7 @@ inst_53:
     # clmul x24, x8, x24
     # sd x24, 32(x1)
 inst_54:
-    TEST_RR_OP(clmul, x24, x8, x8, 0xfffff00000000000, 0x100000000000, 0xffffffffffefffff, x1, 32, x2)
+    TEST_RR_OP(clmul, x24, x8, x24, 0xfffff00000000000, 0x100000000000, 0xffffffffffefffff, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x24, 0xfffff00000000000) 
     
 
@@ -690,7 +690,7 @@ inst_54:
     # clmul x25, x7, x23
     # sd x25, 0(x1)
 inst_55:
-    TEST_RR_OP(clmul, x25, x7, x7, 0xffffe00000000000, 0x200000000000, 0xfffffffffff7ffff, x1, 0, x2)
+    TEST_RR_OP(clmul, x25, x7, x23, 0xffffe00000000000, 0x200000000000, 0xfffffffffff7ffff, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x25, 0xffffe00000000000) 
     
  
@@ -700,7 +700,7 @@ inst_55:
     # clmul x26, x6, x22
     # sd x26, 8(x1)
 inst_56:
-    TEST_RR_OP(clmul, x26, x6, x6, 0xffffc00000000000, 0x400000000000, 0xfffffffffffbffff, x1, 8, x2)
+    TEST_RR_OP(clmul, x26, x6, x22, 0xffffc00000000000, 0x400000000000, 0xfffffffffffbffff, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x26, 0xffffc00000000000) 
     
  
@@ -710,7 +710,7 @@ inst_56:
     # clmul x27, x5, x21
     # sd x27, 16(x1)
 inst_57:
-    TEST_RR_OP(clmul, x27, x5, x5, 0xffff800000000000, 0x800000000000, 0xfffffffffffdffff, x1, 16, x2)
+    TEST_RR_OP(clmul, x27, x5, x21, 0xffff800000000000, 0x800000000000, 0xfffffffffffdffff, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x27, 0xffff800000000000) 
     
  
@@ -720,7 +720,7 @@ inst_57:
     # clmul x28, x4, x20
     # sd x28, 24(x1)
 inst_58:
-    TEST_RR_OP(clmul, x28, x4, x4, 0xffff000000000000, 0x1000000000000, 0xfffffffffffeffff, x1, 24, x2)
+    TEST_RR_OP(clmul, x28, x4, x20, 0xffff000000000000, 0x1000000000000, 0xfffffffffffeffff, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x28, 0xffff000000000000) 
     
  
@@ -730,7 +730,7 @@ inst_58:
     # clmul x29, x3, x19
     # sd x29, 32(x1)
 inst_59:
-    TEST_RR_OP(clmul, x29, x3, x3, 0xfffe000000000000, 0x2000000000000, 0xffffffffffff7fff, x1, 32, x2)
+    TEST_RR_OP(clmul, x29, x3, x19, 0xfffe000000000000, 0x2000000000000, 0xffffffffffff7fff, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x29, 0xfffe000000000000) 
     
 
@@ -748,7 +748,7 @@ inst_59:
     # clmul x30, x2, x18
     # sd x30, 0(x4)
 inst_60:
-    TEST_RR_OP(clmul, x30, x2, x2, 0xfffc000000000000, 0x4000000000000, 0xffffffffffffbfff, x4, 0, x5)
+    TEST_RR_OP(clmul, x30, x2, x18, 0xfffc000000000000, 0x4000000000000, 0xffffffffffffbfff, x4, 0, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x30, 0xfffc000000000000) 
     
  
@@ -758,7 +758,7 @@ inst_60:
     # clmul x31, x1, x17
     # sd x31, 8(x4)
 inst_61:
-    TEST_RR_OP(clmul, x31, x1, x1, 0xfff8000000000000, 0x8000000000000, 0xffffffffffffdfff, x4, 8, x5)
+    TEST_RR_OP(clmul, x31, x1, x17, 0xfff8000000000000, 0x8000000000000, 0xffffffffffffdfff, x4, 8, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x31, 0xfff8000000000000) 
     
  
@@ -768,7 +768,7 @@ inst_61:
     # clmul x1, x31, x16
     # sd x1, 16(x4)
 inst_62:
-    TEST_RR_OP(clmul, x1, x31, x31, 0xfff0000000000000, 0x10000000000000, 0xffffffffffffefff, x4, 16, x5)
+    TEST_RR_OP(clmul, x1, x31, x16, 0xfff0000000000000, 0x10000000000000, 0xffffffffffffefff, x4, 16, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x1, 0xfff0000000000000) 
     
  
@@ -778,7 +778,7 @@ inst_62:
     # clmul x2, x30, x15
     # sd x2, 24(x4)
 inst_63:
-    TEST_RR_OP(clmul, x2, x30, x30, 0xffe0000000000000, 0x20000000000000, 0xfffffffffffff7ff, x4, 24, x5)
+    TEST_RR_OP(clmul, x2, x30, x15, 0xffe0000000000000, 0x20000000000000, 0xfffffffffffff7ff, x4, 24, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x2, 0xffe0000000000000) 
     
  
@@ -788,7 +788,7 @@ inst_63:
     # clmul x3, x29, x14
     # sd x3, 32(x4)
 inst_64:
-    TEST_RR_OP(clmul, x3, x29, x29, 0xffc0000000000000, 0x40000000000000, 0xfffffffffffffbff, x4, 32, x5)
+    TEST_RR_OP(clmul, x3, x29, x14, 0xffc0000000000000, 0x40000000000000, 0xfffffffffffffbff, x4, 32, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x3, 0xffc0000000000000) 
     
 
@@ -806,7 +806,7 @@ inst_64:
     # clmul x4, x28, x13
     # sd x4, 0(x1)
 inst_65:
-    TEST_RR_OP(clmul, x4, x28, x28, 0xff80000000000000, 0x80000000000000, 0xfffffffffffffdff, x1, 0, x2)
+    TEST_RR_OP(clmul, x4, x28, x13, 0xff80000000000000, 0x80000000000000, 0xfffffffffffffdff, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x4, 0xff80000000000000) 
     
  
@@ -816,7 +816,7 @@ inst_65:
     # clmul x5, x27, x12
     # sd x5, 8(x1)
 inst_66:
-    TEST_RR_OP(clmul, x5, x27, x27, 0xff00000000000000, 0x100000000000000, 0xfffffffffffffeff, x1, 8, x2)
+    TEST_RR_OP(clmul, x5, x27, x12, 0xff00000000000000, 0x100000000000000, 0xfffffffffffffeff, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x5, 0xff00000000000000) 
     
  
@@ -826,7 +826,7 @@ inst_66:
     # clmul x6, x26, x11
     # sd x6, 16(x1)
 inst_67:
-    TEST_RR_OP(clmul, x6, x26, x26, 0xfe00000000000000, 0x200000000000000, 0xffffffffffffff7f, x1, 16, x2)
+    TEST_RR_OP(clmul, x6, x26, x11, 0xfe00000000000000, 0x200000000000000, 0xffffffffffffff7f, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x6, 0xfe00000000000000) 
     
  
@@ -836,7 +836,7 @@ inst_67:
     # clmul x7, x25, x10
     # sd x7, 24(x1)
 inst_68:
-    TEST_RR_OP(clmul, x7, x25, x25, 0xfc00000000000000, 0x400000000000000, 0xffffffffffffffbf, x1, 24, x2)
+    TEST_RR_OP(clmul, x7, x25, x10, 0xfc00000000000000, 0x400000000000000, 0xffffffffffffffbf, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x7, 0xfc00000000000000) 
     
  
@@ -846,7 +846,7 @@ inst_68:
     # clmul x8, x24, x9
     # sd x8, 32(x1)
 inst_69:
-    TEST_RR_OP(clmul, x8, x24, x24, 0xf800000000000000, 0x800000000000000, 0xffffffffffffffdf, x1, 32, x2)
+    TEST_RR_OP(clmul, x8, x24, x9, 0xf800000000000000, 0x800000000000000, 0xffffffffffffffdf, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x8, 0xf800000000000000) 
     
 
@@ -864,7 +864,7 @@ inst_69:
     # clmul x9, x23, x8
     # sd x9, 0(x1)
 inst_70:
-    TEST_RR_OP(clmul, x9, x23, x23, 0xf000000000000000, 0x1000000000000000, 0xffffffffffffffef, x1, 0, x2)
+    TEST_RR_OP(clmul, x9, x23, x8, 0xf000000000000000, 0x1000000000000000, 0xffffffffffffffef, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x9, 0xf000000000000000) 
     
  
@@ -874,7 +874,7 @@ inst_70:
     # clmul x10, x22, x7
     # sd x10, 8(x1)
 inst_71:
-    TEST_RR_OP(clmul, x10, x22, x22, 0xe000000000000000, 0x2000000000000000, 0xfffffffffffffff7, x1, 8, x2)
+    TEST_RR_OP(clmul, x10, x22, x7, 0xe000000000000000, 0x2000000000000000, 0xfffffffffffffff7, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x10, 0xe000000000000000) 
     
  
@@ -884,7 +884,7 @@ inst_71:
     # clmul x11, x21, x6
     # sd x11, 16(x1)
 inst_72:
-    TEST_RR_OP(clmul, x11, x21, x21, 0xc000000000000000, 0x4000000000000000, 0xfffffffffffffffb, x1, 16, x2)
+    TEST_RR_OP(clmul, x11, x21, x6, 0xc000000000000000, 0x4000000000000000, 0xfffffffffffffffb, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x11, 0xc000000000000000) 
     
  
@@ -894,7 +894,7 @@ inst_72:
     # clmul x12, x20, x5
     # sd x12, 24(x1)
 inst_73:
-    TEST_RR_OP(clmul, x12, x20, x20, 0x8000000000000000, 0x8000000000000000, 0xfffffffffffffffd, x1, 24, x2)
+    TEST_RR_OP(clmul, x12, x20, x5, 0x8000000000000000, 0x8000000000000000, 0xfffffffffffffffd, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x12, 0x8000000000000000) 
     
  
@@ -904,7 +904,7 @@ inst_73:
     # clmul x13, x19, x4
     # sd x13, 32(x1)
 inst_74:
-    TEST_RR_OP(clmul, x13, x19, x19, 0x0000000000000000, 0x0, 0xfffffffffffffffe, x1, 32, x2)
+    TEST_RR_OP(clmul, x13, x19, x4, 0x0000000000000000, 0x0, 0xfffffffffffffffe, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x13, 0x0000000000000000) 
     
 
@@ -922,7 +922,7 @@ inst_74:
     # clmul x14, x18, x3
     # sd x14, 0(x4)
 inst_75:
-    TEST_RR_OP(clmul, x14, x18, x18, 0x0000000000000000, 0xfffffffffffffffe, 0x0, x4, 0, x5)
+    TEST_RR_OP(clmul, x14, x18, x3, 0x0000000000000000, 0xfffffffffffffffe, 0x0, x4, 0, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x14, 0x0000000000000000) 
     
  
@@ -932,7 +932,7 @@ inst_75:
     # clmul x15, x17, x2
     # sd x15, 8(x4)
 inst_76:
-    TEST_RR_OP(clmul, x15, x17, x17, 0x8000000000000000, 0xfffffffffffffffd, 0x8000000000000000, x4, 8, x5)
+    TEST_RR_OP(clmul, x15, x17, x2, 0x8000000000000000, 0xfffffffffffffffd, 0x8000000000000000, x4, 8, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x15, 0x8000000000000000) 
     
  
@@ -942,7 +942,7 @@ inst_76:
     # clmul x16, x16, x1
     # sd x16, 16(x4)
 inst_77:
-    TEST_RR_OP(clmul, x16, x16, x16, 0xc000000000000000, 0xfffffffffffffffb, 0x4000000000000000, x4, 16, x5)
+    TEST_RR_OP(clmul, x16, x16, x1, 0xc000000000000000, 0xfffffffffffffffb, 0x4000000000000000, x4, 16, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x16, 0xc000000000000000) 
     
  
@@ -952,7 +952,7 @@ inst_77:
     # clmul x17, x15, x31
     # sd x17, 24(x4)
 inst_78:
-    TEST_RR_OP(clmul, x17, x15, x15, 0xe000000000000000, 0xfffffffffffffff7, 0x2000000000000000, x4, 24, x5)
+    TEST_RR_OP(clmul, x17, x15, x31, 0xe000000000000000, 0xfffffffffffffff7, 0x2000000000000000, x4, 24, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x17, 0xe000000000000000) 
     
  
@@ -962,7 +962,7 @@ inst_78:
     # clmul x18, x14, x30
     # sd x18, 32(x4)
 inst_79:
-    TEST_RR_OP(clmul, x18, x14, x14, 0xf000000000000000, 0xffffffffffffffef, 0x1000000000000000, x4, 32, x5)
+    TEST_RR_OP(clmul, x18, x14, x30, 0xf000000000000000, 0xffffffffffffffef, 0x1000000000000000, x4, 32, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x18, 0xf000000000000000) 
     
 
@@ -980,7 +980,7 @@ inst_79:
     # clmul x19, x13, x29
     # sd x19, 0(x1)
 inst_80:
-    TEST_RR_OP(clmul, x19, x13, x13, 0xf800000000000000, 0xffffffffffffffdf, 0x800000000000000, x1, 0, x2)
+    TEST_RR_OP(clmul, x19, x13, x29, 0xf800000000000000, 0xffffffffffffffdf, 0x800000000000000, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x19, 0xf800000000000000) 
     
  
@@ -990,7 +990,7 @@ inst_80:
     # clmul x20, x12, x28
     # sd x20, 8(x1)
 inst_81:
-    TEST_RR_OP(clmul, x20, x12, x12, 0xfc00000000000000, 0xffffffffffffffbf, 0x400000000000000, x1, 8, x2)
+    TEST_RR_OP(clmul, x20, x12, x28, 0xfc00000000000000, 0xffffffffffffffbf, 0x400000000000000, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x20, 0xfc00000000000000) 
     
  
@@ -1000,7 +1000,7 @@ inst_81:
     # clmul x21, x11, x27
     # sd x21, 16(x1)
 inst_82:
-    TEST_RR_OP(clmul, x21, x11, x11, 0xfe00000000000000, 0xffffffffffffff7f, 0x200000000000000, x1, 16, x2)
+    TEST_RR_OP(clmul, x21, x11, x27, 0xfe00000000000000, 0xffffffffffffff7f, 0x200000000000000, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x21, 0xfe00000000000000) 
     
  
@@ -1010,7 +1010,7 @@ inst_82:
     # clmul x22, x10, x26
     # sd x22, 24(x1)
 inst_83:
-    TEST_RR_OP(clmul, x22, x10, x10, 0xff00000000000000, 0xfffffffffffffeff, 0x100000000000000, x1, 24, x2)
+    TEST_RR_OP(clmul, x22, x10, x26, 0xff00000000000000, 0xfffffffffffffeff, 0x100000000000000, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x22, 0xff00000000000000) 
     
  
@@ -1020,7 +1020,7 @@ inst_83:
     # clmul x23, x9, x25
     # sd x23, 32(x1)
 inst_84:
-    TEST_RR_OP(clmul, x23, x9, x9, 0xff80000000000000, 0xfffffffffffffdff, 0x80000000000000, x1, 32, x2)
+    TEST_RR_OP(clmul, x23, x9, x25, 0xff80000000000000, 0xfffffffffffffdff, 0x80000000000000, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x23, 0xff80000000000000) 
     
 
@@ -1038,7 +1038,7 @@ inst_84:
     # clmul x24, x8, x24
     # sd x24, 0(x1)
 inst_85:
-    TEST_RR_OP(clmul, x24, x8, x8, 0xffc0000000000000, 0xfffffffffffffbff, 0x40000000000000, x1, 0, x2)
+    TEST_RR_OP(clmul, x24, x8, x24, 0xffc0000000000000, 0xfffffffffffffbff, 0x40000000000000, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x24, 0xffc0000000000000) 
     
  
@@ -1048,7 +1048,7 @@ inst_85:
     # clmul x25, x7, x23
     # sd x25, 8(x1)
 inst_86:
-    TEST_RR_OP(clmul, x25, x7, x7, 0xffe0000000000000, 0xfffffffffffff7ff, 0x20000000000000, x1, 8, x2)
+    TEST_RR_OP(clmul, x25, x7, x23, 0xffe0000000000000, 0xfffffffffffff7ff, 0x20000000000000, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x25, 0xffe0000000000000) 
     
  
@@ -1058,7 +1058,7 @@ inst_86:
     # clmul x26, x6, x22
     # sd x26, 16(x1)
 inst_87:
-    TEST_RR_OP(clmul, x26, x6, x6, 0xfff0000000000000, 0xffffffffffffefff, 0x10000000000000, x1, 16, x2)
+    TEST_RR_OP(clmul, x26, x6, x22, 0xfff0000000000000, 0xffffffffffffefff, 0x10000000000000, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x26, 0xfff0000000000000) 
     
  
@@ -1068,7 +1068,7 @@ inst_87:
     # clmul x27, x5, x21
     # sd x27, 24(x1)
 inst_88:
-    TEST_RR_OP(clmul, x27, x5, x5, 0xfff8000000000000, 0xffffffffffffdfff, 0x8000000000000, x1, 24, x2)
+    TEST_RR_OP(clmul, x27, x5, x21, 0xfff8000000000000, 0xffffffffffffdfff, 0x8000000000000, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x27, 0xfff8000000000000) 
     
  
@@ -1078,7 +1078,7 @@ inst_88:
     # clmul x28, x4, x20
     # sd x28, 32(x1)
 inst_89:
-    TEST_RR_OP(clmul, x28, x4, x4, 0xfffc000000000000, 0xffffffffffffbfff, 0x4000000000000, x1, 32, x2)
+    TEST_RR_OP(clmul, x28, x4, x20, 0xfffc000000000000, 0xffffffffffffbfff, 0x4000000000000, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x28, 0xfffc000000000000) 
     
 
@@ -1096,7 +1096,7 @@ inst_89:
     # clmul x29, x3, x19
     # sd x29, 0(x4)
 inst_90:
-    TEST_RR_OP(clmul, x29, x3, x3, 0xfffe000000000000, 0xffffffffffff7fff, 0x2000000000000, x4, 0, x5)
+    TEST_RR_OP(clmul, x29, x3, x19, 0xfffe000000000000, 0xffffffffffff7fff, 0x2000000000000, x4, 0, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x29, 0xfffe000000000000) 
     
  
@@ -1106,7 +1106,7 @@ inst_90:
     # clmul x30, x2, x18
     # sd x30, 8(x4)
 inst_91:
-    TEST_RR_OP(clmul, x30, x2, x2, 0xffff000000000000, 0xfffffffffffeffff, 0x1000000000000, x4, 8, x5)
+    TEST_RR_OP(clmul, x30, x2, x18, 0xffff000000000000, 0xfffffffffffeffff, 0x1000000000000, x4, 8, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x30, 0xffff000000000000) 
     
  
@@ -1116,7 +1116,7 @@ inst_91:
     # clmul x31, x1, x17
     # sd x31, 16(x4)
 inst_92:
-    TEST_RR_OP(clmul, x31, x1, x1, 0xffff800000000000, 0xfffffffffffdffff, 0x800000000000, x4, 16, x5)
+    TEST_RR_OP(clmul, x31, x1, x17, 0xffff800000000000, 0xfffffffffffdffff, 0x800000000000, x4, 16, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x31, 0xffff800000000000) 
     
  
@@ -1126,7 +1126,7 @@ inst_92:
     # clmul x1, x31, x16
     # sd x1, 24(x4)
 inst_93:
-    TEST_RR_OP(clmul, x1, x31, x31, 0xffffc00000000000, 0xfffffffffffbffff, 0x400000000000, x4, 24, x5)
+    TEST_RR_OP(clmul, x1, x31, x16, 0xffffc00000000000, 0xfffffffffffbffff, 0x400000000000, x4, 24, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x1, 0xffffc00000000000) 
     
  
@@ -1136,7 +1136,7 @@ inst_93:
     # clmul x2, x30, x15
     # sd x2, 32(x4)
 inst_94:
-    TEST_RR_OP(clmul, x2, x30, x30, 0xffffe00000000000, 0xfffffffffff7ffff, 0x200000000000, x4, 32, x5)
+    TEST_RR_OP(clmul, x2, x30, x15, 0xffffe00000000000, 0xfffffffffff7ffff, 0x200000000000, x4, 32, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x2, 0xffffe00000000000) 
     
 
@@ -1154,7 +1154,7 @@ inst_94:
     # clmul x3, x29, x14
     # sd x3, 0(x1)
 inst_95:
-    TEST_RR_OP(clmul, x3, x29, x29, 0xfffff00000000000, 0xffffffffffefffff, 0x100000000000, x1, 0, x2)
+    TEST_RR_OP(clmul, x3, x29, x14, 0xfffff00000000000, 0xffffffffffefffff, 0x100000000000, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x3, 0xfffff00000000000) 
     
  
@@ -1164,7 +1164,7 @@ inst_95:
     # clmul x4, x28, x13
     # sd x4, 8(x1)
 inst_96:
-    TEST_RR_OP(clmul, x4, x28, x28, 0xfffff80000000000, 0xffffffffffdfffff, 0x80000000000, x1, 8, x2)
+    TEST_RR_OP(clmul, x4, x28, x13, 0xfffff80000000000, 0xffffffffffdfffff, 0x80000000000, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x4, 0xfffff80000000000) 
     
  
@@ -1174,7 +1174,7 @@ inst_96:
     # clmul x5, x27, x12
     # sd x5, 16(x1)
 inst_97:
-    TEST_RR_OP(clmul, x5, x27, x27, 0xfffffc0000000000, 0xffffffffffbfffff, 0x40000000000, x1, 16, x2)
+    TEST_RR_OP(clmul, x5, x27, x12, 0xfffffc0000000000, 0xffffffffffbfffff, 0x40000000000, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x5, 0xfffffc0000000000) 
     
  
@@ -1184,7 +1184,7 @@ inst_97:
     # clmul x6, x26, x11
     # sd x6, 24(x1)
 inst_98:
-    TEST_RR_OP(clmul, x6, x26, x26, 0xfffffe0000000000, 0xffffffffff7fffff, 0x20000000000, x1, 24, x2)
+    TEST_RR_OP(clmul, x6, x26, x11, 0xfffffe0000000000, 0xffffffffff7fffff, 0x20000000000, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x6, 0xfffffe0000000000) 
     
  
@@ -1194,7 +1194,7 @@ inst_98:
     # clmul x7, x25, x10
     # sd x7, 32(x1)
 inst_99:
-    TEST_RR_OP(clmul, x7, x25, x25, 0xffffff0000000000, 0xfffffffffeffffff, 0x10000000000, x1, 32, x2)
+    TEST_RR_OP(clmul, x7, x25, x10, 0xffffff0000000000, 0xfffffffffeffffff, 0x10000000000, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x7, 0xffffff0000000000) 
     
 
@@ -1212,7 +1212,7 @@ inst_99:
     # clmul x8, x24, x9
     # sd x8, 0(x1)
 inst_100:
-    TEST_RR_OP(clmul, x8, x24, x24, 0xffffff8000000000, 0xfffffffffdffffff, 0x8000000000, x1, 0, x2)
+    TEST_RR_OP(clmul, x8, x24, x9, 0xffffff8000000000, 0xfffffffffdffffff, 0x8000000000, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x8, 0xffffff8000000000) 
     
  
@@ -1222,7 +1222,7 @@ inst_100:
     # clmul x9, x23, x8
     # sd x9, 8(x1)
 inst_101:
-    TEST_RR_OP(clmul, x9, x23, x23, 0xffffffc000000000, 0xfffffffffbffffff, 0x4000000000, x1, 8, x2)
+    TEST_RR_OP(clmul, x9, x23, x8, 0xffffffc000000000, 0xfffffffffbffffff, 0x4000000000, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x9, 0xffffffc000000000) 
     
  
@@ -1232,7 +1232,7 @@ inst_101:
     # clmul x10, x22, x7
     # sd x10, 16(x1)
 inst_102:
-    TEST_RR_OP(clmul, x10, x22, x22, 0xffffffe000000000, 0xfffffffff7ffffff, 0x2000000000, x1, 16, x2)
+    TEST_RR_OP(clmul, x10, x22, x7, 0xffffffe000000000, 0xfffffffff7ffffff, 0x2000000000, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x10, 0xffffffe000000000) 
     
  
@@ -1242,7 +1242,7 @@ inst_102:
     # clmul x11, x21, x6
     # sd x11, 24(x1)
 inst_103:
-    TEST_RR_OP(clmul, x11, x21, x21, 0xfffffff000000000, 0xffffffffefffffff, 0x1000000000, x1, 24, x2)
+    TEST_RR_OP(clmul, x11, x21, x6, 0xfffffff000000000, 0xffffffffefffffff, 0x1000000000, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x11, 0xfffffff000000000) 
     
  
@@ -1252,7 +1252,7 @@ inst_103:
     # clmul x12, x20, x5
     # sd x12, 32(x1)
 inst_104:
-    TEST_RR_OP(clmul, x12, x20, x20, 0xfffffff800000000, 0xffffffffdfffffff, 0x800000000, x1, 32, x2)
+    TEST_RR_OP(clmul, x12, x20, x5, 0xfffffff800000000, 0xffffffffdfffffff, 0x800000000, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x12, 0xfffffff800000000) 
     
 
@@ -1270,7 +1270,7 @@ inst_104:
     # clmul x13, x19, x4
     # sd x13, 0(x5)
 inst_105:
-    TEST_RR_OP(clmul, x13, x19, x19, 0xfffffffc00000000, 0xffffffffbfffffff, 0x400000000, x5, 0, x6)
+    TEST_RR_OP(clmul, x13, x19, x4, 0xfffffffc00000000, 0xffffffffbfffffff, 0x400000000, x5, 0, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x13, 0xfffffffc00000000) 
     
  
@@ -1280,7 +1280,7 @@ inst_105:
     # clmul x14, x18, x3
     # sd x14, 8(x5)
 inst_106:
-    TEST_RR_OP(clmul, x14, x18, x18, 0xfffffffe00000000, 0xffffffff7fffffff, 0x200000000, x5, 8, x6)
+    TEST_RR_OP(clmul, x14, x18, x3, 0xfffffffe00000000, 0xffffffff7fffffff, 0x200000000, x5, 8, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x14, 0xfffffffe00000000) 
     
  
@@ -1290,7 +1290,7 @@ inst_106:
     # clmul x15, x17, x2
     # sd x15, 16(x5)
 inst_107:
-    TEST_RR_OP(clmul, x15, x17, x17, 0xffffffff00000000, 0xfffffffeffffffff, 0x100000000, x5, 16, x6)
+    TEST_RR_OP(clmul, x15, x17, x2, 0xffffffff00000000, 0xfffffffeffffffff, 0x100000000, x5, 16, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x15, 0xffffffff00000000) 
     
  
@@ -1300,7 +1300,7 @@ inst_107:
     # clmul x16, x16, x1
     # sd x16, 24(x5)
 inst_108:
-    TEST_RR_OP(clmul, x16, x16, x16, 0xffffffff80000000, 0xfffffffdffffffff, 0x80000000, x5, 24, x6)
+    TEST_RR_OP(clmul, x16, x16, x1, 0xffffffff80000000, 0xfffffffdffffffff, 0x80000000, x5, 24, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x16, 0xffffffff80000000) 
     
  
@@ -1310,7 +1310,7 @@ inst_108:
     # clmul x17, x15, x31
     # sd x17, 32(x5)
 inst_109:
-    TEST_RR_OP(clmul, x17, x15, x15, 0xffffffffc0000000, 0xfffffffbffffffff, 0x40000000, x5, 32, x6)
+    TEST_RR_OP(clmul, x17, x15, x31, 0xffffffffc0000000, 0xfffffffbffffffff, 0x40000000, x5, 32, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x17, 0xffffffffc0000000) 
     
 
@@ -1328,7 +1328,7 @@ inst_109:
     # clmul x18, x14, x30
     # sd x18, 0(x1)
 inst_110:
-    TEST_RR_OP(clmul, x18, x14, x14, 0xffffffffe0000000, 0xfffffff7ffffffff, 0x20000000, x1, 0, x2)
+    TEST_RR_OP(clmul, x18, x14, x30, 0xffffffffe0000000, 0xfffffff7ffffffff, 0x20000000, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x18, 0xffffffffe0000000) 
     
  
@@ -1338,7 +1338,7 @@ inst_110:
     # clmul x19, x13, x29
     # sd x19, 8(x1)
 inst_111:
-    TEST_RR_OP(clmul, x19, x13, x13, 0xfffffffff0000000, 0xffffffefffffffff, 0x10000000, x1, 8, x2)
+    TEST_RR_OP(clmul, x19, x13, x29, 0xfffffffff0000000, 0xffffffefffffffff, 0x10000000, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x19, 0xfffffffff0000000) 
     
  
@@ -1348,7 +1348,7 @@ inst_111:
     # clmul x20, x12, x28
     # sd x20, 16(x1)
 inst_112:
-    TEST_RR_OP(clmul, x20, x12, x12, 0xfffffffff8000000, 0xffffffdfffffffff, 0x8000000, x1, 16, x2)
+    TEST_RR_OP(clmul, x20, x12, x28, 0xfffffffff8000000, 0xffffffdfffffffff, 0x8000000, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x20, 0xfffffffff8000000) 
     
  
@@ -1358,7 +1358,7 @@ inst_112:
     # clmul x21, x11, x27
     # sd x21, 24(x1)
 inst_113:
-    TEST_RR_OP(clmul, x21, x11, x11, 0xfffffffffc000000, 0xffffffbfffffffff, 0x4000000, x1, 24, x2)
+    TEST_RR_OP(clmul, x21, x11, x27, 0xfffffffffc000000, 0xffffffbfffffffff, 0x4000000, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x21, 0xfffffffffc000000) 
     
  
@@ -1368,7 +1368,7 @@ inst_113:
     # clmul x22, x10, x26
     # sd x22, 32(x1)
 inst_114:
-    TEST_RR_OP(clmul, x22, x10, x10, 0xfffffffffe000000, 0xffffff7fffffffff, 0x2000000, x1, 32, x2)
+    TEST_RR_OP(clmul, x22, x10, x26, 0xfffffffffe000000, 0xffffff7fffffffff, 0x2000000, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x22, 0xfffffffffe000000) 
     
 
@@ -1386,7 +1386,7 @@ inst_114:
     # clmul x23, x9, x25
     # sd x23, 0(x1)
 inst_115:
-    TEST_RR_OP(clmul, x23, x9, x9, 0xffffffffff000000, 0xfffffeffffffffff, 0x1000000, x1, 0, x2)
+    TEST_RR_OP(clmul, x23, x9, x25, 0xffffffffff000000, 0xfffffeffffffffff, 0x1000000, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x23, 0xffffffffff000000) 
     
  
@@ -1396,7 +1396,7 @@ inst_115:
     # clmul x24, x8, x24
     # sd x24, 8(x1)
 inst_116:
-    TEST_RR_OP(clmul, x24, x8, x8, 0xffffffffff800000, 0xfffffdffffffffff, 0x800000, x1, 8, x2)
+    TEST_RR_OP(clmul, x24, x8, x24, 0xffffffffff800000, 0xfffffdffffffffff, 0x800000, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x24, 0xffffffffff800000) 
     
  
@@ -1406,7 +1406,7 @@ inst_116:
     # clmul x25, x7, x23
     # sd x25, 16(x1)
 inst_117:
-    TEST_RR_OP(clmul, x25, x7, x7, 0xffffffffffc00000, 0xfffffbffffffffff, 0x400000, x1, 16, x2)
+    TEST_RR_OP(clmul, x25, x7, x23, 0xffffffffffc00000, 0xfffffbffffffffff, 0x400000, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x25, 0xffffffffffc00000) 
     
  
@@ -1416,7 +1416,7 @@ inst_117:
     # clmul x26, x6, x22
     # sd x26, 24(x1)
 inst_118:
-    TEST_RR_OP(clmul, x26, x6, x6, 0xffffffffffe00000, 0xfffff7ffffffffff, 0x200000, x1, 24, x2)
+    TEST_RR_OP(clmul, x26, x6, x22, 0xffffffffffe00000, 0xfffff7ffffffffff, 0x200000, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x26, 0xffffffffffe00000) 
     
  
@@ -1426,7 +1426,7 @@ inst_118:
     # clmul x27, x5, x21
     # sd x27, 32(x1)
 inst_119:
-    TEST_RR_OP(clmul, x27, x5, x5, 0xfffffffffff00000, 0xffffefffffffffff, 0x100000, x1, 32, x2)
+    TEST_RR_OP(clmul, x27, x5, x21, 0xfffffffffff00000, 0xffffefffffffffff, 0x100000, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x27, 0xfffffffffff00000) 
     
 
@@ -1444,7 +1444,7 @@ inst_119:
     # clmul x28, x4, x20
     # sd x28, 0(x5)
 inst_120:
-    TEST_RR_OP(clmul, x28, x4, x4, 0xfffffffffff80000, 0xffffdfffffffffff, 0x80000, x5, 0, x6)
+    TEST_RR_OP(clmul, x28, x4, x20, 0xfffffffffff80000, 0xffffdfffffffffff, 0x80000, x5, 0, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x28, 0xfffffffffff80000) 
     
  
@@ -1454,7 +1454,7 @@ inst_120:
     # clmul x29, x3, x19
     # sd x29, 8(x5)
 inst_121:
-    TEST_RR_OP(clmul, x29, x3, x3, 0xfffffffffffc0000, 0xffffbfffffffffff, 0x40000, x5, 8, x6)
+    TEST_RR_OP(clmul, x29, x3, x19, 0xfffffffffffc0000, 0xffffbfffffffffff, 0x40000, x5, 8, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x29, 0xfffffffffffc0000) 
     
  
@@ -1464,7 +1464,7 @@ inst_121:
     # clmul x30, x2, x18
     # sd x30, 16(x5)
 inst_122:
-    TEST_RR_OP(clmul, x30, x2, x2, 0xfffffffffffe0000, 0xffff7fffffffffff, 0x20000, x5, 16, x6)
+    TEST_RR_OP(clmul, x30, x2, x18, 0xfffffffffffe0000, 0xffff7fffffffffff, 0x20000, x5, 16, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x30, 0xfffffffffffe0000) 
     
  
@@ -1474,7 +1474,7 @@ inst_122:
     # clmul x31, x1, x17
     # sd x31, 24(x5)
 inst_123:
-    TEST_RR_OP(clmul, x31, x1, x1, 0xffffffffffff0000, 0xfffeffffffffffff, 0x10000, x5, 24, x6)
+    TEST_RR_OP(clmul, x31, x1, x17, 0xffffffffffff0000, 0xfffeffffffffffff, 0x10000, x5, 24, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x31, 0xffffffffffff0000) 
     
  
@@ -1484,7 +1484,7 @@ inst_123:
     # clmul x1, x31, x16
     # sd x1, 32(x5)
 inst_124:
-    TEST_RR_OP(clmul, x1, x31, x31, 0xffffffffffff8000, 0xfffdffffffffffff, 0x8000, x5, 32, x6)
+    TEST_RR_OP(clmul, x1, x31, x16, 0xffffffffffff8000, 0xfffdffffffffffff, 0x8000, x5, 32, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x1, 0xffffffffffff8000) 
     
 
@@ -1502,7 +1502,7 @@ inst_124:
     # clmul x2, x30, x15
     # sd x2, 0(x1)
 inst_125:
-    TEST_RR_OP(clmul, x2, x30, x30, 0xffffffffffffc000, 0xfffbffffffffffff, 0x4000, x1, 0, x7)
+    TEST_RR_OP(clmul, x2, x30, x15, 0xffffffffffffc000, 0xfffbffffffffffff, 0x4000, x1, 0, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x2, 0xffffffffffffc000) 
     
  
@@ -1512,7 +1512,7 @@ inst_125:
     # clmul x3, x29, x14
     # sd x3, 8(x1)
 inst_126:
-    TEST_RR_OP(clmul, x3, x29, x29, 0xffffffffffffe000, 0xfff7ffffffffffff, 0x2000, x1, 8, x7)
+    TEST_RR_OP(clmul, x3, x29, x14, 0xffffffffffffe000, 0xfff7ffffffffffff, 0x2000, x1, 8, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x3, 0xffffffffffffe000) 
     
  
@@ -1522,7 +1522,7 @@ inst_126:
     # clmul x4, x28, x13
     # sd x4, 16(x1)
 inst_127:
-    TEST_RR_OP(clmul, x4, x28, x28, 0xfffffffffffff000, 0xffefffffffffffff, 0x1000, x1, 16, x7)
+    TEST_RR_OP(clmul, x4, x28, x13, 0xfffffffffffff000, 0xffefffffffffffff, 0x1000, x1, 16, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x4, 0xfffffffffffff000) 
     
  
@@ -1532,7 +1532,7 @@ inst_127:
     # clmul x5, x27, x12
     # sd x5, 24(x1)
 inst_128:
-    TEST_RR_OP(clmul, x5, x27, x27, 0xfffffffffffff800, 0xffdfffffffffffff, 0x800, x1, 24, x7)
+    TEST_RR_OP(clmul, x5, x27, x12, 0xfffffffffffff800, 0xffdfffffffffffff, 0x800, x1, 24, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x5, 0xfffffffffffff800) 
     
  
@@ -1542,7 +1542,7 @@ inst_128:
     # clmul x6, x26, x11
     # sd x6, 32(x1)
 inst_129:
-    TEST_RR_OP(clmul, x6, x26, x26, 0xfffffffffffffc00, 0xffbfffffffffffff, 0x400, x1, 32, x7)
+    TEST_RR_OP(clmul, x6, x26, x11, 0xfffffffffffffc00, 0xffbfffffffffffff, 0x400, x1, 32, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x6, 0xfffffffffffffc00) 
     
 
@@ -1560,7 +1560,7 @@ inst_129:
     # clmul x7, x25, x10
     # sd x7, 0(x1)
 inst_130:
-    TEST_RR_OP(clmul, x7, x25, x25, 0xfffffffffffffe00, 0xff7fffffffffffff, 0x200, x1, 0, x2)
+    TEST_RR_OP(clmul, x7, x25, x10, 0xfffffffffffffe00, 0xff7fffffffffffff, 0x200, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x7, 0xfffffffffffffe00) 
     
  
@@ -1570,7 +1570,7 @@ inst_130:
     # clmul x8, x24, x9
     # sd x8, 8(x1)
 inst_131:
-    TEST_RR_OP(clmul, x8, x24, x24, 0xffffffffffffff00, 0xfeffffffffffffff, 0x100, x1, 8, x2)
+    TEST_RR_OP(clmul, x8, x24, x9, 0xffffffffffffff00, 0xfeffffffffffffff, 0x100, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x8, 0xffffffffffffff00) 
     
  
@@ -1580,7 +1580,7 @@ inst_131:
     # clmul x9, x23, x8
     # sd x9, 16(x1)
 inst_132:
-    TEST_RR_OP(clmul, x9, x23, x23, 0xffffffffffffff80, 0xfdffffffffffffff, 0x80, x1, 16, x2)
+    TEST_RR_OP(clmul, x9, x23, x8, 0xffffffffffffff80, 0xfdffffffffffffff, 0x80, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x9, 0xffffffffffffff80) 
     
  
@@ -1590,7 +1590,7 @@ inst_132:
     # clmul x10, x22, x7
     # sd x10, 24(x1)
 inst_133:
-    TEST_RR_OP(clmul, x10, x22, x22, 0xffffffffffffffc0, 0xfbffffffffffffff, 0x40, x1, 24, x2)
+    TEST_RR_OP(clmul, x10, x22, x7, 0xffffffffffffffc0, 0xfbffffffffffffff, 0x40, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x10, 0xffffffffffffffc0) 
     
  
@@ -1600,7 +1600,7 @@ inst_133:
     # clmul x11, x21, x6
     # sd x11, 32(x1)
 inst_134:
-    TEST_RR_OP(clmul, x11, x21, x21, 0xffffffffffffffe0, 0xf7ffffffffffffff, 0x20, x1, 32, x2)
+    TEST_RR_OP(clmul, x11, x21, x6, 0xffffffffffffffe0, 0xf7ffffffffffffff, 0x20, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x11, 0xffffffffffffffe0) 
     
 
@@ -1618,7 +1618,7 @@ inst_134:
     # clmul x12, x20, x5
     # sd x12, 0(x6)
 inst_135:
-    TEST_RR_OP(clmul, x12, x20, x20, 0xfffffffffffffff0, 0xefffffffffffffff, 0x10, x6, 0, x7)
+    TEST_RR_OP(clmul, x12, x20, x5, 0xfffffffffffffff0, 0xefffffffffffffff, 0x10, x6, 0, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x12, 0xfffffffffffffff0) 
     
  
@@ -1628,7 +1628,7 @@ inst_135:
     # clmul x13, x19, x4
     # sd x13, 8(x6)
 inst_136:
-    TEST_RR_OP(clmul, x13, x19, x19, 0xfffffffffffffff8, 0xdfffffffffffffff, 0x8, x6, 8, x7)
+    TEST_RR_OP(clmul, x13, x19, x4, 0xfffffffffffffff8, 0xdfffffffffffffff, 0x8, x6, 8, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x13, 0xfffffffffffffff8) 
     
  
@@ -1638,7 +1638,7 @@ inst_136:
     # clmul x14, x18, x3
     # sd x14, 16(x6)
 inst_137:
-    TEST_RR_OP(clmul, x14, x18, x18, 0xfffffffffffffffc, 0xbfffffffffffffff, 0x4, x6, 16, x7)
+    TEST_RR_OP(clmul, x14, x18, x3, 0xfffffffffffffffc, 0xbfffffffffffffff, 0x4, x6, 16, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x14, 0xfffffffffffffffc) 
     
  
@@ -1648,7 +1648,7 @@ inst_137:
     # clmul x15, x17, x2
     # sd x15, 24(x6)
 inst_138:
-    TEST_RR_OP(clmul, x15, x17, x17, 0xfffffffffffffffe, 0x7fffffffffffffff, 0x2, x6, 24, x7)
+    TEST_RR_OP(clmul, x15, x17, x2, 0xfffffffffffffffe, 0x7fffffffffffffff, 0x2, x6, 24, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x15, 0xfffffffffffffffe) 
     
  
@@ -1658,7 +1658,7 @@ inst_138:
     # clmul x16, x16, x1
     # sd x16, 32(x6)
 inst_139:
-    TEST_RR_OP(clmul, x16, x16, x16, 0xffffffffffffffff, 0xffffffffffffffff, 0x1, x6, 32, x7)
+    TEST_RR_OP(clmul, x16, x16, x1, 0xffffffffffffffff, 0xffffffffffffffff, 0x1, x6, 32, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x16, 0xffffffffffffffff) 
     
 
@@ -1676,7 +1676,7 @@ inst_139:
     # clmul x17, x15, x31
     # sd x17, 0(x1)
 inst_140:
-    TEST_RR_OP(clmul, x17, x15, x15, 0x0000000000000000, 0x1, 0x0, x1, 0, x2)
+    TEST_RR_OP(clmul, x17, x15, x31, 0x0000000000000000, 0x1, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x17, 0x0000000000000000) 
     
  
@@ -1686,7 +1686,7 @@ inst_140:
     # clmul x18, x14, x30
     # sd x18, 8(x1)
 inst_141:
-    TEST_RR_OP(clmul, x18, x14, x14, 0x0000000000000000, 0x2, 0x0, x1, 8, x2)
+    TEST_RR_OP(clmul, x18, x14, x30, 0x0000000000000000, 0x2, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x18, 0x0000000000000000) 
     
  
@@ -1696,7 +1696,7 @@ inst_141:
     # clmul x19, x13, x29
     # sd x19, 16(x1)
 inst_142:
-    TEST_RR_OP(clmul, x19, x13, x13, 0x0000000000000000, 0x4, 0x0, x1, 16, x2)
+    TEST_RR_OP(clmul, x19, x13, x29, 0x0000000000000000, 0x4, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x19, 0x0000000000000000) 
     
  
@@ -1706,7 +1706,7 @@ inst_142:
     # clmul x20, x12, x28
     # sd x20, 24(x1)
 inst_143:
-    TEST_RR_OP(clmul, x20, x12, x12, 0x0000000000000000, 0x8, 0x0, x1, 24, x2)
+    TEST_RR_OP(clmul, x20, x12, x28, 0x0000000000000000, 0x8, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x20, 0x0000000000000000) 
     
  
@@ -1716,7 +1716,7 @@ inst_143:
     # clmul x21, x11, x27
     # sd x21, 32(x1)
 inst_144:
-    TEST_RR_OP(clmul, x21, x11, x11, 0x0000000000000000, 0x10, 0x0, x1, 32, x2)
+    TEST_RR_OP(clmul, x21, x11, x27, 0x0000000000000000, 0x10, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x21, 0x0000000000000000) 
     
 
@@ -1734,7 +1734,7 @@ inst_144:
     # clmul x22, x10, x26
     # sd x22, 0(x1)
 inst_145:
-    TEST_RR_OP(clmul, x22, x10, x10, 0x0000000000000000, 0x20, 0x0, x1, 0, x2)
+    TEST_RR_OP(clmul, x22, x10, x26, 0x0000000000000000, 0x20, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x22, 0x0000000000000000) 
     
  
@@ -1744,7 +1744,7 @@ inst_145:
     # clmul x23, x9, x25
     # sd x23, 8(x1)
 inst_146:
-    TEST_RR_OP(clmul, x23, x9, x9, 0x0000000000000000, 0x40, 0x0, x1, 8, x2)
+    TEST_RR_OP(clmul, x23, x9, x25, 0x0000000000000000, 0x40, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x23, 0x0000000000000000) 
     
  
@@ -1754,7 +1754,7 @@ inst_146:
     # clmul x24, x8, x24
     # sd x24, 16(x1)
 inst_147:
-    TEST_RR_OP(clmul, x24, x8, x8, 0x0000000000000000, 0x80, 0x0, x1, 16, x2)
+    TEST_RR_OP(clmul, x24, x8, x24, 0x0000000000000000, 0x80, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x24, 0x0000000000000000) 
     
  
@@ -1764,7 +1764,7 @@ inst_147:
     # clmul x25, x7, x23
     # sd x25, 24(x1)
 inst_148:
-    TEST_RR_OP(clmul, x25, x7, x7, 0x0000000000000000, 0x100, 0x0, x1, 24, x2)
+    TEST_RR_OP(clmul, x25, x7, x23, 0x0000000000000000, 0x100, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x25, 0x0000000000000000) 
     
  
@@ -1774,7 +1774,7 @@ inst_148:
     # clmul x26, x6, x22
     # sd x26, 32(x1)
 inst_149:
-    TEST_RR_OP(clmul, x26, x6, x6, 0x0000000000000000, 0x200, 0x0, x1, 32, x2)
+    TEST_RR_OP(clmul, x26, x6, x22, 0x0000000000000000, 0x200, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x26, 0x0000000000000000) 
     
 
@@ -1792,7 +1792,7 @@ inst_149:
     # clmul x27, x5, x21
     # sd x27, 0(x6)
 inst_150:
-    TEST_RR_OP(clmul, x27, x5, x5, 0x0000000000000000, 0x400, 0x0, x6, 0, x7)
+    TEST_RR_OP(clmul, x27, x5, x21, 0x0000000000000000, 0x400, 0x0, x6, 0, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x27, 0x0000000000000000) 
     
  
@@ -1802,7 +1802,7 @@ inst_150:
     # clmul x28, x4, x20
     # sd x28, 8(x6)
 inst_151:
-    TEST_RR_OP(clmul, x28, x4, x4, 0x0000000000000000, 0x800, 0x0, x6, 8, x7)
+    TEST_RR_OP(clmul, x28, x4, x20, 0x0000000000000000, 0x800, 0x0, x6, 8, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x28, 0x0000000000000000) 
     
  
@@ -1812,7 +1812,7 @@ inst_151:
     # clmul x29, x3, x19
     # sd x29, 16(x6)
 inst_152:
-    TEST_RR_OP(clmul, x29, x3, x3, 0x0000000000000000, 0x1000, 0x0, x6, 16, x7)
+    TEST_RR_OP(clmul, x29, x3, x19, 0x0000000000000000, 0x1000, 0x0, x6, 16, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x29, 0x0000000000000000) 
     
  
@@ -1822,7 +1822,7 @@ inst_152:
     # clmul x30, x2, x18
     # sd x30, 24(x6)
 inst_153:
-    TEST_RR_OP(clmul, x30, x2, x2, 0x0000000000000000, 0x2000, 0x0, x6, 24, x7)
+    TEST_RR_OP(clmul, x30, x2, x18, 0x0000000000000000, 0x2000, 0x0, x6, 24, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x30, 0x0000000000000000) 
     
  
@@ -1832,7 +1832,7 @@ inst_153:
     # clmul x31, x1, x17
     # sd x31, 32(x6)
 inst_154:
-    TEST_RR_OP(clmul, x31, x1, x1, 0x0000000000000000, 0x4000, 0x0, x6, 32, x7)
+    TEST_RR_OP(clmul, x31, x1, x17, 0x0000000000000000, 0x4000, 0x0, x6, 32, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x31, 0x0000000000000000) 
     
 
@@ -1850,7 +1850,7 @@ inst_154:
     # clmul x1, x31, x16
     # sd x1, 0(x6)
 inst_155:
-    TEST_RR_OP(clmul, x1, x31, x31, 0x0000000000000000, 0x8000, 0x0, x6, 0, x7)
+    TEST_RR_OP(clmul, x1, x31, x16, 0x0000000000000000, 0x8000, 0x0, x6, 0, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x1, 0x0000000000000000) 
     
  
@@ -1860,7 +1860,7 @@ inst_155:
     # clmul x2, x30, x15
     # sd x2, 8(x6)
 inst_156:
-    TEST_RR_OP(clmul, x2, x30, x30, 0x0000000000000000, 0x10000, 0x0, x6, 8, x7)
+    TEST_RR_OP(clmul, x2, x30, x15, 0x0000000000000000, 0x10000, 0x0, x6, 8, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x2, 0x0000000000000000) 
     
  
@@ -1870,7 +1870,7 @@ inst_156:
     # clmul x3, x29, x14
     # sd x3, 16(x6)
 inst_157:
-    TEST_RR_OP(clmul, x3, x29, x29, 0x0000000000000000, 0x20000, 0x0, x6, 16, x7)
+    TEST_RR_OP(clmul, x3, x29, x14, 0x0000000000000000, 0x20000, 0x0, x6, 16, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x3, 0x0000000000000000) 
     
  
@@ -1880,7 +1880,7 @@ inst_157:
     # clmul x4, x28, x13
     # sd x4, 24(x6)
 inst_158:
-    TEST_RR_OP(clmul, x4, x28, x28, 0x0000000000000000, 0x40000, 0x0, x6, 24, x7)
+    TEST_RR_OP(clmul, x4, x28, x13, 0x0000000000000000, 0x40000, 0x0, x6, 24, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x4, 0x0000000000000000) 
     
  
@@ -1890,7 +1890,7 @@ inst_158:
     # clmul x5, x27, x12
     # sd x5, 32(x6)
 inst_159:
-    TEST_RR_OP(clmul, x5, x27, x27, 0x0000000000000000, 0x80000, 0x0, x6, 32, x7)
+    TEST_RR_OP(clmul, x5, x27, x12, 0x0000000000000000, 0x80000, 0x0, x6, 32, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x5, 0x0000000000000000) 
     
 
@@ -1908,7 +1908,7 @@ inst_159:
     # clmul x6, x26, x11
     # sd x6, 0(x1)
 inst_160:
-    TEST_RR_OP(clmul, x6, x26, x26, 0x0000000000000000, 0x100000, 0x0, x1, 0, x2)
+    TEST_RR_OP(clmul, x6, x26, x11, 0x0000000000000000, 0x100000, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x6, 0x0000000000000000) 
     
  
@@ -1918,7 +1918,7 @@ inst_160:
     # clmul x7, x25, x10
     # sd x7, 8(x1)
 inst_161:
-    TEST_RR_OP(clmul, x7, x25, x25, 0x0000000000000000, 0x200000, 0x0, x1, 8, x2)
+    TEST_RR_OP(clmul, x7, x25, x10, 0x0000000000000000, 0x200000, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x7, 0x0000000000000000) 
     
  
@@ -1928,7 +1928,7 @@ inst_161:
     # clmul x8, x24, x9
     # sd x8, 16(x1)
 inst_162:
-    TEST_RR_OP(clmul, x8, x24, x24, 0x0000000000000000, 0x400000, 0x0, x1, 16, x2)
+    TEST_RR_OP(clmul, x8, x24, x9, 0x0000000000000000, 0x400000, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x8, 0x0000000000000000) 
     
  
@@ -1938,7 +1938,7 @@ inst_162:
     # clmul x9, x23, x8
     # sd x9, 24(x1)
 inst_163:
-    TEST_RR_OP(clmul, x9, x23, x23, 0x0000000000000000, 0x800000, 0x0, x1, 24, x2)
+    TEST_RR_OP(clmul, x9, x23, x8, 0x0000000000000000, 0x800000, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x9, 0x0000000000000000) 
     
  
@@ -1948,7 +1948,7 @@ inst_163:
     # clmul x10, x22, x7
     # sd x10, 32(x1)
 inst_164:
-    TEST_RR_OP(clmul, x10, x22, x22, 0x0000000000000000, 0x1000000, 0x0, x1, 32, x2)
+    TEST_RR_OP(clmul, x10, x22, x7, 0x0000000000000000, 0x1000000, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x10, 0x0000000000000000) 
     
 
@@ -1966,7 +1966,7 @@ inst_164:
     # clmul x11, x21, x6
     # sd x11, 0(x1)
 inst_165:
-    TEST_RR_OP(clmul, x11, x21, x21, 0x0000000000000000, 0x2000000, 0x0, x1, 0, x7)
+    TEST_RR_OP(clmul, x11, x21, x6, 0x0000000000000000, 0x2000000, 0x0, x1, 0, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x11, 0x0000000000000000) 
     
  
@@ -1976,7 +1976,7 @@ inst_165:
     # clmul x12, x20, x5
     # sd x12, 8(x1)
 inst_166:
-    TEST_RR_OP(clmul, x12, x20, x20, 0x0000000000000000, 0x4000000, 0x0, x1, 8, x7)
+    TEST_RR_OP(clmul, x12, x20, x5, 0x0000000000000000, 0x4000000, 0x0, x1, 8, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x12, 0x0000000000000000) 
     
  
@@ -1986,7 +1986,7 @@ inst_166:
     # clmul x13, x19, x4
     # sd x13, 16(x1)
 inst_167:
-    TEST_RR_OP(clmul, x13, x19, x19, 0x0000000000000000, 0x8000000, 0x0, x1, 16, x7)
+    TEST_RR_OP(clmul, x13, x19, x4, 0x0000000000000000, 0x8000000, 0x0, x1, 16, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x13, 0x0000000000000000) 
     
  
@@ -1996,7 +1996,7 @@ inst_167:
     # clmul x14, x18, x3
     # sd x14, 24(x1)
 inst_168:
-    TEST_RR_OP(clmul, x14, x18, x18, 0x0000000000000000, 0x10000000, 0x0, x1, 24, x7)
+    TEST_RR_OP(clmul, x14, x18, x3, 0x0000000000000000, 0x10000000, 0x0, x1, 24, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x14, 0x0000000000000000) 
     
  
@@ -2006,7 +2006,7 @@ inst_168:
     # clmul x15, x17, x2
     # sd x15, 32(x1)
 inst_169:
-    TEST_RR_OP(clmul, x15, x17, x17, 0x0000000000000000, 0x20000000, 0x0, x1, 32, x7)
+    TEST_RR_OP(clmul, x15, x17, x2, 0x0000000000000000, 0x20000000, 0x0, x1, 32, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x15, 0x0000000000000000) 
     
 
@@ -2024,7 +2024,7 @@ inst_169:
     # clmul x16, x16, x1
     # sd x16, 0(x2)
 inst_170:
-    TEST_RR_OP(clmul, x16, x16, x16, 0x0000000000000000, 0x40000000, 0x0, x2, 0, x3)
+    TEST_RR_OP(clmul, x16, x16, x1, 0x0000000000000000, 0x40000000, 0x0, x2, 0, x3)
     RVMODEL_IO_ASSERT_GPR_EQ(x3, x16, 0x0000000000000000) 
     
  
@@ -2034,7 +2034,7 @@ inst_170:
     # clmul x17, x15, x31
     # sd x17, 8(x2)
 inst_171:
-    TEST_RR_OP(clmul, x17, x15, x15, 0x0000000000000000, 0x80000000, 0x0, x2, 8, x3)
+    TEST_RR_OP(clmul, x17, x15, x31, 0x0000000000000000, 0x80000000, 0x0, x2, 8, x3)
     RVMODEL_IO_ASSERT_GPR_EQ(x3, x17, 0x0000000000000000) 
     
  
@@ -2044,7 +2044,7 @@ inst_171:
     # clmul x18, x14, x30
     # sd x18, 16(x2)
 inst_172:
-    TEST_RR_OP(clmul, x18, x14, x14, 0x0000000000000000, 0x100000000, 0x0, x2, 16, x3)
+    TEST_RR_OP(clmul, x18, x14, x30, 0x0000000000000000, 0x100000000, 0x0, x2, 16, x3)
     RVMODEL_IO_ASSERT_GPR_EQ(x3, x18, 0x0000000000000000) 
     
  
@@ -2054,7 +2054,7 @@ inst_172:
     # clmul x19, x13, x29
     # sd x19, 24(x2)
 inst_173:
-    TEST_RR_OP(clmul, x19, x13, x13, 0x0000000000000000, 0x200000000, 0x0, x2, 24, x3)
+    TEST_RR_OP(clmul, x19, x13, x29, 0x0000000000000000, 0x200000000, 0x0, x2, 24, x3)
     RVMODEL_IO_ASSERT_GPR_EQ(x3, x19, 0x0000000000000000) 
     
  
@@ -2064,7 +2064,7 @@ inst_173:
     # clmul x20, x12, x28
     # sd x20, 32(x2)
 inst_174:
-    TEST_RR_OP(clmul, x20, x12, x12, 0x0000000000000000, 0x400000000, 0x0, x2, 32, x3)
+    TEST_RR_OP(clmul, x20, x12, x28, 0x0000000000000000, 0x400000000, 0x0, x2, 32, x3)
     RVMODEL_IO_ASSERT_GPR_EQ(x3, x20, 0x0000000000000000) 
     
 
@@ -2082,7 +2082,7 @@ inst_174:
     # clmul x21, x11, x27
     # sd x21, 0(x1)
 inst_175:
-    TEST_RR_OP(clmul, x21, x11, x11, 0x0000000000000000, 0x800000000, 0x0, x1, 0, x2)
+    TEST_RR_OP(clmul, x21, x11, x27, 0x0000000000000000, 0x800000000, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x21, 0x0000000000000000) 
     
  
@@ -2092,7 +2092,7 @@ inst_175:
     # clmul x22, x10, x26
     # sd x22, 8(x1)
 inst_176:
-    TEST_RR_OP(clmul, x22, x10, x10, 0x0000000000000000, 0x1000000000, 0x0, x1, 8, x2)
+    TEST_RR_OP(clmul, x22, x10, x26, 0x0000000000000000, 0x1000000000, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x22, 0x0000000000000000) 
     
  
@@ -2102,7 +2102,7 @@ inst_176:
     # clmul x23, x9, x25
     # sd x23, 16(x1)
 inst_177:
-    TEST_RR_OP(clmul, x23, x9, x9, 0x0000000000000000, 0x2000000000, 0x0, x1, 16, x2)
+    TEST_RR_OP(clmul, x23, x9, x25, 0x0000000000000000, 0x2000000000, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x23, 0x0000000000000000) 
     
  
@@ -2112,7 +2112,7 @@ inst_177:
     # clmul x24, x8, x24
     # sd x24, 24(x1)
 inst_178:
-    TEST_RR_OP(clmul, x24, x8, x8, 0x0000000000000000, 0x4000000000, 0x0, x1, 24, x2)
+    TEST_RR_OP(clmul, x24, x8, x24, 0x0000000000000000, 0x4000000000, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x24, 0x0000000000000000) 
     
  
@@ -2122,7 +2122,7 @@ inst_178:
     # clmul x25, x7, x23
     # sd x25, 32(x1)
 inst_179:
-    TEST_RR_OP(clmul, x25, x7, x7, 0x0000000000000000, 0x8000000000, 0x0, x1, 32, x2)
+    TEST_RR_OP(clmul, x25, x7, x23, 0x0000000000000000, 0x8000000000, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x25, 0x0000000000000000) 
     
 
@@ -2140,7 +2140,7 @@ inst_179:
     # clmul x26, x6, x22
     # sd x26, 0(x1)
 inst_180:
-    TEST_RR_OP(clmul, x26, x6, x6, 0x0000000000000000, 0x10000000000, 0x0, x1, 0, x7)
+    TEST_RR_OP(clmul, x26, x6, x22, 0x0000000000000000, 0x10000000000, 0x0, x1, 0, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x26, 0x0000000000000000) 
     
  
@@ -2150,7 +2150,7 @@ inst_180:
     # clmul x27, x5, x21
     # sd x27, 8(x1)
 inst_181:
-    TEST_RR_OP(clmul, x27, x5, x5, 0x0000000000000000, 0x20000000000, 0x0, x1, 8, x7)
+    TEST_RR_OP(clmul, x27, x5, x21, 0x0000000000000000, 0x20000000000, 0x0, x1, 8, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x27, 0x0000000000000000) 
     
  
@@ -2160,7 +2160,7 @@ inst_181:
     # clmul x28, x4, x20
     # sd x28, 16(x1)
 inst_182:
-    TEST_RR_OP(clmul, x28, x4, x4, 0x0000000000000000, 0x40000000000, 0x0, x1, 16, x7)
+    TEST_RR_OP(clmul, x28, x4, x20, 0x0000000000000000, 0x40000000000, 0x0, x1, 16, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x28, 0x0000000000000000) 
     
  
@@ -2170,7 +2170,7 @@ inst_182:
     # clmul x29, x3, x19
     # sd x29, 24(x1)
 inst_183:
-    TEST_RR_OP(clmul, x29, x3, x3, 0x0000000000000000, 0x80000000000, 0x0, x1, 24, x7)
+    TEST_RR_OP(clmul, x29, x3, x19, 0x0000000000000000, 0x80000000000, 0x0, x1, 24, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x29, 0x0000000000000000) 
     
  
@@ -2180,7 +2180,7 @@ inst_183:
     # clmul x30, x2, x18
     # sd x30, 32(x1)
 inst_184:
-    TEST_RR_OP(clmul, x30, x2, x2, 0x0000000000000000, 0x100000000000, 0x0, x1, 32, x7)
+    TEST_RR_OP(clmul, x30, x2, x18, 0x0000000000000000, 0x100000000000, 0x0, x1, 32, x7)
     RVMODEL_IO_ASSERT_GPR_EQ(x7, x30, 0x0000000000000000) 
     
 
@@ -2198,7 +2198,7 @@ inst_184:
     # clmul x31, x1, x17
     # sd x31, 0(x5)
 inst_185:
-    TEST_RR_OP(clmul, x31, x1, x1, 0x0000000000000000, 0x200000000000, 0x0, x5, 0, x6)
+    TEST_RR_OP(clmul, x31, x1, x17, 0x0000000000000000, 0x200000000000, 0x0, x5, 0, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x31, 0x0000000000000000) 
     
  
@@ -2208,7 +2208,7 @@ inst_185:
     # clmul x1, x31, x16
     # sd x1, 8(x5)
 inst_186:
-    TEST_RR_OP(clmul, x1, x31, x31, 0x0000000000000000, 0x400000000000, 0x0, x5, 8, x6)
+    TEST_RR_OP(clmul, x1, x31, x16, 0x0000000000000000, 0x400000000000, 0x0, x5, 8, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x1, 0x0000000000000000) 
     
  
@@ -2218,7 +2218,7 @@ inst_186:
     # clmul x2, x30, x15
     # sd x2, 16(x5)
 inst_187:
-    TEST_RR_OP(clmul, x2, x30, x30, 0x0000000000000000, 0x800000000000, 0x0, x5, 16, x6)
+    TEST_RR_OP(clmul, x2, x30, x15, 0x0000000000000000, 0x800000000000, 0x0, x5, 16, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x2, 0x0000000000000000) 
     
  
@@ -2228,7 +2228,7 @@ inst_187:
     # clmul x3, x29, x14
     # sd x3, 24(x5)
 inst_188:
-    TEST_RR_OP(clmul, x3, x29, x29, 0x0000000000000000, 0x1000000000000, 0x0, x5, 24, x6)
+    TEST_RR_OP(clmul, x3, x29, x14, 0x0000000000000000, 0x1000000000000, 0x0, x5, 24, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x3, 0x0000000000000000) 
     
  
@@ -2238,7 +2238,7 @@ inst_188:
     # clmul x4, x28, x13
     # sd x4, 32(x5)
 inst_189:
-    TEST_RR_OP(clmul, x4, x28, x28, 0x0000000000000000, 0x2000000000000, 0x0, x5, 32, x6)
+    TEST_RR_OP(clmul, x4, x28, x13, 0x0000000000000000, 0x2000000000000, 0x0, x5, 32, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x4, 0x0000000000000000) 
     
 
@@ -2256,7 +2256,7 @@ inst_189:
     # clmul x5, x27, x12
     # sd x5, 0(x1)
 inst_190:
-    TEST_RR_OP(clmul, x5, x27, x27, 0x0000000000000000, 0x4000000000000, 0x0, x1, 0, x2)
+    TEST_RR_OP(clmul, x5, x27, x12, 0x0000000000000000, 0x4000000000000, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x5, 0x0000000000000000) 
     
  
@@ -2266,7 +2266,7 @@ inst_190:
     # clmul x6, x26, x11
     # sd x6, 8(x1)
 inst_191:
-    TEST_RR_OP(clmul, x6, x26, x26, 0x0000000000000000, 0x8000000000000, 0x0, x1, 8, x2)
+    TEST_RR_OP(clmul, x6, x26, x11, 0x0000000000000000, 0x8000000000000, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x6, 0x0000000000000000) 
     
  
@@ -2276,7 +2276,7 @@ inst_191:
     # clmul x7, x25, x10
     # sd x7, 16(x1)
 inst_192:
-    TEST_RR_OP(clmul, x7, x25, x25, 0x0000000000000000, 0x10000000000000, 0x0, x1, 16, x2)
+    TEST_RR_OP(clmul, x7, x25, x10, 0x0000000000000000, 0x10000000000000, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x7, 0x0000000000000000) 
     
  
@@ -2286,7 +2286,7 @@ inst_192:
     # clmul x8, x24, x9
     # sd x8, 24(x1)
 inst_193:
-    TEST_RR_OP(clmul, x8, x24, x24, 0x0000000000000000, 0x20000000000000, 0x0, x1, 24, x2)
+    TEST_RR_OP(clmul, x8, x24, x9, 0x0000000000000000, 0x20000000000000, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x8, 0x0000000000000000) 
     
  
@@ -2296,7 +2296,7 @@ inst_193:
     # clmul x9, x23, x8
     # sd x9, 32(x1)
 inst_194:
-    TEST_RR_OP(clmul, x9, x23, x23, 0x0000000000000000, 0x40000000000000, 0x0, x1, 32, x2)
+    TEST_RR_OP(clmul, x9, x23, x8, 0x0000000000000000, 0x40000000000000, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x9, 0x0000000000000000) 
     
 
@@ -2314,7 +2314,7 @@ inst_194:
     # clmul x10, x22, x7
     # sd x10, 0(x1)
 inst_195:
-    TEST_RR_OP(clmul, x10, x22, x22, 0x0000000000000000, 0x80000000000000, 0x0, x1, 0, x2)
+    TEST_RR_OP(clmul, x10, x22, x7, 0x0000000000000000, 0x80000000000000, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x10, 0x0000000000000000) 
     
  
@@ -2324,7 +2324,7 @@ inst_195:
     # clmul x11, x21, x6
     # sd x11, 8(x1)
 inst_196:
-    TEST_RR_OP(clmul, x11, x21, x21, 0x0000000000000000, 0x100000000000000, 0x0, x1, 8, x2)
+    TEST_RR_OP(clmul, x11, x21, x6, 0x0000000000000000, 0x100000000000000, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x11, 0x0000000000000000) 
     
  
@@ -2334,7 +2334,7 @@ inst_196:
     # clmul x12, x20, x5
     # sd x12, 16(x1)
 inst_197:
-    TEST_RR_OP(clmul, x12, x20, x20, 0x0000000000000000, 0x200000000000000, 0x0, x1, 16, x2)
+    TEST_RR_OP(clmul, x12, x20, x5, 0x0000000000000000, 0x200000000000000, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x12, 0x0000000000000000) 
     
  
@@ -2344,7 +2344,7 @@ inst_197:
     # clmul x13, x19, x4
     # sd x13, 24(x1)
 inst_198:
-    TEST_RR_OP(clmul, x13, x19, x19, 0x0000000000000000, 0x400000000000000, 0x0, x1, 24, x2)
+    TEST_RR_OP(clmul, x13, x19, x4, 0x0000000000000000, 0x400000000000000, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x13, 0x0000000000000000) 
     
  
@@ -2354,7 +2354,7 @@ inst_198:
     # clmul x14, x18, x3
     # sd x14, 32(x1)
 inst_199:
-    TEST_RR_OP(clmul, x14, x18, x18, 0x0000000000000000, 0x800000000000000, 0x0, x1, 32, x2)
+    TEST_RR_OP(clmul, x14, x18, x3, 0x0000000000000000, 0x800000000000000, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x14, 0x0000000000000000) 
     
 
@@ -2372,7 +2372,7 @@ inst_199:
     # clmul x15, x17, x2
     # sd x15, 0(x3)
 inst_200:
-    TEST_RR_OP(clmul, x15, x17, x17, 0x0000000000000000, 0x1000000000000000, 0x0, x3, 0, x4)
+    TEST_RR_OP(clmul, x15, x17, x2, 0x0000000000000000, 0x1000000000000000, 0x0, x3, 0, x4)
     RVMODEL_IO_ASSERT_GPR_EQ(x4, x15, 0x0000000000000000) 
     
  
@@ -2382,7 +2382,7 @@ inst_200:
     # clmul x16, x16, x1
     # sd x16, 8(x3)
 inst_201:
-    TEST_RR_OP(clmul, x16, x16, x16, 0x0000000000000000, 0x2000000000000000, 0x0, x3, 8, x4)
+    TEST_RR_OP(clmul, x16, x16, x1, 0x0000000000000000, 0x2000000000000000, 0x0, x3, 8, x4)
     RVMODEL_IO_ASSERT_GPR_EQ(x4, x16, 0x0000000000000000) 
     
  
@@ -2392,7 +2392,7 @@ inst_201:
     # clmul x17, x15, x31
     # sd x17, 16(x3)
 inst_202:
-    TEST_RR_OP(clmul, x17, x15, x15, 0x0000000000000000, 0x4000000000000000, 0x0, x3, 16, x4)
+    TEST_RR_OP(clmul, x17, x15, x31, 0x0000000000000000, 0x4000000000000000, 0x0, x3, 16, x4)
     RVMODEL_IO_ASSERT_GPR_EQ(x4, x17, 0x0000000000000000) 
     
  
@@ -2402,7 +2402,7 @@ inst_202:
     # clmul x18, x14, x30
     # sd x18, 24(x3)
 inst_203:
-    TEST_RR_OP(clmul, x18, x14, x14, 0x0000000000000000, 0x8000000000000000, 0x0, x3, 24, x4)
+    TEST_RR_OP(clmul, x18, x14, x30, 0x0000000000000000, 0x8000000000000000, 0x0, x3, 24, x4)
     RVMODEL_IO_ASSERT_GPR_EQ(x4, x18, 0x0000000000000000) 
     
  
@@ -2412,7 +2412,7 @@ inst_203:
     # clmul x19, x13, x29
     # sd x19, 32(x3)
 inst_204:
-    TEST_RR_OP(clmul, x19, x13, x13, 0x0000000000000000, 0x0, 0x0, x3, 32, x4)
+    TEST_RR_OP(clmul, x19, x13, x29, 0x0000000000000000, 0x0, 0x0, x3, 32, x4)
     RVMODEL_IO_ASSERT_GPR_EQ(x4, x19, 0x0000000000000000) 
     
 
@@ -2430,7 +2430,7 @@ inst_204:
     # clmul x20, x12, x28
     # sd x20, 0(x1)
 inst_205:
-    TEST_RR_OP(clmul, x20, x12, x12, 0x0000000000000000, 0xfffffffffffffffe, 0x0, x1, 0, x2)
+    TEST_RR_OP(clmul, x20, x12, x28, 0x0000000000000000, 0xfffffffffffffffe, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x20, 0x0000000000000000) 
     
  
@@ -2440,7 +2440,7 @@ inst_205:
     # clmul x21, x11, x27
     # sd x21, 8(x1)
 inst_206:
-    TEST_RR_OP(clmul, x21, x11, x11, 0x0000000000000000, 0xfffffffffffffffd, 0x0, x1, 8, x2)
+    TEST_RR_OP(clmul, x21, x11, x27, 0x0000000000000000, 0xfffffffffffffffd, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x21, 0x0000000000000000) 
     
  
@@ -2450,7 +2450,7 @@ inst_206:
     # clmul x22, x10, x26
     # sd x22, 16(x1)
 inst_207:
-    TEST_RR_OP(clmul, x22, x10, x10, 0x0000000000000000, 0xfffffffffffffffb, 0x0, x1, 16, x2)
+    TEST_RR_OP(clmul, x22, x10, x26, 0x0000000000000000, 0xfffffffffffffffb, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x22, 0x0000000000000000) 
     
  
@@ -2460,7 +2460,7 @@ inst_207:
     # clmul x23, x9, x25
     # sd x23, 24(x1)
 inst_208:
-    TEST_RR_OP(clmul, x23, x9, x9, 0x0000000000000000, 0xfffffffffffffff7, 0x0, x1, 24, x2)
+    TEST_RR_OP(clmul, x23, x9, x25, 0x0000000000000000, 0xfffffffffffffff7, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x23, 0x0000000000000000) 
     
  
@@ -2470,7 +2470,7 @@ inst_208:
     # clmul x24, x8, x24
     # sd x24, 32(x1)
 inst_209:
-    TEST_RR_OP(clmul, x24, x8, x8, 0x0000000000000000, 0xffffffffffffffef, 0x0, x1, 32, x2)
+    TEST_RR_OP(clmul, x24, x8, x24, 0x0000000000000000, 0xffffffffffffffef, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x24, 0x0000000000000000) 
     
 
@@ -2488,7 +2488,7 @@ inst_209:
     # clmul x25, x7, x23
     # sd x25, 0(x1)
 inst_210:
-    TEST_RR_OP(clmul, x25, x7, x7, 0x0000000000000000, 0xffffffffffffffdf, 0x0, x1, 0, x2)
+    TEST_RR_OP(clmul, x25, x7, x23, 0x0000000000000000, 0xffffffffffffffdf, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x25, 0x0000000000000000) 
     
  
@@ -2498,7 +2498,7 @@ inst_210:
     # clmul x26, x6, x22
     # sd x26, 8(x1)
 inst_211:
-    TEST_RR_OP(clmul, x26, x6, x6, 0x0000000000000000, 0xffffffffffffffbf, 0x0, x1, 8, x2)
+    TEST_RR_OP(clmul, x26, x6, x22, 0x0000000000000000, 0xffffffffffffffbf, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x26, 0x0000000000000000) 
     
  
@@ -2508,7 +2508,7 @@ inst_211:
     # clmul x27, x5, x21
     # sd x27, 16(x1)
 inst_212:
-    TEST_RR_OP(clmul, x27, x5, x5, 0x0000000000000000, 0xffffffffffffff7f, 0x0, x1, 16, x2)
+    TEST_RR_OP(clmul, x27, x5, x21, 0x0000000000000000, 0xffffffffffffff7f, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x27, 0x0000000000000000) 
     
  
@@ -2518,7 +2518,7 @@ inst_212:
     # clmul x28, x4, x20
     # sd x28, 24(x1)
 inst_213:
-    TEST_RR_OP(clmul, x28, x4, x4, 0x0000000000000000, 0xfffffffffffffeff, 0x0, x1, 24, x2)
+    TEST_RR_OP(clmul, x28, x4, x20, 0x0000000000000000, 0xfffffffffffffeff, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x28, 0x0000000000000000) 
     
  
@@ -2528,7 +2528,7 @@ inst_213:
     # clmul x29, x3, x19
     # sd x29, 32(x1)
 inst_214:
-    TEST_RR_OP(clmul, x29, x3, x3, 0x0000000000000000, 0xfffffffffffffdff, 0x0, x1, 32, x2)
+    TEST_RR_OP(clmul, x29, x3, x19, 0x0000000000000000, 0xfffffffffffffdff, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x29, 0x0000000000000000) 
     
 
@@ -2546,7 +2546,7 @@ inst_214:
     # clmul x30, x2, x18
     # sd x30, 0(x4)
 inst_215:
-    TEST_RR_OP(clmul, x30, x2, x2, 0x0000000000000000, 0xfffffffffffffbff, 0x0, x4, 0, x5)
+    TEST_RR_OP(clmul, x30, x2, x18, 0x0000000000000000, 0xfffffffffffffbff, 0x0, x4, 0, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x30, 0x0000000000000000) 
     
  
@@ -2556,7 +2556,7 @@ inst_215:
     # clmul x31, x1, x17
     # sd x31, 8(x4)
 inst_216:
-    TEST_RR_OP(clmul, x31, x1, x1, 0x0000000000000000, 0xfffffffffffff7ff, 0x0, x4, 8, x5)
+    TEST_RR_OP(clmul, x31, x1, x17, 0x0000000000000000, 0xfffffffffffff7ff, 0x0, x4, 8, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x31, 0x0000000000000000) 
     
  
@@ -2566,7 +2566,7 @@ inst_216:
     # clmul x1, x31, x16
     # sd x1, 16(x4)
 inst_217:
-    TEST_RR_OP(clmul, x1, x31, x31, 0x0000000000000000, 0xffffffffffffefff, 0x0, x4, 16, x5)
+    TEST_RR_OP(clmul, x1, x31, x16, 0x0000000000000000, 0xffffffffffffefff, 0x0, x4, 16, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x1, 0x0000000000000000) 
     
  
@@ -2576,7 +2576,7 @@ inst_217:
     # clmul x2, x30, x15
     # sd x2, 24(x4)
 inst_218:
-    TEST_RR_OP(clmul, x2, x30, x30, 0x0000000000000000, 0xffffffffffffdfff, 0x0, x4, 24, x5)
+    TEST_RR_OP(clmul, x2, x30, x15, 0x0000000000000000, 0xffffffffffffdfff, 0x0, x4, 24, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x2, 0x0000000000000000) 
     
  
@@ -2586,7 +2586,7 @@ inst_218:
     # clmul x3, x29, x14
     # sd x3, 32(x4)
 inst_219:
-    TEST_RR_OP(clmul, x3, x29, x29, 0x0000000000000000, 0xffffffffffffbfff, 0x0, x4, 32, x5)
+    TEST_RR_OP(clmul, x3, x29, x14, 0x0000000000000000, 0xffffffffffffbfff, 0x0, x4, 32, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x3, 0x0000000000000000) 
     
 
@@ -2604,7 +2604,7 @@ inst_219:
     # clmul x4, x28, x13
     # sd x4, 0(x1)
 inst_220:
-    TEST_RR_OP(clmul, x4, x28, x28, 0x0000000000000000, 0xffffffffffff7fff, 0x0, x1, 0, x2)
+    TEST_RR_OP(clmul, x4, x28, x13, 0x0000000000000000, 0xffffffffffff7fff, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x4, 0x0000000000000000) 
     
  
@@ -2614,7 +2614,7 @@ inst_220:
     # clmul x5, x27, x12
     # sd x5, 8(x1)
 inst_221:
-    TEST_RR_OP(clmul, x5, x27, x27, 0x0000000000000000, 0xfffffffffffeffff, 0x0, x1, 8, x2)
+    TEST_RR_OP(clmul, x5, x27, x12, 0x0000000000000000, 0xfffffffffffeffff, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x5, 0x0000000000000000) 
     
  
@@ -2624,7 +2624,7 @@ inst_221:
     # clmul x6, x26, x11
     # sd x6, 16(x1)
 inst_222:
-    TEST_RR_OP(clmul, x6, x26, x26, 0x0000000000000000, 0xfffffffffffdffff, 0x0, x1, 16, x2)
+    TEST_RR_OP(clmul, x6, x26, x11, 0x0000000000000000, 0xfffffffffffdffff, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x6, 0x0000000000000000) 
     
  
@@ -2634,7 +2634,7 @@ inst_222:
     # clmul x7, x25, x10
     # sd x7, 24(x1)
 inst_223:
-    TEST_RR_OP(clmul, x7, x25, x25, 0x0000000000000000, 0xfffffffffffbffff, 0x0, x1, 24, x2)
+    TEST_RR_OP(clmul, x7, x25, x10, 0x0000000000000000, 0xfffffffffffbffff, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x7, 0x0000000000000000) 
     
  
@@ -2644,7 +2644,7 @@ inst_223:
     # clmul x8, x24, x9
     # sd x8, 32(x1)
 inst_224:
-    TEST_RR_OP(clmul, x8, x24, x24, 0x0000000000000000, 0xfffffffffff7ffff, 0x0, x1, 32, x2)
+    TEST_RR_OP(clmul, x8, x24, x9, 0x0000000000000000, 0xfffffffffff7ffff, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x8, 0x0000000000000000) 
     
 
@@ -2662,7 +2662,7 @@ inst_224:
     # clmul x9, x23, x8
     # sd x9, 0(x1)
 inst_225:
-    TEST_RR_OP(clmul, x9, x23, x23, 0x0000000000000000, 0xffffffffffefffff, 0x0, x1, 0, x2)
+    TEST_RR_OP(clmul, x9, x23, x8, 0x0000000000000000, 0xffffffffffefffff, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x9, 0x0000000000000000) 
     
  
@@ -2672,7 +2672,7 @@ inst_225:
     # clmul x10, x22, x7
     # sd x10, 8(x1)
 inst_226:
-    TEST_RR_OP(clmul, x10, x22, x22, 0x0000000000000000, 0xffffffffffdfffff, 0x0, x1, 8, x2)
+    TEST_RR_OP(clmul, x10, x22, x7, 0x0000000000000000, 0xffffffffffdfffff, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x10, 0x0000000000000000) 
     
  
@@ -2682,7 +2682,7 @@ inst_226:
     # clmul x11, x21, x6
     # sd x11, 16(x1)
 inst_227:
-    TEST_RR_OP(clmul, x11, x21, x21, 0x0000000000000000, 0xffffffffffbfffff, 0x0, x1, 16, x2)
+    TEST_RR_OP(clmul, x11, x21, x6, 0x0000000000000000, 0xffffffffffbfffff, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x11, 0x0000000000000000) 
     
  
@@ -2692,7 +2692,7 @@ inst_227:
     # clmul x12, x20, x5
     # sd x12, 24(x1)
 inst_228:
-    TEST_RR_OP(clmul, x12, x20, x20, 0x0000000000000000, 0xffffffffff7fffff, 0x0, x1, 24, x2)
+    TEST_RR_OP(clmul, x12, x20, x5, 0x0000000000000000, 0xffffffffff7fffff, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x12, 0x0000000000000000) 
     
  
@@ -2702,7 +2702,7 @@ inst_228:
     # clmul x13, x19, x4
     # sd x13, 32(x1)
 inst_229:
-    TEST_RR_OP(clmul, x13, x19, x19, 0x0000000000000000, 0xfffffffffeffffff, 0x0, x1, 32, x2)
+    TEST_RR_OP(clmul, x13, x19, x4, 0x0000000000000000, 0xfffffffffeffffff, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x13, 0x0000000000000000) 
     
 
@@ -2720,7 +2720,7 @@ inst_229:
     # clmul x14, x18, x3
     # sd x14, 0(x4)
 inst_230:
-    TEST_RR_OP(clmul, x14, x18, x18, 0x0000000000000000, 0xfffffffffdffffff, 0x0, x4, 0, x5)
+    TEST_RR_OP(clmul, x14, x18, x3, 0x0000000000000000, 0xfffffffffdffffff, 0x0, x4, 0, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x14, 0x0000000000000000) 
     
  
@@ -2730,7 +2730,7 @@ inst_230:
     # clmul x15, x17, x2
     # sd x15, 8(x4)
 inst_231:
-    TEST_RR_OP(clmul, x15, x17, x17, 0x0000000000000000, 0xfffffffffbffffff, 0x0, x4, 8, x5)
+    TEST_RR_OP(clmul, x15, x17, x2, 0x0000000000000000, 0xfffffffffbffffff, 0x0, x4, 8, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x15, 0x0000000000000000) 
     
  
@@ -2740,7 +2740,7 @@ inst_231:
     # clmul x16, x16, x1
     # sd x16, 16(x4)
 inst_232:
-    TEST_RR_OP(clmul, x16, x16, x16, 0x0000000000000000, 0xfffffffff7ffffff, 0x0, x4, 16, x5)
+    TEST_RR_OP(clmul, x16, x16, x1, 0x0000000000000000, 0xfffffffff7ffffff, 0x0, x4, 16, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x16, 0x0000000000000000) 
     
  
@@ -2750,7 +2750,7 @@ inst_232:
     # clmul x17, x15, x31
     # sd x17, 24(x4)
 inst_233:
-    TEST_RR_OP(clmul, x17, x15, x15, 0x0000000000000000, 0xffffffffefffffff, 0x0, x4, 24, x5)
+    TEST_RR_OP(clmul, x17, x15, x31, 0x0000000000000000, 0xffffffffefffffff, 0x0, x4, 24, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x17, 0x0000000000000000) 
     
  
@@ -2760,7 +2760,7 @@ inst_233:
     # clmul x18, x14, x30
     # sd x18, 32(x4)
 inst_234:
-    TEST_RR_OP(clmul, x18, x14, x14, 0x0000000000000000, 0xffffffffdfffffff, 0x0, x4, 32, x5)
+    TEST_RR_OP(clmul, x18, x14, x30, 0x0000000000000000, 0xffffffffdfffffff, 0x0, x4, 32, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x18, 0x0000000000000000) 
     
 
@@ -2778,7 +2778,7 @@ inst_234:
     # clmul x19, x13, x29
     # sd x19, 0(x1)
 inst_235:
-    TEST_RR_OP(clmul, x19, x13, x13, 0x0000000000000000, 0xffffffffbfffffff, 0x0, x1, 0, x2)
+    TEST_RR_OP(clmul, x19, x13, x29, 0x0000000000000000, 0xffffffffbfffffff, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x19, 0x0000000000000000) 
     
  
@@ -2788,7 +2788,7 @@ inst_235:
     # clmul x20, x12, x28
     # sd x20, 8(x1)
 inst_236:
-    TEST_RR_OP(clmul, x20, x12, x12, 0x0000000000000000, 0xffffffff7fffffff, 0x0, x1, 8, x2)
+    TEST_RR_OP(clmul, x20, x12, x28, 0x0000000000000000, 0xffffffff7fffffff, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x20, 0x0000000000000000) 
     
  
@@ -2798,7 +2798,7 @@ inst_236:
     # clmul x21, x11, x27
     # sd x21, 16(x1)
 inst_237:
-    TEST_RR_OP(clmul, x21, x11, x11, 0x0000000000000000, 0xfffffffeffffffff, 0x0, x1, 16, x2)
+    TEST_RR_OP(clmul, x21, x11, x27, 0x0000000000000000, 0xfffffffeffffffff, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x21, 0x0000000000000000) 
     
  
@@ -2808,7 +2808,7 @@ inst_237:
     # clmul x22, x10, x26
     # sd x22, 24(x1)
 inst_238:
-    TEST_RR_OP(clmul, x22, x10, x10, 0x0000000000000000, 0xfffffffdffffffff, 0x0, x1, 24, x2)
+    TEST_RR_OP(clmul, x22, x10, x26, 0x0000000000000000, 0xfffffffdffffffff, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x22, 0x0000000000000000) 
     
  
@@ -2818,7 +2818,7 @@ inst_238:
     # clmul x23, x9, x25
     # sd x23, 32(x1)
 inst_239:
-    TEST_RR_OP(clmul, x23, x9, x9, 0x0000000000000000, 0xfffffffbffffffff, 0x0, x1, 32, x2)
+    TEST_RR_OP(clmul, x23, x9, x25, 0x0000000000000000, 0xfffffffbffffffff, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x23, 0x0000000000000000) 
     
 
@@ -2836,7 +2836,7 @@ inst_239:
     # clmul x24, x8, x24
     # sd x24, 0(x1)
 inst_240:
-    TEST_RR_OP(clmul, x24, x8, x8, 0x0000000000000000, 0xfffffff7ffffffff, 0x0, x1, 0, x2)
+    TEST_RR_OP(clmul, x24, x8, x24, 0x0000000000000000, 0xfffffff7ffffffff, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x24, 0x0000000000000000) 
     
  
@@ -2846,7 +2846,7 @@ inst_240:
     # clmul x25, x7, x23
     # sd x25, 8(x1)
 inst_241:
-    TEST_RR_OP(clmul, x25, x7, x7, 0x0000000000000000, 0xffffffefffffffff, 0x0, x1, 8, x2)
+    TEST_RR_OP(clmul, x25, x7, x23, 0x0000000000000000, 0xffffffefffffffff, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x25, 0x0000000000000000) 
     
  
@@ -2856,7 +2856,7 @@ inst_241:
     # clmul x26, x6, x22
     # sd x26, 16(x1)
 inst_242:
-    TEST_RR_OP(clmul, x26, x6, x6, 0x0000000000000000, 0xffffffdfffffffff, 0x0, x1, 16, x2)
+    TEST_RR_OP(clmul, x26, x6, x22, 0x0000000000000000, 0xffffffdfffffffff, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x26, 0x0000000000000000) 
     
  
@@ -2866,7 +2866,7 @@ inst_242:
     # clmul x27, x5, x21
     # sd x27, 24(x1)
 inst_243:
-    TEST_RR_OP(clmul, x27, x5, x5, 0x0000000000000000, 0xffffffbfffffffff, 0x0, x1, 24, x2)
+    TEST_RR_OP(clmul, x27, x5, x21, 0x0000000000000000, 0xffffffbfffffffff, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x27, 0x0000000000000000) 
     
  
@@ -2876,7 +2876,7 @@ inst_243:
     # clmul x28, x4, x20
     # sd x28, 32(x1)
 inst_244:
-    TEST_RR_OP(clmul, x28, x4, x4, 0x0000000000000000, 0xffffff7fffffffff, 0x0, x1, 32, x2)
+    TEST_RR_OP(clmul, x28, x4, x20, 0x0000000000000000, 0xffffff7fffffffff, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x28, 0x0000000000000000) 
     
 
@@ -2894,7 +2894,7 @@ inst_244:
     # clmul x29, x3, x19
     # sd x29, 0(x4)
 inst_245:
-    TEST_RR_OP(clmul, x29, x3, x3, 0x0000000000000000, 0xfffffeffffffffff, 0x0, x4, 0, x5)
+    TEST_RR_OP(clmul, x29, x3, x19, 0x0000000000000000, 0xfffffeffffffffff, 0x0, x4, 0, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x29, 0x0000000000000000) 
     
  
@@ -2904,7 +2904,7 @@ inst_245:
     # clmul x30, x2, x18
     # sd x30, 8(x4)
 inst_246:
-    TEST_RR_OP(clmul, x30, x2, x2, 0x0000000000000000, 0xfffffdffffffffff, 0x0, x4, 8, x5)
+    TEST_RR_OP(clmul, x30, x2, x18, 0x0000000000000000, 0xfffffdffffffffff, 0x0, x4, 8, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x30, 0x0000000000000000) 
     
  
@@ -2914,7 +2914,7 @@ inst_246:
     # clmul x31, x1, x17
     # sd x31, 16(x4)
 inst_247:
-    TEST_RR_OP(clmul, x31, x1, x1, 0x0000000000000000, 0xfffffbffffffffff, 0x0, x4, 16, x5)
+    TEST_RR_OP(clmul, x31, x1, x17, 0x0000000000000000, 0xfffffbffffffffff, 0x0, x4, 16, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x31, 0x0000000000000000) 
     
  
@@ -2924,7 +2924,7 @@ inst_247:
     # clmul x1, x31, x16
     # sd x1, 24(x4)
 inst_248:
-    TEST_RR_OP(clmul, x1, x31, x31, 0x0000000000000000, 0xfffff7ffffffffff, 0x0, x4, 24, x5)
+    TEST_RR_OP(clmul, x1, x31, x16, 0x0000000000000000, 0xfffff7ffffffffff, 0x0, x4, 24, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x1, 0x0000000000000000) 
     
  
@@ -2934,7 +2934,7 @@ inst_248:
     # clmul x2, x30, x15
     # sd x2, 32(x4)
 inst_249:
-    TEST_RR_OP(clmul, x2, x30, x30, 0x0000000000000000, 0xffffefffffffffff, 0x0, x4, 32, x5)
+    TEST_RR_OP(clmul, x2, x30, x15, 0x0000000000000000, 0xffffefffffffffff, 0x0, x4, 32, x5)
     RVMODEL_IO_ASSERT_GPR_EQ(x5, x2, 0x0000000000000000) 
     
 
@@ -2952,7 +2952,7 @@ inst_249:
     # clmul x3, x29, x14
     # sd x3, 0(x1)
 inst_250:
-    TEST_RR_OP(clmul, x3, x29, x29, 0x0000000000000000, 0xffffdfffffffffff, 0x0, x1, 0, x2)
+    TEST_RR_OP(clmul, x3, x29, x14, 0x0000000000000000, 0xffffdfffffffffff, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x3, 0x0000000000000000) 
     
  
@@ -2962,7 +2962,7 @@ inst_250:
     # clmul x4, x28, x13
     # sd x4, 8(x1)
 inst_251:
-    TEST_RR_OP(clmul, x4, x28, x28, 0x0000000000000000, 0xffffbfffffffffff, 0x0, x1, 8, x2)
+    TEST_RR_OP(clmul, x4, x28, x13, 0x0000000000000000, 0xffffbfffffffffff, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x4, 0x0000000000000000) 
     
  
@@ -2972,7 +2972,7 @@ inst_251:
     # clmul x5, x27, x12
     # sd x5, 16(x1)
 inst_252:
-    TEST_RR_OP(clmul, x5, x27, x27, 0x0000000000000000, 0xffff7fffffffffff, 0x0, x1, 16, x2)
+    TEST_RR_OP(clmul, x5, x27, x12, 0x0000000000000000, 0xffff7fffffffffff, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x5, 0x0000000000000000) 
     
  
@@ -2982,7 +2982,7 @@ inst_252:
     # clmul x6, x26, x11
     # sd x6, 24(x1)
 inst_253:
-    TEST_RR_OP(clmul, x6, x26, x26, 0x0000000000000000, 0xfffeffffffffffff, 0x0, x1, 24, x2)
+    TEST_RR_OP(clmul, x6, x26, x11, 0x0000000000000000, 0xfffeffffffffffff, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x6, 0x0000000000000000) 
     
  
@@ -2992,7 +2992,7 @@ inst_253:
     # clmul x7, x25, x10
     # sd x7, 32(x1)
 inst_254:
-    TEST_RR_OP(clmul, x7, x25, x25, 0x0000000000000000, 0xfffdffffffffffff, 0x0, x1, 32, x2)
+    TEST_RR_OP(clmul, x7, x25, x10, 0x0000000000000000, 0xfffdffffffffffff, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x7, 0x0000000000000000) 
     
 
@@ -3010,7 +3010,7 @@ inst_254:
     # clmul x8, x24, x9
     # sd x8, 0(x1)
 inst_255:
-    TEST_RR_OP(clmul, x8, x24, x24, 0x0000000000000000, 0xfffbffffffffffff, 0x0, x1, 0, x2)
+    TEST_RR_OP(clmul, x8, x24, x9, 0x0000000000000000, 0xfffbffffffffffff, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x8, 0x0000000000000000) 
     
  
@@ -3020,7 +3020,7 @@ inst_255:
     # clmul x9, x23, x8
     # sd x9, 8(x1)
 inst_256:
-    TEST_RR_OP(clmul, x9, x23, x23, 0x0000000000000000, 0xfff7ffffffffffff, 0x0, x1, 8, x2)
+    TEST_RR_OP(clmul, x9, x23, x8, 0x0000000000000000, 0xfff7ffffffffffff, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x9, 0x0000000000000000) 
     
  
@@ -3030,7 +3030,7 @@ inst_256:
     # clmul x10, x22, x7
     # sd x10, 16(x1)
 inst_257:
-    TEST_RR_OP(clmul, x10, x22, x22, 0x0000000000000000, 0xffefffffffffffff, 0x0, x1, 16, x2)
+    TEST_RR_OP(clmul, x10, x22, x7, 0x0000000000000000, 0xffefffffffffffff, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x10, 0x0000000000000000) 
     
  
@@ -3040,7 +3040,7 @@ inst_257:
     # clmul x11, x21, x6
     # sd x11, 24(x1)
 inst_258:
-    TEST_RR_OP(clmul, x11, x21, x21, 0x0000000000000000, 0xffdfffffffffffff, 0x0, x1, 24, x2)
+    TEST_RR_OP(clmul, x11, x21, x6, 0x0000000000000000, 0xffdfffffffffffff, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x11, 0x0000000000000000) 
     
  
@@ -3050,7 +3050,7 @@ inst_258:
     # clmul x12, x20, x5
     # sd x12, 32(x1)
 inst_259:
-    TEST_RR_OP(clmul, x12, x20, x20, 0x0000000000000000, 0xffbfffffffffffff, 0x0, x1, 32, x2)
+    TEST_RR_OP(clmul, x12, x20, x5, 0x0000000000000000, 0xffbfffffffffffff, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x12, 0x0000000000000000) 
     
 
@@ -3068,7 +3068,7 @@ inst_259:
     # clmul x13, x19, x4
     # sd x13, 0(x5)
 inst_260:
-    TEST_RR_OP(clmul, x13, x19, x19, 0x0000000000000000, 0xff7fffffffffffff, 0x0, x5, 0, x6)
+    TEST_RR_OP(clmul, x13, x19, x4, 0x0000000000000000, 0xff7fffffffffffff, 0x0, x5, 0, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x13, 0x0000000000000000) 
     
  
@@ -3078,7 +3078,7 @@ inst_260:
     # clmul x14, x18, x3
     # sd x14, 8(x5)
 inst_261:
-    TEST_RR_OP(clmul, x14, x18, x18, 0x0000000000000000, 0xfeffffffffffffff, 0x0, x5, 8, x6)
+    TEST_RR_OP(clmul, x14, x18, x3, 0x0000000000000000, 0xfeffffffffffffff, 0x0, x5, 8, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x14, 0x0000000000000000) 
     
  
@@ -3088,7 +3088,7 @@ inst_261:
     # clmul x15, x17, x2
     # sd x15, 16(x5)
 inst_262:
-    TEST_RR_OP(clmul, x15, x17, x17, 0x0000000000000000, 0xfdffffffffffffff, 0x0, x5, 16, x6)
+    TEST_RR_OP(clmul, x15, x17, x2, 0x0000000000000000, 0xfdffffffffffffff, 0x0, x5, 16, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x15, 0x0000000000000000) 
     
  
@@ -3098,7 +3098,7 @@ inst_262:
     # clmul x16, x16, x1
     # sd x16, 24(x5)
 inst_263:
-    TEST_RR_OP(clmul, x16, x16, x16, 0x0000000000000000, 0xfbffffffffffffff, 0x0, x5, 24, x6)
+    TEST_RR_OP(clmul, x16, x16, x1, 0x0000000000000000, 0xfbffffffffffffff, 0x0, x5, 24, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x16, 0x0000000000000000) 
     
  
@@ -3108,7 +3108,7 @@ inst_263:
     # clmul x17, x15, x31
     # sd x17, 32(x5)
 inst_264:
-    TEST_RR_OP(clmul, x17, x15, x15, 0x0000000000000000, 0xf7ffffffffffffff, 0x0, x5, 32, x6)
+    TEST_RR_OP(clmul, x17, x15, x31, 0x0000000000000000, 0xf7ffffffffffffff, 0x0, x5, 32, x6)
     RVMODEL_IO_ASSERT_GPR_EQ(x6, x17, 0x0000000000000000) 
     
 
@@ -3126,7 +3126,7 @@ inst_264:
     # clmul x18, x14, x30
     # sd x18, 0(x1)
 inst_265:
-    TEST_RR_OP(clmul, x18, x14, x14, 0x0000000000000000, 0xefffffffffffffff, 0x0, x1, 0, x2)
+    TEST_RR_OP(clmul, x18, x14, x30, 0x0000000000000000, 0xefffffffffffffff, 0x0, x1, 0, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x18, 0x0000000000000000) 
     
  
@@ -3136,7 +3136,7 @@ inst_265:
     # clmul x19, x13, x29
     # sd x19, 8(x1)
 inst_266:
-    TEST_RR_OP(clmul, x19, x13, x13, 0x0000000000000000, 0xdfffffffffffffff, 0x0, x1, 8, x2)
+    TEST_RR_OP(clmul, x19, x13, x29, 0x0000000000000000, 0xdfffffffffffffff, 0x0, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x19, 0x0000000000000000) 
     
  
@@ -3146,7 +3146,7 @@ inst_266:
     # clmul x20, x12, x28
     # sd x20, 16(x1)
 inst_267:
-    TEST_RR_OP(clmul, x20, x12, x12, 0x0000000000000000, 0xbfffffffffffffff, 0x0, x1, 16, x2)
+    TEST_RR_OP(clmul, x20, x12, x28, 0x0000000000000000, 0xbfffffffffffffff, 0x0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x20, 0x0000000000000000) 
     
  
@@ -3156,7 +3156,7 @@ inst_267:
     # clmul x21, x11, x27
     # sd x21, 24(x1)
 inst_268:
-    TEST_RR_OP(clmul, x21, x11, x11, 0x0000000000000000, 0x7fffffffffffffff, 0x0, x1, 24, x2)
+    TEST_RR_OP(clmul, x21, x11, x27, 0x0000000000000000, 0x7fffffffffffffff, 0x0, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x21, 0x0000000000000000) 
     
  
@@ -3166,7 +3166,7 @@ inst_268:
     # clmul x22, x10, x26
     # sd x22, 32(x1)
 inst_269:
-    TEST_RR_OP(clmul, x22, x10, x10, 0x0000000000000000, 0xffffffffffffffff, 0x0, x1, 32, x2)
+    TEST_RR_OP(clmul, x22, x10, x26, 0x0000000000000000, 0xffffffffffffffff, 0x0, x1, 32, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x22, 0x0000000000000000) 
     
 
@@ -3178,14 +3178,14 @@ inst_269:
 	RVTEST_SIGBASE(x1,signature_55_0)
 
  
-    # Testcase 270:  rs1:x25(0x10fd3dedadea5195), rs2:x25(0xdf7f3844121bcc23), result rd:x23(0x4451544411014111)
+    # Testcase 270:  rs1:x25(0x10fd3dedadea5195), rs2:x25(0xdf7f3844121bcc23), result rd:x23(0x0104014550500405)
     # li  x25, MASK_XLEN(0xdf7f3844121bcc23)
     # li  x25, MASK_XLEN(0x10fd3dedadea5195)
     # clmul x23, x25, x25
     # sd x23, 0(x1)
 inst_270:
-    TEST_RR_OP(clmul, x23, x25, x25, 0x4451544411014111, 0x10fd3dedadea5195, 0xdf7f3844121bcc23, x1, 0, x2)
-    RVMODEL_IO_ASSERT_GPR_EQ(x2, x23, 0x4451544411014111) 
+    TEST_RR_OP(clmul, x23, x25, x25, 0x0104014550500405, 0x10fd3dedadea5195, 0xdf7f3844121bcc23, x1, 0, x2)
+    RVMODEL_IO_ASSERT_GPR_EQ(x2, x23, 0x0104014550500405) 
     
  
     # Testcase 271:  rs1:x8(0xbd295ce2d2ffbec1), rs2:x24(0xf5adb41aa47d105b), result rd:x0(0x0000000000000000)
@@ -3194,7 +3194,7 @@ inst_270:
     # clmul x0, x8, x24
     # sd x0, 8(x1)
 inst_271:
-    TEST_RR_OP(clmul, x0, x8, x8, 0x0000000000000000, 0xbd295ce2d2ffbec1, 0xf5adb41aa47d105b, x1, 8, x2)
+    TEST_RR_OP(clmul, x0, x8, x24, 0x0000000000000000, 0xbd295ce2d2ffbec1, 0xf5adb41aa47d105b, x1, 8, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x0, 0x0000000000000000) 
     
  
@@ -3204,7 +3204,7 @@ inst_271:
     # clmul x25, x7, x0
     # sd x25, 16(x1)
 inst_272:
-    TEST_RR_OP(clmul, x25, x7, x7, 0x0000000000000000, 0xc9649f05a8e1a8bb, 0x82f6747f707af2c0, x1, 16, x2)
+    TEST_RR_OP(clmul, x25, x7, x0, 0x0000000000000000, 0xc9649f05a8e1a8bb, 0x82f6747f707af2c0, x1, 16, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x25, 0x0000000000000000) 
     
  
@@ -3214,7 +3214,7 @@ inst_272:
     # clmul x26, x0, x22
     # sd x26, 24(x1)
 inst_273:
-    TEST_RR_OP(clmul, x26, x0, x0, 0x0000000000000000, 0x3541291848c99fcb, 0x73a92fd4e19bfbc3, x1, 24, x2)
+    TEST_RR_OP(clmul, x26, x0, x22, 0x0000000000000000, 0x3541291848c99fcb, 0x73a92fd4e19bfbc3, x1, 24, x2)
     RVMODEL_IO_ASSERT_GPR_EQ(x2, x26, 0x0000000000000000) 
     
 
